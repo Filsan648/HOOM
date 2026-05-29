@@ -1,8 +1,8 @@
-import BackgroundImage from "../assets/image.png";
-
+import BackgroundImage from "../assets/BackroundImageHero.png";
+import Button from "../utilis/Button";
 function Hero() {
   return (
-    <section className="h-screen m-10">
+    <section className="h-screen m-10 my-30">
       
       <div
         className="rounded-4xl h-full flex items-center px-16 bg-cover bg-center relative overflow-hidden"
@@ -15,19 +15,14 @@ function Hero() {
         <div className="absolute inset-0 bg-black/40 rounded-4xl"></div>
 
         {/* Contenu */}
-        <div className="relative z-10 max-w-xl text-white">
-          <h1 className="text-6xl font-bold leading-tight">
-            Bienvenue sur notre plateforme
-          </h1>
+        <div className="relative z-10 max-w-2xl text-white">
+          <h1 className="text-6xl  leading-tight">
+Apprenez autrement, évoluez sans limites.          </h1>
 
           <p className="mt-6 text-lg opacity-90">
-            Découvrez une expérience moderne avec un design élégant et
-            professionnel.
-          </p>
+HOOM vous accompagne vers la réussite en vous offrant une expérience d’apprentissage personnalisée, interactive et adaptée à vos besoins pour progresser efficacement à votre rythme.          </p>
 
-          <button className="mt-8 bg-white text-black px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition">
-            Commencer
-          </button>
+          <Button />
         </div>
 
       </div>
