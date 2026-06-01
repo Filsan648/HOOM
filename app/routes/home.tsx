@@ -2,6 +2,8 @@ import type { Route } from "./+types/home";
 import { Welcome } from "../welcome/welcome";
 import Hero from "../Compement/Hero";
 import Menue from "../Generale/Menue";
+import About from "~/Compement/about";
+import Fonctionality from "~/Compement/Fonctionnality";
 export function meta({}: Route.MetaArgs) {
   return [
     { title: "New React Router App" },
@@ -13,8 +15,9 @@ export default function Home() {
   return (
     <div className="flex flex-col font-sans bg-[#FEFBF6]   ">
       <Menue />
-
       <Hero />
+        <About />
+        <Fonctionality />
     </div>
   );
 }
