@@ -1,5 +1,6 @@
 import BackgroundImage from "../assets/BackroundImageHero.png";
 import Button from "../utilis/Button";
+
 function Hero() {
   return (
     <section className="h-screen m-10 my-30">
@@ -17,7 +18,7 @@ function Hero() {
         {/* Contenu */}
         <div className="relative z-10 max-w-2xl text-white">
           <h1 className="text-6xl  leading-tight">
-Apprenez autrement, évoluez sans limites.          </h1>
+<span className="text-yellow-500">Apprenez </span> autrement, évoluez <span className="text-yellow-500">sans limites</span>.          </h1>
 
           <p className="mt-6 text-lg opacity-90">
 HOOM vous accompagne vers la réussite en vous offrant une expérience d’apprentissage personnalisée, interactive et adaptée à vos besoins pour progresser efficacement à votre rythme.          </p>
@@ -31,3 +32,4 @@ HOOM vous accompagne vers la réussite en vous offrant une expérience d’appre
 }
 
 export default Hero;
+

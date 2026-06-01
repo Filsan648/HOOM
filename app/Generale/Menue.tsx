@@ -63,8 +63,8 @@ export default function Menue() {
         transition-all duration-700
         ${
           scrolled
-            ? "bg-white/80 backdrop-blur-2xl border-b border-black/10 py-4"
-            : "bg-transparent  py-6"
+            ? "bg-[#FEFBF6] backdrop-blur-2xl border-b border-black/10 py-4"
+            : "bg-[#FEFBF6] py-6"
         }
       `}
     >
