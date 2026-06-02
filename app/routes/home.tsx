@@ -3,7 +3,7 @@ import { Welcome } from "../welcome/welcome";
 import Hero from "../Compement/Hero";
 import Menue from "../Generale/Menue";
 import About from "~/Compement/about";
-import Fonctionality from "~/Compement/Fonctionnality";
+import FonctionalityCompement from "~/Compement/FonctionnalityCompement";
 export function meta({}: Route.MetaArgs) {
   return [
     { title: "New React Router App" },
@@ -17,7 +17,7 @@ export default function Home() {
       <Menue />
       <Hero />
         <About />
-        <Fonctionality />
+        <FonctionalityCompement />
     </div>
   );
 }
