@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { 
   BookOpen, 
   CheckSquare, 
@@ -8,33 +8,70 @@ import {
   Dumbbell, 
   BrainCircuit, 
   Rocket,
-  ArrowRight
+  ArrowUpRight
 } from 'lucide-react';
 
 function About() {
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef(null);
+
+  // Déclenche l'animation au scroll quand la section entre dans le viewport
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.unobserve(entry.target); // On anime une seule fois
+        }
+      },
+      { threshold: 0.15 } // Se déclenche quand 15% de la section est visible
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
   const floatingWords = [
-    { id: 1, text: 'Cours sur-mesure', icon: <BookOpen className="w-4 h-4 text-yellow-600" />, pos: 'top-[12%] left-[6%]', bg: 'bg-white text-gray-800' },
-    { id: 2, text: 'QCM interactifs', icon: <CheckSquare className="w-4 h-4 text-blue-700" />, pos: 'top-[26%] left-[14%]', bg: 'bg-blue-100 text-[#111b21]' },
-    { id: 3, text: 'Réussite', icon: <Sparkles className="w-4 h-4 text-white" />, pos: 'top-[8%] left-[45%]', bg: 'bg-blue-600 text-white' },
-    { id: 4, text: 'Objectif Bac / Examens', icon: <Target className="w-4 h-4 text-red-500" />, pos: 'top-[15%] right-[15%]', bg: 'bg-white text-gray-800' },
-    { id: 5, text: 'Annales corrigées', icon: <BookMarked className="w-4 h-4 text-blue-700" />, pos: 'top-[28%] right-[5%]', bg: 'bg-blue-100 text-[#111b21]' },
-    { id: 6, text: 'Exercices ciblés', icon: <Dumbbell className="w-4 h-4 text-yellow-500" />, pos: 'bottom-[18%] left-[4%]', bg: 'bg-white text-gray-800' },
-    { id: 7, text: 'Accompagnement', icon: <BrainCircuit className="w-4 h-4 text-gray-300" />, pos: 'bottom-[10%] left-[32%]', bg: 'bg-gray-800 text-white' },
-    { id: 8, text: 'Progression', icon: <Rocket className="w-4 h-4 text-yellow-600" />, pos: 'bottom-[15%] right-[8%]', bg: 'bg-yellow-100 text-yellow-800' },
+    { id: 1, text: 'Cours sur-mesure', icon: <BookOpen className="w-3.5 h-3.5 text-neutral-400" />, pos: 'top-[15%] left-[8%]' },
+    { id: 2, text: 'QCM interactifs', icon: <CheckSquare className="w-3.5 h-3.5 text-neutral-400" />, pos: 'top-[32%] left-[0%]' },
+    { id: 3, text: 'Réussite', icon: <Sparkles className="w-3.5 h-3.5 text-amber-600" />, pos: 'top-[10%] left-[48%]' },
+    { id: 4, text: 'Objectif Bac / Examens', icon: <Target className="w-3.5 h-3.5 text-neutral-400" />, pos: 'top-[18%] right-[12%]' },
+    { id: 5, text: 'Annales corrigées', icon: <BookMarked className="w-3.5 h-3.5 text-neutral-400" />, pos: 'top-[35%] right-[0%]' },
+    { id: 6, text: 'Exercices ciblés', icon: <Dumbbell className="w-3.5 h-3.5 text-neutral-400" />, pos: 'bottom-[22%] left-[6%]' },
+    { id: 7, text: 'Accompagnement', icon: <BrainCircuit className="w-3.5 h-3.5 text-neutral-400" />, pos: 'bottom-[20%] left-[35%]' },
+    { id: 8, text: 'Progression', icon: <Rocket className="w-3.5 h-3.5 text-neutral-400" />, pos: 'bottom-[20%] right-[10%]' },
   ];
 
   return (
-    <section className="relative w-full min-h-screen  overflow-hidden flex flex-col items-center justify-center px-6 py-24 select-none">
+    <section 
+      ref={sectionRef}
+      className="relative w-full min-h-screen bg-[#fcfbf9] text-[#1a1a1a] overflow-hidden flex flex-col justify-between p-6 md:p-12 font-sans select-none border-t border-black/5"
+    >
       
-      {/* --- Mots-clés Flottants --- */}
+      {/* LIGNES DE GRILLE STRUCTURELLES */}
+      <div className="absolute inset-0 pointer-events-none grid grid-cols-4 md:grid-cols-12 gap-0 px-6 md:px-12 opacity-[0.04]">
+        {[...Array(13)].map((_, i) => (
+          <div key={i} className="h-full border-r border-black last:border-r-0" />
+        ))}
+      </div>
+
+      {/* MOTS FLOTTANTS ÉPURÉS */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden hidden md:block">
         {floatingWords.map((word) => (
           <div 
             key={word.id} 
-            className={`absolute ${word.pos} px-4 py-2.5 rounded-full shadow-sm border border-black/5 text-sm font-medium tracking-wide flex items-center gap-2 transition-transform duration-700 hover:scale-105 ${word.bg}`}
+            className={`absolute ${word.pos} px-4 py-2 rounded-full bg-white/40 backdrop-blur-sm border border-black/[0.06] text-xs uppercase tracking-wider font-light text-neutral-600 flex items-center gap-2.5 transition-all duration-700 pointer-events-auto cursor-pointer hover:scale-105 hover:bg-white hover:border-black/20 hover:shadow-md
+              ${isVisible ? 'animate-badge-pop' : 'opacity-0'}
+            `}
             style={{
-              animation: `float-slow ${4 + (word.id % 3)}s ease-in-out infinite alternate`,
-              animationDelay: `${word.id * 0.15}s`
+              animationDelay: `${word.id * 0.1}s`,
+              // On applique l'animation de flottement continu après l'apparition
+              animation: isVisible 
+                ? `badgePop 1.2s cubic-bezier(0.16, 1, 0.3, 1) ${word.id * 0.1}s forwards, floatSlow ${6 + (word.id % 4)}s ease-in-out ${1.2 + (word.id * 0.1)}s infinite alternate` 
+                : 'none'
             }}
           >
             {word.icon}
@@ -43,13 +80,76 @@ function About() {
         ))}
       </div>
 
-      {/* --- Contenu Unique (Paragraphe unique géant) --- */}
-      <div className="relative z-10 max-w-5xl text-center mx-auto space-y-12">
-        <p className="text-3xl md:text-5xl lg:text-6xl font-light text-[#111b21] tracking-tight leading-[1.25] md:leading-[1.2] max-w-4xl mx-auto">
-          <span className="font-semibold text-yellow-500">Hoom</span> est là pour vous accompagner vers la réussite, avec des sujets, des cours personnalisés, des QCM, des exercices et des annales spécialement conçus pour vous.
-        </p>
+      {/* MANIFESTO / GRAND TEXTE RYTHMÉ (Apparition découpée en blocs) */}
+      <div className="relative z-10 max-w-6xl mx-auto my-auto w-full grid grid-cols-1 md:grid-cols-12 gap-8 items-center py-20">
+        <div className="md:col-span-11 md:col-start-2">
+          <p className="text-[7.5vw] md:text-[3.8vw] font-serif font-light text-[#1a1a1a] tracking-tight leading-[1.2] md:leading-[1.15]">
+            
+            {/* Bloc 1 */}
+            <span className="inline-block overflow-hidden vertical-align-bottom">
+              <span className={`inline-block transition-all ${isVisible ? 'animate-text-reveal' : 'opacity-0'}`}>
+                <span className="font-sans font-extrabold tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-neutral-800 to-neutral-500 block mb-2 md:inline md:mr-4">
+                  HOOM
+                </span>
+                est là pour vous accompagner vers la 
+              </span>
+            </span>
 
-       
+            {/* Bloc 2 */}
+            <span className="inline-block overflow-hidden vertical-align-bottom mx-2">
+              <span 
+                className={`inline-block font-serif italic font-normal text-blue-600 ${isVisible ? 'animate-text-reveal' : 'opacity-0'}`}
+                style={{ animationDelay: '200ms' }}
+              >
+                réussite.
+              </span>
+            </span>
+
+            {/* Bloc 3 */}
+            <span className="inline-block overflow-hidden vertical-align-bottom">
+              <span 
+                className={`inline-block ${isVisible ? 'animate-text-reveal' : 'opacity-0'}`}
+                style={{ animationDelay: '350ms' }}
+              >
+                À travers des parcours 
+                <span className="font-sans italic font-extralight text-neutral-400 mx-2">sur-mesure</span>, 
+                des modules interactifs et des annales ciblées,
+              </span>
+            </span>
+
+            {/* Bloc 4 */}
+            <span className="inline-block overflow-hidden vertical-align-bottom">
+              <span 
+                className={`inline-block ${isVisible ? 'animate-text-reveal' : 'opacity-0'}`}
+                style={{ animationDelay: '500ms' }}
+              >
+                nous redéfinissons votre manière de 
+                <span className="font-serif italic font-normal text-neutral-800 ml-2">progresser.</span>
+              </span>
+            </span>
+
+          </p>
+        </div>
+      </div>
+
+      {/* SECTION FOOTER ACCENT */}
+      <div className={`relative z-20 grid grid-cols-1 md:grid-cols-12 gap-6 w-full border-t border-black/10 pt-8 items-end transition-all duration-1000 delay-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
+        <div className="md:col-span-4">
+          <p className="text-[10px] uppercase tracking-[0.2em] text-neutral-400">
+            © HOOM ÉDUCATION — ALL RIGHTS RESERVED
+          </p>
+        </div>
+        
+        {/* Lien interactif Awwwards */}
+        <div className="md:col-span-4 md:col-start-9 flex md:justify-end">
+          <a href="#discover" className="group flex items-center gap-2 text-[11px] uppercase tracking-[0.2em] font-medium text-neutral-800 hover:text-blue-600 transition-colors duration-300">
+            Découvrir notre méthode
+            <div className="overflow-hidden w-4 h-4 relative">
+              <ArrowUpRight className="w-4 h-4 transition-transform duration-500 cubic-bezier(0.16, 1, 0.3, 1) group-hover:translate-x-4 group-hover:-translate-y-4 absolute top-0 left-0" />
+              <ArrowUpRight className="w-4 h-4 transition-transform duration-500 cubic-bezier(0.16, 1, 0.3, 1) -translate-x-4 translate-y-4 group-hover:translate-x-0 group-hover:translate-y-0 text-blue-600 absolute top-0 left-0" />
+            </div>
+          </a>
+        </div>
       </div>
 
     </section>

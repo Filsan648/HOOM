@@ -3,7 +3,11 @@ import { Welcome } from "../welcome/welcome";
 import Hero from "../Compement/Hero";
 import Menue from "../Generale/Menue";
 import About from "~/Compement/about";
-import FonctionalityCompement from "~/Compement/FonctionnalityCompement";
+import Fontionalities from "~/Compement/Fonctionnalities";
+import HoomCyclesGrid from "~/Compement/pac";
+import Testimonials from "~/Compement/Testimentale";
+import PreFooter from "~/Compement/prefooter";
+import Footer from "~/Compement/Footer";
 export function meta({}: Route.MetaArgs) {
   return [
     { title: "New React Router App" },
@@ -11,13 +15,18 @@ export function meta({}: Route.MetaArgs) {
   ];
 }
 
+
 export default function Home() {
   return (
-    <div className="flex flex-col font-sans bg-[#FEFBF6]   ">
+    <div className="   ">
       <Menue />
       <Hero />
         <About />
-        <FonctionalityCompement />
+        <Fontionalities />
+        <HoomCyclesGrid />
+        <Testimonials />
+        <PreFooter />
+        <Footer />
     </div>
   );
 }
