@@ -13,3 +13,81 @@ body {
     color-scheme: dark;
   }
 }
+@layer utilities {
+  /* Masque les barres de défilement sur tous les navigateurs */
+  .scrollbar-none::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-none {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+@layer utilities {
+  /* Flottement asymétrique fluide pour les badges */
+  @keyframes floatSlow {
+    0% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-10px) rotate(1deg); }
+    100% { transform: translateY(5px) rotate(-1deg); }
+  }
+
+  /* Révélation de bas en haut pour le texte */
+  @keyframes textRevealUp {
+    0% { transform: translateY(40px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+  }
+
+  /* Entrée en fondu/zoom léger pour les badges */
+  @keyframes badgePop {
+    0% { transform: scale(0.9) translateY(15px); opacity: 0; }
+    100% { transform: scale(1) translateY(0); opacity: 1; }
+  }
+
+  .animate-text-reveal {
+    animation: textRevealUp 1.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  .animate-badge-pop {
+    animation: badgePop 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  .float-animation {
+    animation: floatSlow 6s ease-in-out infinite alternate;
+  }
+}
+@layer utilities {
+  /* Courbe de vitesse fluide (Cubic-Bezier) typique des sites de design */
+  .ease-premium {
+    transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  /* Animation de révélation du texte (du bas vers le haut) */
+  @keyframes revealUp {
+    0% { transform: translateY(110%); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+  }
+
+  /* Animation de fondu + montée douce */
+  @keyframes fadeInUp {
+    0% { transform: translateY(20px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+  }
+
+  /* Animation d'échelle pour l'image */
+  @keyframes scaleReveal {
+    0% { transform: scale(1.15) translateX(20px); opacity: 0; }
+    100% { transform: scale(1) translateX(0); opacity: 0.9; }
+  }
+
+  .animate-reveal {
+    animation: revealUp 1.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  .animate-fade-up {
+    animation: fadeInUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  .animate-image {
+    animation: scaleReveal 1.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+}
