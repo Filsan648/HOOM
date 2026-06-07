@@ -40,7 +40,7 @@ function Fontionalities() {
   };
 
   return (
-    <div className="min-h-screen w-full text-white bg-[#020617] relative overflow-hidden">
+    <div className="min-h-screen w-full text-white bg-blue-600  ml-7 relative overflow-hidden">
       {/* background glow */}
       <div
         className="absolute inset-0 z-0"

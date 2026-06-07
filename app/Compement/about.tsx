@@ -35,26 +35,26 @@ function About() {
   }, []);
 
   const floatingWords = [
-    { id: 1, text: 'Cours sur-mesure', icon: <BookOpen className="w-3.5 h-3.5 text-neutral-400" />, pos: 'top-[15%] left-[8%]' },
-    { id: 2, text: 'QCM interactifs', icon: <CheckSquare className="w-3.5 h-3.5 text-neutral-400" />, pos: 'top-[32%] left-[0%]' },
-    { id: 3, text: 'Réussite', icon: <Sparkles className="w-3.5 h-3.5 text-amber-600" />, pos: 'top-[10%] left-[48%]' },
-    { id: 4, text: 'Objectif Bac / Examens', icon: <Target className="w-3.5 h-3.5 text-neutral-400" />, pos: 'top-[18%] right-[12%]' },
-    { id: 5, text: 'Annales corrigées', icon: <BookMarked className="w-3.5 h-3.5 text-neutral-400" />, pos: 'top-[35%] right-[0%]' },
-    { id: 6, text: 'Exercices ciblés', icon: <Dumbbell className="w-3.5 h-3.5 text-neutral-400" />, pos: 'bottom-[22%] left-[6%]' },
-    { id: 7, text: 'Accompagnement', icon: <BrainCircuit className="w-3.5 h-3.5 text-neutral-400" />, pos: 'bottom-[20%] left-[35%]' },
-    { id: 8, text: 'Progression', icon: <Rocket className="w-3.5 h-3.5 text-neutral-400" />, pos: 'bottom-[20%] right-[10%]' },
+    { id: 1, text: 'Cours sur-mesure', icon: <BookOpen className="w-3.5 h-3.5 text-blue-600" />, pos: 'top-[15%] left-[8%]' },
+    { id: 2, text: 'QCM interactifs', icon: <CheckSquare className="w-3.5 h-3.5 text-blue-600" />, pos: 'top-[32%] left-[0%]' },
+    { id: 3, text: 'Réussite', icon: <Sparkles className="w-3.5 h-3.5 text-blue-600" />, pos: 'top-[10%] left-[48%]' },
+    { id: 4, text: 'Objectif Bac / Examens', icon: <Target className="w-3.5 h-3.5 text-blue-600" />, pos: 'top-[18%] right-[12%]' },
+    { id: 5, text: 'Annales corrigées', icon: <BookMarked className="w-3.5 h-3.5 text-blue-600" />, pos: 'top-[35%] right-[0%]' },
+    { id: 6, text: 'Exercices ciblés', icon: <Dumbbell className="w-3.5 h-3.5 text-blue-600" />, pos: 'bottom-[22%] left-[6%]' },
+    { id: 7, text: 'Accompagnement', icon: <BrainCircuit className="w-3.5 h-3.5 text-blue-600" />, pos: 'bottom-[20%] left-[35%]' },
+    { id: 8, text: 'Progression', icon: <Rocket className="w-3.5 h-3.5 text-blue-600" />, pos: 'bottom-[20%] right-[10%]' },
   ];
 
   return (
     <section 
       ref={sectionRef}
-      className="relative w-full min-h-screen bg-[#fcfbf9] text-[#1a1a1a] overflow-hidden flex flex-col justify-between p-6 md:p-12 font-sans select-none border-t border-black/5"
+      className="relative w-full min-h-screen bg-[#fcfbf9] text-[#1a1a1a] overflow-hidden flex flex-col justify-between p-6 md:p-12 font-sans select-none border-t border-blue-600/60"
     >
       
       {/* LIGNES DE GRILLE STRUCTURELLES */}
       <div className="absolute inset-0 pointer-events-none grid grid-cols-4 md:grid-cols-12 gap-0 px-6 md:px-12 opacity-[0.04]">
         {[...Array(13)].map((_, i) => (
-          <div key={i} className="h-full border-r border-black last:border-r-0" />
+          <div key={i} className="h-full border-r border-blue-600 last:border-r-0" />
         ))}
       </div>
 
@@ -88,7 +88,7 @@ function About() {
             {/* Bloc 1 */}
             <span className="inline-block overflow-hidden vertical-align-bottom">
               <span className={`inline-block transition-all ${isVisible ? 'animate-text-reveal' : 'opacity-0'}`}>
-                <span className="font-sans font-extrabold tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-neutral-800 to-neutral-500 block mb-2 md:inline md:mr-4">
+                <span className="font-sans  tracking-tighter   block mb-2 md:inline md:mr-4">
                   HOOM
                 </span>
                 est là pour vous accompagner vers la 
@@ -112,7 +112,7 @@ function About() {
                 style={{ animationDelay: '350ms' }}
               >
                 À travers des parcours 
-                <span className="font-sans italic font-extralight text-neutral-400 mx-2">sur-mesure</span>, 
+                <span className="font-sans italic font-extralight text-blue-600 mx-2">sur-mesure</span>, 
                 des modules interactifs et des annales ciblées,
               </span>
             </span>

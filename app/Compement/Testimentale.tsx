@@ -75,7 +75,7 @@ export default function Testimonials() {
           </div>
           <div className="lg:col-span-8">
             <h2 className="text-3xl md:text-5xl lg:text-6xl font-serif font-light text-[#1a1a1a] tracking-tight leading-[1.1]">
-              Ce que nos <span className="italic font-normal">étudiants</span> disent <br />
+              Ce que nos <span className="italic font-normal text-blue-600">étudiants</span> disent <br />
               de leur expérience chez nous.
             </h2>
           </div>

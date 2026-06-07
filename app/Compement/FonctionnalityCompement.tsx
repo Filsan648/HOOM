@@ -38,7 +38,7 @@ function FonctionalityCompement({
           {/* Titre avec mix de polices Serif/Sans-serif */}
           <h2 className="text-3xl md:text-[3.2vw] font-serif font-light leading-[1.1] tracking-tight text-[#1a1a1a]">
             {title.split(" ").map((word, i) => (
-              <span key={i} className={i === 1 ? "font-sans italic font-extralight text-neutral-400 mr-2" : "mr-2"}>
+              <span key={i} className={i === 1 ? "font-sans italic font-extralight text-blue-600 mr-2" : "mr-2"}>
                 {word}{" "}
               </span>
             ))}

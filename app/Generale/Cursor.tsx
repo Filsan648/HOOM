@@ -53,7 +53,7 @@ export default function Cursor() {
         }}
       >
         {!targetRect && (
-          <div className="w-6 h-6 rounded-full bg-black mix-blend-difference" />
+          <div className="w-6 h-6 rounded-full bg-blue-600 mix-blend-difference" />
         )}
       </div>
 
@@ -65,7 +65,7 @@ export default function Cursor() {
             pointer-events-none
             z-[9998]
             border
-            border-black
+            border-blue-600
             rounded-xl
       
             transition-all

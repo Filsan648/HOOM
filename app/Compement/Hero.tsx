@@ -13,7 +13,7 @@ function Hero() {
       </div>
 
       {/* TOP HEADER / META DATA (Apparaît en premier) */}
-      <div className="opacity-0 animate-fade-up [animation-delay:100ms] relative z-20 flex justify-between items-center w-full border-b border-black/10 pb-6">
+      <div className="opacity-0 animate-fade-up [animation-delay:100ms] relative z-20 flex justify-between items-center w-full border-b border-yellow-600 pb-6">
         <span className="text-[10px] md:text-xs uppercase tracking-[0.3em] font-medium text-neutral-500">
           [ ARCHITECTURE DE L'APPRENTISSAGE ]
         </span>
@@ -38,7 +38,7 @@ function Hero() {
 
             {/* Ligne 2 */}
             <span className="block overflow-hidden w-max py-1">
-              <span className="block opacity-0 animate-reveal [animation-delay:350ms] font-sans italic font-extralight tracking-tighter text-neutral-400">
+              <span className="block opacity-0 animate-reveal [animation-delay:350ms] font-sans italic font-extralight tracking-tighter text-blue-600">
                 autrement
               </span>
             </span>
@@ -76,9 +76,7 @@ function Hero() {
 
         <div className="md:col-span-4 md:col-start-9 flex md:justify-end items-center h-full pt-2 md:pt-0">
           {/* Bouton interactif en CSS pur */}
-          <div className="group relative overflow-hidden rounded-full bg-blue-600 p-2 transition-all duration-500 ease-premium hover:scale-105 hover:shadow-xl active:scale-98">
-            <Button />
-          </div>
+         +100
         </div>
 
       </div>
