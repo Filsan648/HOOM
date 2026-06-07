@@ -56,7 +56,7 @@ export default function HoomCyclesGrid() {
       {/* LIGNES DE GRILLE EN ARRIÈRE-PLAN */}
       <div className="absolute inset-0 pointer-events-none grid grid-cols-4 md:grid-cols-12 gap-0 px-6 md:px-12 opacity-[0.04]">
         {[...Array(13)].map((_, i) => (
-          <div key={i} className="h-full border-r border-black last:border-r-0" />
+          <div key={i} className="h-full border-r border-yellow-600 last:border-r-0" />
         ))}
       </div>
 
@@ -71,7 +71,7 @@ export default function HoomCyclesGrid() {
         <div className="md:col-span-8 md:col-start-2">
           <h2 className="text-4xl md:text-[4vw] font-serif font-light tracking-tight leading-tight text-[#1a1a1a]">
             Trois cycles. <br className="md:hidden" />
-            <span className="font-sans italic font-extralight text-neutral-400">Une seule</span> et unique réussite.
+            <span className="font-sans italic font-extralight text-blue-600">Une seule</span> et unique réussite.
           </h2>
         </div>
         <div className="hidden md:block md:col-span-2 md:col-start-11 h-[1px] bg-black/10 w-full mb-3" />
@@ -92,7 +92,7 @@ export default function HoomCyclesGrid() {
               <div className="space-y-6">
                 
                 <div className="flex justify-between items-baseline">
-                  <h3 className="text-2xl md:text-[1.8vw] font-serif font-normal tracking-tight text-[#1a1a1a]">
+                  <h3 className="text-2xl md:text-[1.8vw] font-serif font-normal tracking-tight text-blue-600">
                     {card.level}
                   </h3>
                   <span className="text-[10px] font-mono text-neutral-400">[0{card.id}]</span>
@@ -110,7 +110,7 @@ export default function HoomCyclesGrid() {
                     const IconComponent = (Icons as any)[feat.icon] || Icons.HelpCircle;
                     return (
                       <div key={i} className="flex gap-4 items-start group/item">
-                        <div className="p-2 rounded-full bg-white border border-black/[0.06] text-neutral-500 transition-colors duration-300 group-hover:border-black/20 group-hover:text-black">
+                        <div className="p-2 rounded-full bg-white border border-black/[0.06] text-blue-500 transition-colors duration-300 group-hover:border-black/20 group-hover:text-black">
                           <IconComponent size={14} strokeWidth={1.5} />
                         </div>
                         <div className="space-y-0.5">

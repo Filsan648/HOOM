@@ -2,12 +2,12 @@ import { ArrowUpRight } from "lucide-react";
 
 export default function PreFooter() {
   return (
-    <section className="relative w-full bg-[#fcfbf9] text-[#1a1a1a] py-32 md:py-48 border-b border-black/5 overflow-hidden font-sans select-none">
+    <section className="relative w-full bg-blue-600 rounded-b-[200px] text-[#1a1a1a] py-32 md:py-48  overflow-hidden font-sans select-none">
       
       {/* LIGNES DE GRILLE DISCRETES EN ARRIÈRE-PLAN */}
       <div className="absolute inset-0 pointer-events-none grid grid-cols-4 md:grid-cols-12 gap-0 px-6 md:px-12 opacity-[0.03]">
         {[...Array(13)].map((_, i) => (
-          <div key={i} className="h-full border-r border-black last:border-r-0" />
+          <div key={i} className="h-full border-r border-blue-600 last:border-r-0" />
         ))}
       </div>
 
