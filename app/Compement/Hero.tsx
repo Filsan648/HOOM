@@ -1,85 +1,107 @@
-import BackgroundImage from "../assets/BackroundImageHero.png"; 
-import Button from "../utilis/Button"; 
+import BackgroundImage from "../assets/BackgroundImage.png";
+import Button from "../utilis/Button";
 
 function Hero() {
   return (
-    <section className="relative w-full min-h-screen bg-[#fcfbf9] text-[#1a1a1a] overflow-hidden flex flex-col justify-between p-6 md:p-12 font-sans select-none">
+    <section className="relative w-full min-h-screen  bg-[#fcfbf9] text-[#1a1a1a] overflow-hidden flex flex-col justify-between p-6 md:p-12 font-sans select-none">
+
+
+
+
+
+      {/* 3. CORE ZONE (Contenu Principal en split asymétrique) */}
+      <div className="relative z-20 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center w-full my-auto py-12">
+
+        {/* --- BLOC TEXTE & ACTIONS (7 Colonnes) --- */}
+        <div className="lg:col-span-7 flex flex-col justify-center h-full">
+          <div>
+            {/* Titre avec lettrines de précision */}
+            <h1 className="text-[11vw] md:text-[6.5vw] font-serif font-light leading-[0.95] tracking-tight text-[#1a1a1a]">
+              <span className="block overflow-hidden py-1">
+                <span className="block opacity-0 animate-reveal w-max [animation-delay:200ms] will-change-transform">
+          HOOM   
+                </span>
+              </span>
+              <span className="block  overflow-hidden py-1">
+                <span className="block opacity-0 animate-reveal [animation-delay:400ms] will-change-transform">
+
+
+                </span>
+              </span>
+            </h1>
+
+            <p className="mt-8 max-w-xl text-base md:text-lg text-neutral-500 font-light leading-relaxed opacity-0 animate-fade-up [animation-delay:650ms]">
+              Réinvente les codes de la réussite. Découvrez une expérience
+              d’apprentissage ultra-personnalisée et interactive, calibrée pour
+              propulser vos compétences à votre propre rythme.
+            </p>
+          </div>
+
+          {/* Call To Action */}
+          <div className="mt-10 opacity-0 animate-fade-up [animation-delay:800ms]">
+            <Button />
+          </div>
+        </div>
+
+        {/* --- BLOC IPHONE MOCKUP LUXE (5 Colonnes) --- */}
+        <div className="lg:col-span-5 flex justify-center lg:justify-end items-center relative opacity-0 animate-image [animation-delay:700ms]">
+
+          {/* Aura lumineuse diffuse derrière l'iPhone */}
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-72 h-72 bg-blue-100 rounded-full blur-[100px] pointer-events-none -z-10 opacity-60" />
+
+          {/* Conteneur iPhone avec micro-interactions et inclinaison */}
+          <div className="relative group w-full max-w-[320px] md:max-w-[340px] transition-all duration-700 ease-out hover:scale-[1.02] hover:-rotate-1">
+
+            {/* Badge flottant Awwwards n°1 */}
+            <div className="absolute -left-10 top-1/4 z-30 bg-white/80 backdrop-blur-md border border-black/5 px-4 py-2.5 rounded-2xl shadow-xl shadow-black/[0.03] flex items-center gap-3 animate-bounce [animation-duration:4s]">
+              <div className="group bg-transparent p-1 transition-colors duration-30 flex flex-col justify-between min-h-[80px]">
+            <h3 className="text-3xl md:text-4xl font-light font-serif tracking-tight text-[#1a1a1a] transition-transform duration-300 group-hover:-translate-y-0.5">
+              600  +
+            </h3>
+            <p className="">
+              Étudiants
+            </p>
+          </div>
+            </div>
+
+            {/* Badge flottant Awwwards n°2 */}
+            <div className="absolute -right-8 flex bottom-1/4 z-30 text-white px-4 py-3  backdrop-blur-md border border-black/5 rounded-2xl shadow-2xl  transition-transform duration-500 group-hover:translate-y-[-5px]">
+              
+               <span className="text-amber-400 text-sm animate-pulse">✦</span>
+              <span className="text-[10px] uppercase tracking-wider font-semibold text-[#1a1a1a]">4.8  Satisfaction</span>
+              
+              
+                
+            </div>
+
+            {/* Châssis Premium de l'iPhone Mockup */}
+            <div className="relative mx-auto border-[10px]  rounded-[50px] shadow-[0_25px_60px_-15px_rgba(0,0,0,0.3)] bg-[#1a1a1a] p-1 overflow-hidden aspect-[9/19.5]">
+
+              {/* Dynamic Island (Encoche iPhone) */}
+              <div className="absolute top-3 left-1/2 -translate-x-1/2 w-24 h-4 bg-black rounded-full z-30 flex items-center justify-end px-2">
+                <div className="w-1.5 h-1.5 rounded-full bg-neutral-900 border border-neutral-800" />
+              </div>
+
+              {/* L'image du Mockup */}
+              <div className="w-full h-full rounded-[38px] overflow-hidden bg-neutral-100 relative">
+                <img
+                  src={BackgroundImage}
+                  alt="Application HOOM sur iPhone"
+                  className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                />
+                {/* Reflet de vitre haut de gamme */}
+                <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/10 to-transparent pointer-events-none" />
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      {/* 4. FOOTER GRID : LES STATISTIQUES "BENTO" */}
       
-      {/* LIGNES DE GRILLE STRUCTURELLES */}
-      <div className="absolute inset-0 pointer-events-none grid grid-cols-4 md:grid-cols-12 gap-0 px-6 md:px-12 opacity-[0.04]">
-        {[...Array(13)].map((_, i) => (
-          <div key={i} className="h-full border-r border-black last:border-r-0" />
-        ))}
-      </div>
-
-      {/* TOP HEADER / META DATA (Apparaît en premier) */}
-      <div className="opacity-0 animate-fade-up [animation-delay:100ms] relative z-20 flex justify-between items-center w-full border-b border-yellow-600 pb-6">
-        <span className="text-[10px] md:text-xs uppercase tracking-[0.3em] font-medium text-neutral-500">
-          [ ARCHITECTURE DE L'APPRENTISSAGE ]
-        </span>
-        <span className="text-[10px] md:text-xs uppercase tracking-[0.3em] font-medium text-neutral-500">
-          HOOM ©2026
-        </span>
-      </div>
-
-      {/* MAIN CONTENT AREA */}
-      <div className="relative z-20 grid grid-cols-1 md:grid-cols-12 gap-8 items-end mt-16 md:mt-0 mb-auto md:mb-0 w-full">
-        
-        {/* TITRE MASSIF ÉDITORIAL AVEC EFFET MASQUE (REVEAL) */}
-        <div className="md:col-span-10 lg:col-span-11 ">
-          <h1 className="text-[12vw] md:text-[8vw] font-serif font-light leading-[0.9] tracking-tight text-[#1a1a1a]">
-            
-            {/* Ligne 1 */}
-            <span className="block overflow-hidden w-max py-1">
-              <span className="block opacity-0 animate-reveal [animation-delay:200ms]">
-                Apprenez
-              </span>
-            </span>
-
-            {/* Ligne 2 */}
-            <span className="block overflow-hidden w-max py-1">
-              <span className="block opacity-0 animate-reveal [animation-delay:350ms] font-sans italic font-extralight tracking-tighter text-blue-600">
-                autrement
-              </span>
-            </span>
-
-            {/* Ligne 3 */}
-            <span className="block overflow-hidden w-max py-1">
-              <span className="block opacity-0 animate-reveal [animation-delay:500ms]">
-                <span className="font-sans font-thin text-neutral-300 hidden md:inline"> — </span> 
-                évoluez <span className="font-serif italic font-normal text-blue-600">sans limites.</span>
-              </span>
-            </span>
-
-          </h1>
-        </div>
-
-        {/* IMAGE FLOTTANTE ASYMÉTRIQUE (Effet d'entrée + Hover fluide) */}
-        <div className="opacity-0 animate-image [animation-delay:650ms] absolute top-[-10%] right-[-5%] w-[70vw] md:w-[40vw] h-[45vh] md:h-[65vh] pointer-events-auto z-0 mix-blend-multiply group/img cursor-pointer">
-          <img 
-            src={BackgroundImage} 
-            alt="HOOM Concept" 
-            className="w-full h-full object-cover rounded-2xl filter sepia-[15%] contrast-[1.05] saturate-[0.85] transition-all duration-1000 ease-premium group-hover/img:scale-105 group-hover/img:filter-none"
-          />
-        </div>
-
-      </div>
-
-      {/* PARAGRAPHE + BOUTON EN BAS */}
-      <div className="opacity-0 animate-fade-up [animation-delay:800ms] relative z-20 grid grid-cols-1 md:grid-cols-12 gap-6 w-full border-t border-black/10 pt-8 items-start">
-        
-        <div className="md:col-span-5 lg:col-span-4">
-          <p className="text-sm md:text-base text-neutral-600 font-light leading-relaxed tracking-wide">
-            HOOM vous accompagne vers la réussite en vous offrant une expérience d’apprentissage personnalisée, interactive et adaptée à vos besoins pour progresser efficacement à votre rythme.
-          </p>
-        </div>
-
-        <div className="md:col-span-4 md:col-start-9 flex md:justify-end items-center h-full pt-2 md:pt-0">
-          {/* Bouton interactif en CSS pur */}
-         +100
-        </div>
-
-      </div>
+    
 
     </section>
   );
