@@ -2,6 +2,7 @@ import defaultImage from "../assets/7.jpeg";
 import { ArrowUpRight } from "lucide-react";
 
 interface FonctionalityCompementProps {
+  id: number;
   className?: string;
   image?: string;
   title: string;
@@ -11,6 +12,7 @@ interface FonctionalityCompementProps {
 }
 
 function FonctionalityCompement({ 
+  id,
   className = "", 
   image, 
   title, 
@@ -29,7 +31,7 @@ function FonctionalityCompement({
         
         {/* INDEX NUMÉRIQUE CHIC */}
         <div className={`hidden md:block md:col-span-1 text-xs font-mono text-neutral-400 self-start pt-2 ${reverse ? 'md:order-12 md:text-right' : ''}`}>
-          [{index}]
+          [{id.toString().padStart(2, '0')}]
         </div>
 
         {/* COLONNE TEXTE */}
@@ -47,14 +49,14 @@ function FonctionalityCompement({
           
           {/* Bouton style Galerie d'Art avec interaction de la ligne */}
           <div className="inline-flex items-center gap-2 cursor-pointer pt-4 relative group/btn">
-            <span className="text-xs uppercase tracking-[0.2em] font-medium text-neutral-800 transition-colors duration-300 group-hover/btn:text-amber-600">
+            <span className="text-xs uppercase tracking-[0.2em] font-medium text-neutral-800 transition-colors duration-300 group-hover/btn:text-blue-600">
               Explorer le module
             </span>
-            <ArrowUpRight className="w-4 h-4 text-neutral-400 transition-all duration-300 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 group-hover/btn:text-amber-600" />
+            <ArrowUpRight className="w-4 h-4 text-neutral-400 transition-all duration-300 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 group-hover/btn:text-black" />
             
             {/* Ligne sous le bouton */}
             <span className="absolute bottom-[-4px] left-0 w-full h-[1px] bg-black/10 origin-right scale-x-100 transition-transform duration-500 group-hover/btn:scale-x-0" />
-            <span className="absolute bottom-[-4px] left-0 w-full h-[1px] bg-amber-600 origin-left scale-x-0 transition-transform duration-500 group-hover/btn:scale-x-100" />
+            <span className="absolute bottom-[-4px] left-0 w-full h-[1px] bg-black origin-left scale-x-0 transition-transform duration-500 group-hover/btn:scale-x-100" />
           </div>
 
         </div>

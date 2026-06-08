@@ -48,7 +48,7 @@ function About() {
   return (
     <section 
       ref={sectionRef}
-      className="relative w-full min-h-screen bg-[#fcfbf9] text-[#1a1a1a] overflow-hidden flex flex-col justify-between p-6 md:p-12 font-sans select-none border-t border-blue-600/60"
+      className="relative w-full min-h-screen bg-[#fcfbf9] text-[#1a1a1a] overflow-hidden flex flex-col justify-between p-6 md:p-12 font-sans select-none"
     >
       
       {/* LIGNES DE GRILLE STRUCTURELLES */}
@@ -132,25 +132,7 @@ function About() {
         </div>
       </div>
 
-      {/* SECTION FOOTER ACCENT */}
-      <div className={`relative z-20 grid grid-cols-1 md:grid-cols-12 gap-6 w-full border-t border-black/10 pt-8 items-end transition-all duration-1000 delay-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
-        <div className="md:col-span-4">
-          <p className="text-[10px] uppercase tracking-[0.2em] text-neutral-400">
-            © HOOM ÉDUCATION — ALL RIGHTS RESERVED
-          </p>
-        </div>
-        
-        {/* Lien interactif Awwwards */}
-        <div className="md:col-span-4 md:col-start-9 flex md:justify-end">
-          <a href="#discover" className="group flex items-center gap-2 text-[11px] uppercase tracking-[0.2em] font-medium text-neutral-800 hover:text-blue-600 transition-colors duration-300">
-            Découvrir notre méthode
-            <div className="overflow-hidden w-4 h-4 relative">
-              <ArrowUpRight className="w-4 h-4 transition-transform duration-500 cubic-bezier(0.16, 1, 0.3, 1) group-hover:translate-x-4 group-hover:-translate-y-4 absolute top-0 left-0" />
-              <ArrowUpRight className="w-4 h-4 transition-transform duration-500 cubic-bezier(0.16, 1, 0.3, 1) -translate-x-4 translate-y-4 group-hover:translate-x-0 group-hover:translate-y-0 text-blue-600 absolute top-0 left-0" />
-            </div>
-          </a>
-        </div>
-      </div>
+
 
     </section>
   );

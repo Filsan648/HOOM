@@ -75,7 +75,7 @@ export default function Menue() {
         <div
           className={`
             absolute top-[-120px] left-[10%]
-            w-[350px] h-[350px]
+            w-[350px] h-[200px]
             rounded-full blur-[120px]
             transition-all duration-700
             ${
@@ -89,7 +89,7 @@ export default function Menue() {
         <div
           className={`
             absolute top-[-100px] right-[10%]
-            w-[300px] h-[300px]
+            w-[300px] h-[200px]
             rounded-full blur-[120px]
             transition-all duration-700
             ${
