@@ -1,15 +1,14 @@
 import { ArrowUpRight } from "lucide-react";
-
+import Faq from "./faq";
 export default function PreFooter() {
   return (
-    <section className="relative w-full bg-blue-600 rounded-b-[200px] text-[#1a1a1a] py-32 md:py-48  overflow-hidden font-sans select-none">
+    <section className="relative w-full bg-black rounded-b-[200px] text-[#1a1a1a] py-32 md:py-48  overflow-hidden font-sans select-none">
       
-      {/* LIGNES DE GRILLE DISCRETES EN ARRIÈRE-PLAN */}
-      <div className="absolute inset-0 pointer-events-none grid grid-cols-4 md:grid-cols-12 gap-0 px-6 md:px-12 opacity-[0.03]">
-        {[...Array(13)].map((_, i) => (
-          <div key={i} className="h-full border-r border-blue-600 last:border-r-0" />
-        ))}
-      </div>
+       {/* Background Glows (Style Awwwards immersif) */}
+      <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-blue-600/10 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-indigo-600/10 rounded-full blur-[100px] pointer-events-none" />
+    <Faq/>
+        
 
       <div className="relative z-10 w-full px-6 md:px-12">
         <div className="max-w-5xl mx-auto text-center space-y-12">
@@ -23,14 +22,14 @@ export default function PreFooter() {
           </div>
 
           {/* TON TITRE DE L'IMAGE - REFAÇONNÉ EN TYPO ÉDITORIALE */}
-          <h2 className="text-4xl sm:text-6xl md:text-7xl lg:text-[5.5vw] font-serif font-light text-[#1a1a1a] tracking-tight leading-[1.1] max-w-4xl mx-auto">
+          <h2 className="text-4xl sm:text-6xl md:text-7xl lg:text-[5.5vw] font-serif font-light text-white tracking-tight leading-[1.1] max-w-4xl mx-auto">
             Prêt à transformer votre <br />
             parcours <span className="italic font-normal text-blue-600">scolaire</span> ?
           </h2>
 
           {/* TON SOUSTITRE DE L'IMAGE - ÉPURÉ */}
           <p className="text-sm md:text-base text-neutral-500 font-light tracking-wide max-w-xl mx-auto leading-relaxed">
-            Rejoignez des centaines d'étudiants qui ont choisi <span className="font-medium text-black">Hoom</span> pour réussir.
+            Rejoignez des centaines d'étudiants qui ont choisi <span className="font-medium text-white">Hoom</span> pour réussir.
           </p>
 
           {/* TES DEUX ACTIONS DE L'IMAGE - EN DUO BOUTONS HAUTE COUTURE */}

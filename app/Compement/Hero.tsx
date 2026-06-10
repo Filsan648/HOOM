@@ -1,15 +1,11 @@
-import BackgroundImage from "../assets/BackgroundImage.png";
+import BackgroundImage from "../assets/Fonctionallity/4.jpeg";
 import Button from "../utilis/Button";
-
+import PhoneMockup from "../utilis/Phonemockup";
 function Hero() {
   return (
     <section className="relative w-full min-h-screen  bg-[#fcfbf9] text-[#1a1a1a] overflow-hidden flex flex-col justify-between p-6 md:p-12 font-sans select-none">
 
-
-
-
-
-      {/* 3. CORE ZONE (Contenu Principal en split asymétrique) */}
+      {/*  CORE ZONE (Contenu Principal en split asymétrique) */}
       <div className="relative z-20 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center w-full my-auto py-12">
 
         {/* --- BLOC TEXTE & ACTIONS (7 Colonnes) --- */}
@@ -75,32 +71,14 @@ function Hero() {
             </div>
 
             {/* Châssis Premium de l'iPhone Mockup */}
-            <div className="relative mx-auto border-[10px]  rounded-[50px] shadow-[0_25px_60px_-15px_rgba(0,0,0,0.3)] bg-[#1a1a1a] p-1 overflow-hidden aspect-[9/19.5]">
+             <PhoneMockup image={BackgroundImage} />
 
-              {/* Dynamic Island (Encoche iPhone) */}
-              <div className="absolute top-3 left-1/2 -translate-x-1/2 w-24 h-4 bg-black rounded-full z-30 flex items-center justify-end px-2">
-                <div className="w-1.5 h-1.5 rounded-full bg-neutral-900 border border-neutral-800" />
-              </div>
-
-              {/* L'image du Mockup */}
-              <div className="w-full h-full rounded-[38px] overflow-hidden bg-neutral-100 relative">
-                <img
-                  src={BackgroundImage}
-                  alt="Application HOOM sur iPhone"
-                  className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-                />
-                {/* Reflet de vitre haut de gamme */}
-                <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/10 to-transparent pointer-events-none" />
-              </div>
-
-            </div>
           </div>
 
         </div>
       </div>
 
-      {/* 4. FOOTER GRID : LES STATISTIQUES "BENTO" */}
-      
+   
     
 
     </section>
