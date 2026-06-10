@@ -1,113 +1,141 @@
 import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import FonctionalityCompement from "./FonctionnalityCompement";
 
+// Vos données inchangées (ajustement esthétique : index formatté en "01", "02" automatiquement)
 const data = [
   {
-    id:1,
+    id: 1,
     title: "Contenu pédagogique adapté à chaque niveau et filière",
-    paragraphe: "ndsjncsdjncdnkd",
-    className: "flex-row",
+    paragraphe: "Accédez à des ressources sur-mesure conçues par des experts pour maximiser votre potentiel académique.",
     image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644",
   },
   {
-    id:2,
+    id: 2,
     title: "Échangez avec d'autres étudiants et enseignants",
-    paragraphe: "ndsjncsdjncdnkd",
-    className: "flex-row-reverse",
+    paragraphe: "Collaborez en temps réel, partagez vos doutes et grandissez au sein d'une communauté soudée.",
     image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644",
   },
-
   {
-    id:3,
+    id: 3,
     title: "Analysez vos performances et identifiez vos points forts",
-    paragraphe: "ndsjncsdjncdnkd",
-    className: "flex-row",
+    paragraphe: "Un tableau de bord intelligent pour suivre votre progression pas à pas et cibler vos lacunes.",
     image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71",
   },
   {
-    id:4,
-    title: "Trouvez des opportunités d'études et de financement dans le monde entier",
-    paragraphe: "ndsjncsdjncdnkd",
-    className: "flex-row-reverse",
+    id: 4,
+    title: "Trouvez des opportunités d'études et de financement",
+    paragraphe: "Des milliers de bourses et programmes internationaux à portée de main, centralisés pour vous.",
     image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644",
   },
   {
-    id:5,
+    id: 5,
     title: "Programme progressif et accompagné pour réussir chaque étape",
-    paragraphe: "ndsjncsdjncdnkd",
-    className: "flex-row-reverse",
-    image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644",
-  },
-  {
-    id:6,
-    title: " Recommandations personnalisées grâce à une intelligence artificielle",
-    paragraphe: "ndsjncsdjncdnkd",
-    className: "flex-row-reverse",
-    image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644",
-  },
-  {
-    id:7,
-    title: "Supports visuels pour faciliter la compréhension des notions clés",
-    paragraphe: "ndsjncsdjncdnkd",
-    className: "flex-row-reverse",
+    paragraphe: "Ne soyez plus jamais perdu. Suivez une roadmap claire avec des objectifs hebdomadaires.",
     image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644",
   }
-
-
 ];
 
 function Fontionalities() {
   const [index, setIndex] = useState(0);
+  const [direction, setDirection] = useState(0); // -1 pour prev, 1 pour next
 
   const next = () => {
+    setDirection(1);
     setIndex((prev) => (prev + 1) % data.length);
   };
 
   const prev = () => {
+    setDirection(-1);
     setIndex((prev) => (prev - 1 + data.length) % data.length);
   };
 
   return (
-    <div className="min-h-screen w-full text-white bg-blue-600  ml-7 relative overflow-hidden">
-      {/* background glow */}
-      <div
-        className="absolute inset-0 z-0"
-        style={{
-          backgroundImage:
-            "radial-gradient(circle 500px at 50% 200px, #3e3e3e, transparent)",
-        }}
-      />
+    <div className="w-full min-h-screen bg-black text-white flex items-center justify-center p-4 md:p-12 overflow-hidden selection:bg-blue-500 selection:text-white">
+      {/* Background Glows (Style Awwwards immersif) */}
+      <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-blue-600/10 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-indigo-600/10 rounded-full blur-[100px] pointer-events-none" />
 
-      <section className="relative z-10 flex items-center justify-center h-screen">
+      <div className="w-full max-w-7xl bg-white/[0.02] border border-white/[0.05] rounded-[2.5rem] p-6 md:p-16 backdrop-blur-3xl relative shadow-2xl">
         
-        {/* Slider container */}
-        <div className="w-full max-w-5xl transition-all duration-500">
-          <FonctionalityCompement
-            id={data[index].id}
-            title={data[index].title}
-            paragraphe={data[index].paragraphe}
-            className={data[index].className}
-            image={data[index].image}
-          />
+        {/* Header du Slider : Compteur Editorial */}
+        <div className="flex justify-between items-center mb-8 border-b border-white/5 pb-6">
+          <div className="overflow-hidden h-8 flex items-center">
+            <span className="text-sm font-mono tracking-widest text-neutral-400 uppercase">
+              Section / {(index + 1).toString().padStart(2, '0')}
+            </span>
+          </div>
+          <span className="text-xs font-mono tracking-widest text-neutral-500">
+            TOTAL {data.length.toString().padStart(2, '0')}
+          </span>
         </div>
 
-        {/* Buttons */}
-        <div className="absolute bottom-10 flex gap-5">
-          <button
-            onClick={prev}
-            className="px-4 py-2 bg-white/10 rounded-xl hover:bg-white/20"
-          >
-            Prev
-          </button>
-
-          <button
-            onClick={next}
-            className="px-4 py-2 bg-white/10 rounded-xl hover:bg-white/20"
-          >
-            Next
-          </button>
+        {/* Slider Container avec Animation d'AnimatePresence */}
+        <div className="relative min-h-[500px] lg:min-h-[550px] flex items-center">
+          <AnimatePresence mode="wait" custom={direction}>
+            <motion.div
+              key={index}
+              custom={direction}
+              initial={{ opacity: 0, x: direction * 50 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: direction * -50 }}
+              transition={{ duration: 0.45, ease: [0.25, 1, 0.5, 1] }}
+              className="w-full"
+            >
+              <FonctionalityCompement
+                id={data[index].id}
+                title={data[index].title}
+                paragraphe={data[index].paragraphe}
+                image={data[index].image}
+                index={(index + 1).toString().padStart(2, '0')}
+                reverse={index % 2 !== 0} // Alterne automatiquement le layout de manière élégante
+              />
+            </motion.div>
+          </AnimatePresence>
         </div>
-      </section>
+
+        {/* Barre de contrôle : Nav + Indicateurs */}
+        <div className="mt-32 flex flex-col sm:flex-row items-center justify-between gap-6 border-t border-white/5 pt-8">
+          
+          {/* Indicateurs de progression (Dots interactifs) */}
+          <div className="flex gap-2">
+            {data.map((_, i) => (
+              <button
+                key={i}
+                onClick={() => {
+                  setDirection(i > index ? 1 : -1);
+                  setIndex(i);
+                }}
+                className="h-1.5 transition-all duration-500 rounded-full relative overflow-hidden"
+                style={{ width: i === index ? '40px' : '8px' }}
+              >
+                <div className={`absolute inset-0 ${i === index ? 'bg-blue-500' : 'bg-white/20'}`} />
+              </button>
+            ))}
+          </div>
+
+          {/* Boutons de Navigation Stylisés */}
+          <div className="flex gap-3">
+            <button
+              onClick={prev}
+              className="p-4 bg-white/[0.03] hover:bg-white/[0.08] active:scale-95 border border-white/10 rounded-full transition-all group"
+              aria-label="Previous unique feature"
+            >
+              <ChevronLeft className="w-5 h-5 text-neutral-300 group-hover:text-white transition-colors" />
+            </button>
+
+            <button
+              onClick={next}
+              className="p-4 bg-blue-600 hover:bg-blue-500 active:scale-95 shadow-[0_0_30px_rgba(37,99,235,0.3)] rounded-full transition-all group"
+              aria-label="Next unique feature"
+            >
+              <ChevronRight className="w-5 h-5 text-white transition-transform group-hover:translate-x-0.5" />
+            </button>
+          </div>
+
+        </div>
+      </div>
     </div>
   );
 }

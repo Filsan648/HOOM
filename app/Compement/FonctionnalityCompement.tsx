@@ -1,83 +1,94 @@
-import defaultImage from "../assets/7.jpeg";
 import { ArrowUpRight } from "lucide-react";
+import PhoneMockup from "../utilis/Phonemockup";
 
 interface FonctionalityCompementProps {
   id: number;
-  className?: string;
   image?: string;
   title: string;
   paragraphe: string;
-  index?: string; // Ajout d'un index optionnel (ex: "01", "02") pour le look éditorial
-  reverse?: boolean; // Pour alterner facilement l'ordre image/texte d'une section à l'autre
+  index: string; 
+  reverse?: boolean; 
 }
 
 function FonctionalityCompement({ 
   id,
-  className = "", 
   image, 
   title, 
   paragraphe,
-  index = "01",
+  index,
   reverse = false 
 }: FonctionalityCompementProps) {
   
   return (
-    <section 
-      className={`group relative w-full border-b border-black/10 bg-[#fcfbf9] text-[#1a1a1a] transition-colors duration-700 hover:bg-[#f5f4f0] px-6 md:px-12 py-16 md:py-24 font-sans overflow-hidden ${className}`}
-    >
-      
-      {/* STRUCTURE GRID ASYMÉTRIQUE */}
-      <div className="relative z-10 grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-center">
+    <section
+      className={`
+        w-full
+        grid grid-cols-1 lg:grid-cols-12
+        items-center
         
-        {/* INDEX NUMÉRIQUE CHIC */}
-        <div className={`hidden md:block md:col-span-1 text-xs font-mono text-neutral-400 self-start pt-2 ${reverse ? 'md:order-12 md:text-right' : ''}`}>
-          [{id.toString().padStart(2, '0')}]
-        </div>
+        gap-10 lg:gap-16
+      `}
+    >
+      {/* TEXTE (Prend 7 colonnes sur 12) */}
+      <div className={`space-y-6 lg:col-span-7  ${reverse ? 'lg:order-last' : ''}`}>
+        
+        {/* Titre Principal Éditorial */}
+   <h2 className="text-3xl md:text-4xl text-white font-serif font-light leading-[1.1] tracking-tight break-words">
 
-        {/* COLONNE TEXTE */}
-        <div className={`col-span-1 md:col-span-5 space-y-6 ${reverse ? 'md:col-start-7 md:order-2' : 'md:col-start-2'}`}>
-          
-          {/* Titre avec mix de polices Serif/Sans-serif */}
-          <h2 className="text-3xl md:text-[3.2vw] font-serif font-light leading-[1.1] tracking-tight text-[#1a1a1a]">
-            {title.split(" ").map((word, i) => (
-              <span key={i} className={i === 1 ? "font-sans italic font-extralight text-blue-600 mr-2" : "mr-2"}>
-                {word}{" "}
-              </span>
-            ))}
-          </h2>
-         
-          
-          {/* Bouton style Galerie d'Art avec interaction de la ligne */}
-          <div className="inline-flex items-center gap-2 cursor-pointer pt-4 relative group/btn">
-            <span className="text-xs uppercase tracking-[0.2em] font-medium text-neutral-800 transition-colors duration-300 group-hover/btn:text-blue-600">
+      {title.split(" ").map((word, i) => (
+
+        <span
+
+          key={i}
+
+          className={
+
+            i === 1
+
+              ? "font-sans italic font-extralight text-blue-600 mr-2"
+
+              : "mr-2"
+
+          }
+
+        >
+
+          {word}
+
+        </span>
+
+      ))}
+
+    </h2>
+        {/* Paragraphe descriptif indispensable au design global */}
+        <p className="text-base md:text-lg text-neutral-400 font-light leading-relaxed max-w-xl">
+          {paragraphe}
+        </p>
+
+        {/* Bouton d'action Premium (Style minimaliste à micro-interaction) */}
+        <div className="pt-4">
+          <button className="inline-flex items-center gap-3 cursor-pointer group/btn bg-white/[0.03] hover:bg-blue-600 border border-white/5 hover:border-blue-500 px-6 py-3 rounded-full transition-all duration-300">
+            <span className="text-xs uppercase tracking-[0.2em] font-semibold text-neutral-200 group-hover/btn:text-white transition-colors">
               Explorer le module
             </span>
-            <ArrowUpRight className="w-4 h-4 text-neutral-400 transition-all duration-300 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 group-hover/btn:text-black" />
-            
-            {/* Ligne sous le bouton */}
-            <span className="absolute bottom-[-4px] left-0 w-full h-[1px] bg-black/10 origin-right scale-x-100 transition-transform duration-500 group-hover/btn:scale-x-0" />
-            <span className="absolute bottom-[-4px] left-0 w-full h-[1px] bg-black origin-left scale-x-0 transition-transform duration-500 group-hover/btn:scale-x-100" />
-          </div>
-
+            <div className="w-7 h-7 rounded-full bg-white/5 flex items-center justify-center group-hover/btn:bg-white/20 transition-colors">
+              <ArrowUpRight className="w-3.5 h-3.5 text-white group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform" />
+            </div>
+          </button>
         </div>
-
-        {/* COLONNE IMAGE ARCHITECTURALE */}
-        <div className={`col-span-1 md:col-span-5 ${reverse ? 'md:col-start-2 md:col-span-5 md:order-1' : 'md:col-start-8'}`}>
-          <div className="relative overflow-hidden w-full aspect-[4/3] md:aspect-[16/11] bg-neutral-100 border border-black/[0.04]">
-            
-            {/* Overlay subtil qui s'estompe au survol global de la section */}
-            <div className="absolute inset-0 bg-[#fcfbf9]/10 z-10 mix-blend-multiply transition-opacity duration-700 group-hover:opacity-0" />
-            
-            <img 
-              src={image } 
-              alt={title} 
-              className="w-full h-full object-cover transition-all duration-1000 ease-[cubic-bezier(0.25,1,0.5,1)] scale-100 filter contrast-[1.02] saturate-[0.9] group-hover:scale-105"
-            />
-          </div>
-        </div>
-
       </div>
 
+      {/* ZONE VISUELLE/IMAGE (Prend 5 colonnes sur 12) */}
+      <div className="lg:col-span-5 w-full h-[450px] md:h-[720px] relative group">
+        
+        {/* Halo de lumière derrière le mockup */}
+        <div className="absolute inset-0 bg-blue-500/5 rounded-full filter blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+        
+        {/* Conteneur du Mockup avec effet 3D léger au hover */}
+        <div className=" relative transform transition-all duration-500 ease-out group-hover:scale-[1.02] group-hover:-rotate-1 ">
+          {image && <PhoneMockup image={image} />}
+        </div>
+      </div>
     </section>
   );
 }
