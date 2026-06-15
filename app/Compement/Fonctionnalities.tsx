@@ -2,38 +2,38 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import FonctionalityCompement from "./FonctionnalityCompement";
-
+import Image from "../assets/image.png"
 // Vos données inchangées (ajustement esthétique : index formatté en "01", "02" automatiquement)
 const data = [
   {
     id: 1,
     title: "Contenu pédagogique adapté à chaque niveau et filière",
     paragraphe: "Accédez à des ressources sur-mesure conçues par des experts pour maximiser votre potentiel académique.",
-    image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644",
+    image: Image,
   },
   {
     id: 2,
     title: "Échangez avec d'autres étudiants et enseignants",
     paragraphe: "Collaborez en temps réel, partagez vos doutes et grandissez au sein d'une communauté soudée.",
-    image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644",
+    image: Image,
   },
   {
     id: 3,
     title: "Analysez vos performances et identifiez vos points forts",
     paragraphe: "Un tableau de bord intelligent pour suivre votre progression pas à pas et cibler vos lacunes.",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71",
+    image: Image,
   },
   {
     id: 4,
     title: "Trouvez des opportunités d'études et de financement",
     paragraphe: "Des milliers de bourses et programmes internationaux à portée de main, centralisés pour vous.",
-    image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644",
+    image: Image,
   },
   {
     id: 5,
     title: "Programme progressif et accompagné pour réussir chaque étape",
     paragraphe: "Ne soyez plus jamais perdu. Suivez une roadmap claire avec des objectifs hebdomadaires.",
-    image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644",
+    image: Image,
   }
 ];
 

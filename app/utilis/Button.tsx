@@ -1,14 +1,16 @@
 import { ArrowUpRight } from 'lucide-react';
 
-function Button() {
+function Button({text1, text2,icone1,icone2}:{text1:string, text2:string,icone1:any,icone2:any}) {
+ 
   return (
     <div className="flex items-center gap-4 select-none">
       
       {/* SECONDARY BUTTON (Télécharger) - Placé en premier pour un équilibre visuel ou inversable */}
+     
       <a href="#services" className="hidden sm:inline-block">
         <button className="group relative overflow-hidden rounded-full border border-black/20 bg-transparent px-6 py-3.5 text-black transition-colors duration-500 hover:border-black focus:outline-none">
           <span className="relative z-10 block text-[10px] uppercase tracking-[0.2em] font-medium transition-colors duration-500 group-hover:text-white">
-            Télécharger
+            {text1}
           </span>
           {/* Remplissage fluide du bas vers le haut au survol */}
           <span className="absolute inset-0 z-0 bg-black translate-y-full transition-transform duration-500 ease-[cubic-bezier(0.19,1,0.22,1)] group-hover:translate-y-0" />
@@ -19,7 +21,7 @@ function Button() {
       <a href="#about" className="inline-block">
         <button className="group relative overflow-hidden rounded-full bg-black px-6 py-3.5 text-white border border-black transition-transform duration-300 active:scale-95 focus:outline-none">
           <span className="relative z-10 flex items-center gap-2 text-[10px] uppercase tracking-[0.2em] font-semibold transition-colors duration-500 group-hover:text-black">
-            Se connecter
+            {text2}
             <div className="relative w-4 h-4 overflow-hidden">
               {/* Effet double flèche directionnelle typique Awwwards */}
               <ArrowUpRight
