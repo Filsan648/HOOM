@@ -9,7 +9,8 @@ const faqData = [
    question: "Qu'est-ce que Hoom ?",
  answer:"Hoom est une application éducative destinée aux élèves et étudiants francophones. Elle propose des quiz, des cours, des annales et des exercices pratiques alignés sur le programme du Bac, ainsi qu'un tuteur intelligent pour guider les révisions."
     },
-      {
+
+    {
     id: 2,
     question: "Comment télécharger et installer l'application ?",
     answer: "Hoom est disponible sur Google Play et l'App Store. Recherchez Hoom, téléchargez l'application, puis suivez les instructions pour créer votre compte.."

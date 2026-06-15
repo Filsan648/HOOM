@@ -26,7 +26,7 @@ const images = [
 ];
 
 function Gallerie() {
-  const containerRef = useRef(null);
+  const containerRef = useRef<HTMLDivElement | null>(null);
   const [showLeftBtn, setShowLeftBtn] = useState(false);
   const [showRightBtn, setShowRightBtn] = useState(true);
 
@@ -38,7 +38,7 @@ function Gallerie() {
     }
   };
 
-  const scroll = (direction) => {
+  const scroll = (direction: "left" | "right") => {
     if (containerRef.current) {
       const { clientWidth } = containerRef.current;
       const scrollAmount = direction === "left" ? -clientWidth * 0.6 : clientWidth * 0.6;

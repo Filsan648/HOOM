@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X } from "lucide-react";
+import { ArrowUpRight, Menu, X } from "lucide-react";
 import KyronetIcone from "../assets/HomLogos.png";
 import Button from "~/utilis/Button";
 
@@ -26,9 +26,7 @@ export default function Menue() {
 
   const links = [
     { label: "À propos", id: "about" },
-    { label: "Services", id: "services" },
-    { label: "Projets", id: "projects" },
-    { label: "Processus", id: "process" },
+    { label: "Fonctionnalités", id: "Fonctionnalite" },
     { label: "Témoignages", id: "testimonials" },
     { label: "FAQ", id: "faq" },
   ];
@@ -79,7 +77,7 @@ export default function Menue() {
 
           {/* DESKTOP CTA */}
           <div className="hidden lg:block cursor-magnetic">
-            <Button />
+            <Button text1="Télécharger" text2="Se connecter" icone1={undefined} icone2={<ArrowUpRight />} />
           </div>
 
           {/* MOBILE MENU TRIGGER */}
