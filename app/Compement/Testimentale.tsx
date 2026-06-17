@@ -67,12 +67,7 @@ export default function Testimonials() {
         
         {/* EN-TÊTE ÉDITORIAL ASYMÉTRIQUE */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-20 md:mb-28">
-          <div className="lg:col-span-4 flex flex-col justify-between">
-            <div className="flex items-center gap-2">
-              <span className="text-[10px] font-mono opacity-40">(05)</span>
-              <span className="text-xs uppercase tracking-[0.2em] font-medium text-neutral-500">Témoignages</span>
-            </div>
-          </div>
+         
           <div className="lg:col-span-8">
             <h2 className="text-3xl md:text-5xl lg:text-6xl font-serif font-light text-[#1a1a1a] tracking-tight leading-[1.1]">
               Ce que nos <span className="italic font-normal text-blue-600">étudiants</span> disent <br />

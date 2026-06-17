@@ -71,9 +71,7 @@ export default function Faq() {
         
         {/* COLONNE GAUCHE : Titre Éditorial Fixe */}
         <div className="lg:col-span-5 space-y-6 lg:sticky lg:top-32 h-fit">
-          <div className="inline-block px-3 py-1 bg-white/5 border border-white/10 rounded-full text-xs font-mono tracking-widest text-neutral-400 uppercase">
-            Questions fréquentes
-          </div>
+         
           <h2 className="text-4xl md:text-6xl font-light tracking-tight leading-[1.1]">
             Des réponses à vos <br />
             <span className="font-serif italic font-normal text-blue-400 bg-gradient-to-r from-blue-400 to-indigo-300 bg-clip-text text-transparent">

@@ -60,11 +60,6 @@ export default function HoomCyclesGrid() {
         ))}
       </div>
 
-      {/* META INFO TOP */}
-      <div className="relative z-20 flex justify-between items-center w-full pb-12">
-        <span className="text-[10px] md:text-xs uppercase tracking-[0.2em] text-neutral-400">[ 03 / OFFRE ]</span>
-        <span className="text-[10px] md:text-xs uppercase tracking-[0.2em] text-neutral-400">STRUCTURE CYCLES</span>
-      </div>
 
       {/* EN-TÊTE ÉDITORIAL DE LA SECTION */}
       <div className="relative z-20 w-full grid grid-cols-1 md:grid-cols-12 gap-6 mb-16 md:mb-24 items-end">

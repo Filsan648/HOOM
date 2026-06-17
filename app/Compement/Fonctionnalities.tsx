@@ -59,17 +59,7 @@ function Fontionalities() {
 
       <div className="w-full max-w-7xl bg-white/[0.02] border border-white/[0.05] rounded-[2.5rem] p-6 md:p-16 backdrop-blur-3xl relative shadow-2xl">
         
-        {/* Header du Slider : Compteur Editorial */}
-        <div className="flex justify-between items-center mb-8 border-b border-white/5 pb-6">
-          <div className="overflow-hidden h-8 flex items-center">
-            <span className="text-sm font-mono tracking-widest text-neutral-400 uppercase">
-              Section / {(index + 1).toString().padStart(2, '0')}
-            </span>
-          </div>
-          <span className="text-xs font-mono tracking-widest text-neutral-500">
-            TOTAL {data.length.toString().padStart(2, '0')}
-          </span>
-        </div>
+  
 
         {/* Slider Container avec Animation d'AnimatePresence */}
         <div className="relative min-h-[500px] lg:min-h-[550px] flex items-center">
