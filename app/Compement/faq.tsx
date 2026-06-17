@@ -16,15 +16,43 @@ const faqData = [
     answer: "Hoom est disponible sur Google Play et l'App Store. Recherchez Hoom, téléchargez l'application, puis suivez les instructions pour créer votre compte.."
   },
   {
-    id: 3,
-    question: "Quels types de ressources sont disponibles sur Hoom ?",
-    answer: "Fiches de révision, quiz interactifs, exercices corrigés, sujets des années précédentes, conseils d'examens, et modules de micro-apprentissage ajoutés régulièrement."
+     id: 3,
+    question:"Quels sont les contenus disponibles ?",
+    answer:"Fiches de révision, quiz interactifs, exercices corrigés, sujets des années précédentes, conseils d'examens, et modules de micro-apprentissage ajoutés régulièrement."   
+
   },
   {
     id: 4,
-    question: "L'intelligence artificielle remplace-t-elle les cours classiques ?",
-    answer: "Non, elle vient les compléter. L'IA agit comme un tuteur personnel disponible 24/7 pour identifier vos points faibles, vous suggérer des révisions ciblées et maximiser l'efficacité de votre temps d'étude."
-  }
+   question:" Comment fonctionne le paiement via Waafi ?",
+   answer:" Pour activer l'accès complet, envoyez le montant de l'abonnement au numéro Waafi : 77219608. Indiquez votre nom d'utilisateur ou numéro de téléphone dans le message. Après réception, vous recevrez une clé de produit par SMS ou e-mail à saisir dans l'app."
+  },
+  {id:5,
+   question: "Combien coûte l'abonnement ?",
+answer:"Plusieurs formules (mensuelle, semestrielle, familiale). Les tarifs sont visibles dans l'application. Le contenu de base est gratuit, l'abonnement Premium débloque tous les cours et exercices. Nous offrons des prix réduits aux étudiants, bien inférieurs au marché."  }
+,{
+  id:6,
+question:"  En combien de temps vais-je recevoir ma clé après paiement ?",
+
+answer:"Généralement sous 24 heures après le paiement Waafi. Si vous ne recevez rien passé ce délai, contactez le support."
+},
+{
+  id:7,
+question:"Que se passe-t-il si je perds ma clé de produit ?",
+answer:"Contactez l'assistance Hoom avec les détails du paiement (numéro Waafi et date). Nous vérifierons l'opération et vous fournirons une nouvelle clé."}
+,{
+  id:8,
+  question :"Puis-je accéder à l'application hors connexion ?",
+anser:"Oui. Vous pouvez télécharger des cours/exercices pour les consulter offline. La progression se synchronise dès le retour en ligne."},
+{
+  id:9,
+question:"L'application est-elle sécurisée pour les mineurs ?",
+answer:"Hoom intègre des contrôles parentaux et respecte la protection des données. Pas de publicité intrusive ni de contenu inapproprié."
+},
+{
+  id:10,
+question:"Qui contacter en cas de problème ?",
+answer:"Support : info@hoom.space • Téléphone/WhatsApp : 77219608 • Et sur nos réseaux sociaux officiels."
+}
 ];
 
 export default function Faq() {
@@ -58,7 +86,7 @@ export default function Faq() {
           
           {/* CTA de support au look minimaliste */}
           <div className="pt-4">
-            <a href="#contact" className="inline-flex items-center gap-2 text-sm text-neutral-400 hover:text-white transition-colors group cursor-magnetic">
+            <a href="#Contact" className="inline-flex items-center gap-2 text-sm text-neutral-400 hover:text-white transition-colors group cursor-magnetic">
               <span>Vous ne trouvez pas votre réponse ?</span>
               <span className="text-blue-400 underline underline-offset-4 group-hover:text-blue-300 transition-colors">Contactez-nous</span>
             </a>

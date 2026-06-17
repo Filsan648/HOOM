@@ -17,27 +17,27 @@ export default function Testimonials() {
   const testimonials: Testimonial[] = [
     {
       index: "01",
-      quote: "L'approche pédagogique de HOOM a complètement redéfini ma vision du développement. Les projets pratiques s'alignent exactement sur les exigences des meilleures agences internationales.",
-      author: "Filsan F. Youssouf",
-      role: "Software Engineer",
-      program: "Master IA & Modélisation",
-      year: "Promo 2025"
+      quote: "Grâce à Hoom, j'ai mieux compris les mathématiques et les sciences. Les QCM et les vidéos m'ont beaucoup aidée.",
+      author: "Ayan Mohamed",
+      role: "Etudiante",
+      program: "Terminal S",
+      year: ""
     },
     {
       index: "02",
-      quote: "Au-delà du code, c'est une véritable culture du design et du détail qui m'a été transmise. Chaque critique de projet nous pousse vers un standard d'excellence très élevé.",
-      author: "Alexandre Mercier",
-      role: "Creative Developer",
-      program: "Spécialisation Front-End",
-      year: "Promo 2026"
+      quote: "La plateforme est très utile pour les révisions. Les cours sont clairs, bien structurés et faciles d'accès.",
+      author: "Youssouf Ali",
+      role: "Etudiant",
+      program: "L1 informatique",
+      year: ""
     },
     {
       index: "03",
-      quote: "Une formation intense mais d'une clarté absolue. Les mentors ne se contentent pas de valider des acquis, ils nous apprennent à penser l'architecture logicielle comme une œuvre d'art.",
-      author: "Sofia Alami",
-      role: "Full-Stack Engineer",
-      program: "Architecture logicielle",
-      year: "Promo 2025"
+      quote: "J'adore l'interface et les fonctionnalités. C'est motivant et vraiment adapté à notre programme.",
+      author: "Fatouma HAsssan",
+      role: "Etudiante",
+      program: "Terminale ES",
+      year: ""
     }
   ];
 

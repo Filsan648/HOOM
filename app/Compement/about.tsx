@@ -47,6 +47,7 @@ function About() {
 
   return (
     <section 
+    id="about"
       ref={sectionRef}
       className="relative w-full min-h-screen bg-[#fcfbf9] text-[#1a1a1a] overflow-hidden flex flex-col justify-between p-6 md:p-12 font-sans select-none"
     >
