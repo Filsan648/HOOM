@@ -26,7 +26,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="relative w-full bg-[#fcfbf9] text-[#1a1a1a] pt-24 pb-12 font-sans select-none border-t border-black/10 overflow-hidden">
+    <footer id="Contact" className="relative w-full bg-[#fcfbf9] text-[#1a1a1a] pt-24 pb-12 font-sans select-none border-t border-black/10 overflow-hidden">
       
       {/* TRACE DE GRILLE INTERNE */}
       <div className="absolute inset-0 pointer-events-none grid grid-cols-4 md:grid-cols-12 gap-0 px-6 md:px-12 opacity-[0.02]">
@@ -57,7 +57,7 @@ export default function Footer() {
                 className="inline-flex items-end gap-2 text-xl md:text-2xl font-light tracking-tight hover:text-blue-600 transition-colors duration-300 group cursor-magnetic"
               >
                 <span className="border-b border-black/20 group-hover:border-blue-600 transition-colors duration-300">
-                  hello@hoom.education
+                  info@hoom.space
                 </span>
                 <ArrowUpRight size={20} className="text-neutral-400 group-hover:text-blue-600 group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-300" />
               </a>
@@ -106,11 +106,11 @@ export default function Footer() {
             <ul className="space-y-3 text-xs text-neutral-500 font-light leading-relaxed">
               <li>
                 <span className="block text-[9px] font-mono text-neutral-400 lowercase">téléphone</span>
-                <a href="tel:+33100000000" className="hover:text-black transition-colors">+33 (0)1 00 00 00 00</a>
+                <a href="tel:+33100000000" className="hover:text-black transition-colors">+253 77 12 96 08</a>
               </li>
               <li>
                 <span className="block text-[9px] font-mono text-neutral-400 lowercase">bureau</span>
-                <span>8 Rue de l'Éducation<br />75005 Paris, France</span>
+                <span>Djibouti , Djibouti Ville Barwaqo 2</span>
               </li>
             </ul>
           </div>
@@ -145,11 +145,7 @@ export default function Footer() {
               ))}
             </div>
           </div>
-          <div className="flex gap-2">
-            <span>Conçu avec soin</span>
-            <span className="opacity-40">//</span>
-            <span className="text-black font-medium">Studio Éditorial</span>
-          </div>
+     
         </div>
 
       </div>

@@ -52,7 +52,7 @@ function Fontionalities() {
   };
 
   return (
-    <div className="w-full min-h-screen bg-black text-white flex items-center justify-center p-4 md:p-12 overflow-hidden selection:bg-blue-500 selection:text-white">
+    <div id="Fonctionnalite" className="w-full min-h-screen bg-black text-white flex items-center justify-center p-4 md:p-12 overflow-hidden selection:bg-blue-500 selection:text-white">
       {/* Background Glows (Style Awwwards immersif) */}
       <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-blue-600/10 rounded-full blur-[120px] pointer-events-none" />
       <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-indigo-600/10 rounded-full blur-[100px] pointer-events-none" />
