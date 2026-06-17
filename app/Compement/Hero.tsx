@@ -1,8 +1,7 @@
 import BackgroundImage from "../assets/Fonctionallity/4.jpeg";
 import Button from "../utilis/Button";
 import PhoneMockup from "../utilis/Phonemockup";
-import { ArrowUpRight } from 'lucide-react';
-
+import { Apple, Download } from "lucide-react";
 function Hero() {
   return (
     <section className="relative w-full min-h-screen  bg-[#fcfbf9] text-[#1a1a1a] overflow-hidden flex flex-col justify-between p-6 md:p-12 font-sans select-none">
@@ -37,7 +36,7 @@ function Hero() {
 
           {/* Call To Action */}
           <div className="mt-10 opacity-0 animate-fade-up [animation-delay:800ms]">
-            <Button text1="Télécharger" text2="Se connecter" icone1={undefined} icone2={ArrowUpRight} />
+            <Button text1="App Store" text2="Google Play" icone1={Apple} icone2={Download} />
           </div>
         </div>
 
@@ -78,11 +77,7 @@ function Hero() {
           </div>
 
         </div>
-      </div>
-
-   
-    
-
+      </div> 
     </section>
   );
 }

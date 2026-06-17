@@ -78,7 +78,7 @@ export default function Menue() {
 
           {/* DESKTOP CTA */}
           <div className="hidden lg:block cursor-magnetic">
-            <Button text1="Télécharger" text2="Se connecter" icone1={undefined} icone2={<ArrowUpRight />} />
+            <Button text1="S'inscrire " text2="Se connecter" icone1={undefined} icone2={ArrowUpRight} />
           </div>
 
           {/* MOBILE MENU TRIGGER */}
