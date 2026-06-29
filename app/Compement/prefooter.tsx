@@ -2,7 +2,7 @@ import { ArrowUpRight } from "lucide-react";
 import Faq from "./faq";
 export default function PreFooter() {
   return (
-    <section className="relative w-full bg-black rounded-b-[200px] text-[#1a1a1a] py-32 md:py-48  overflow-hidden font-sans select-none">
+    <section className="relative w-full bg-blue-600 rounded-b-[200px] text-[#1a1a1a] py-32 md:py-48  overflow-hidden font-sans select-none">
       
        {/* Background Glows (Style Awwwards immersif) */}
       <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-blue-600/10 rounded-full blur-[120px] pointer-events-none" />

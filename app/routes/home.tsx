@@ -20,7 +20,7 @@ export function meta({}: Route.MetaArgs) {
 
 export default function Home() {
   return (
-    <div className="  overflow-hidden ">
+    <div className=" bg-amber-50 overflow-hidden ">
       <Menue />
       <Hero />
         <About />

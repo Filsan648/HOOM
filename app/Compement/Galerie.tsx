@@ -58,7 +58,7 @@ function Gallerie() {
   }, []);
 
   return (
-    <div className="relative w-full min-h-screen bg-black text-white py-24 overflow-hidden font-sans selection:bg-white selection:text-black">
+    <div className="relative w-full min-h-screen text-black py-24 overflow-hidden font-sans selection:bg-white selection:text-black">
       {/* Giga Typo en Arrière-plan (Signature Awwwards) */}
      <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-blue-600/10 rounded-full blur-[120px] pointer-events-none" />
       <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-indigo-600/10 rounded-full blur-[100px] pointer-events-none" />
@@ -70,7 +70,7 @@ Découvrez l'interface
 de Hoom  <span className="italic font-normal text-blue-600">étudiants</span> en images <br />
               
             </h2>
-             <p className="text-lg text-zinc-300 font-light mt-4">
+             <p className="text-lg  font-light mt-4">
               Une expérience utilisateur soignée, des designs intuitifs pour une apprentissage optimal
              </p>
           </div>

@@ -25,7 +25,7 @@ function FonctionalityCompement({
         w-full
         grid grid-cols-1 lg:grid-cols-12
         items-center
-        
+        bg-amber-800
         gap-10 lg:gap-16
       `}
     >
@@ -33,7 +33,7 @@ function FonctionalityCompement({
       <div className={`space-y-6 lg:col-span-7  ${reverse ? 'lg:order-last' : ''}`}>
         
         {/* Titre Principal Éditorial */}
-   <h2 className="text-3xl md:text-4xl text-white font-serif font-light leading-[1.1] tracking-tight break-words">
+   <h2 className="text-3xl md:text-4xl text-black font-serif font-light leading-[1.1] tracking-tight break-words">
 
       {title.split(" ").map((word, i) => (
 
@@ -78,17 +78,7 @@ function FonctionalityCompement({
         </div>
       </div>
 
-      {/* ZONE VISUELLE/IMAGE (Prend 5 colonnes sur 12) */}
-      <div className="lg:col-span-5 w-full h-[450px] md:h-[720px] relative group">
-        
-        {/* Halo de lumière derrière le mockup */}
-        <div className="absolute inset-0 bg-blue-500/5 rounded-full filter blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
-        
-        {/* Conteneur du Mockup avec effet 3D léger au hover */}
-        <div className=" relative transform transition-all duration-500 ease-out group-hover:scale-[1.02] group-hover:-rotate-1 ">
-          {image && <PhoneMockup image={image} />}
-        </div>
-      </div>
+ 
     </section>
   );
 }

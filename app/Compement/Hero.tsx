@@ -2,21 +2,43 @@ import BackgroundImage from "../assets/Fonctionallity/4.jpeg";
 import Button from "../utilis/Button";
 import PhoneMockup from "../utilis/Phonemockup";
 import { Apple, Download } from "lucide-react";
+import { CheckCircle2 } from "lucide-react";
+
 function Hero() {
   return (
-    <section className="relative w-full min-h-screen  bg-[#fcfbf9] text-[#1a1a1a] overflow-hidden flex flex-col justify-between p-6 md:p-12 font-sans select-none">
+    
+    <section className="relative bg-blue-500 mx-6 my-20 min-h-screen rounded-4xl overflow-hidden flex flex-col justify-between p-6 md:p-12 font-sans select-none">
 
       {/*  CORE ZONE (Contenu Principal en split asymétrique) */}
-      <div className="relative z-20 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center w-full my-auto py-12">
+      <div className="relative z-20 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center w-full my-auto ">
 
         {/* --- BLOC TEXTE & ACTIONS (7 Colonnes) --- */}
         <div className="lg:col-span-7 flex flex-col justify-center h-full">
           <div>
+            <div className="flex items-center gap-4 mt-10">
+
+    <div className=" my-4 flex -space-x-3">
+
+        <img src={BackgroundImage} className="w-10 h-10 rounded-full border-2 border-white"/>
+
+        <img src={BackgroundImage} className="w-10 h-10 rounded-full border-2 border-white"/>
+
+        <img src={BackgroundImage} className="w-10 h-10 rounded-full border-2 border-white"/>
+
+        <img src={BackgroundImage} className="w-10 h-10 rounded-full border-2 border-white"/>
+
+    </div>
+
+    <p className="text-sm">
+        Plus de <b className="text-yellow-300">600 étudiants</b> nous font confiance
+    </p>
+
+</div>
             {/* Titre avec lettrines de précision */}
-            <h1 className="text-[11vw] md:text-[6.5vw] font-serif font-light leading-[0.95] tracking-tight text-[#1a1a1a]">
+            <h1 className=" text-white text-[11vw] md:text-[6.5vw] font-serif font-light leading-[0.95] tracking-tight text-[#1a1a1a]">
               <span className="block overflow-hidden py-1">
-                <span className="block opacity-0 animate-reveal w-max [animation-delay:200ms] will-change-transform">
-          HOOM   
+                <span className="block opacity-0 animate-reveal  [animation-delay:200ms] will-change-transform">
+          L'Excellence Académique
                 </span>
               </span>
               <span className="block  overflow-hidden py-1">
@@ -27,11 +49,36 @@ function Hero() {
               </span>
             </h1>
 
-            <p className="mt-8 max-w-xl text-base md:text-lg text-neutral-500 font-light leading-relaxed opacity-0 animate-fade-up [animation-delay:650ms]">
+            <p className="mt-8 text-blue-100 max-w-xl text-base md:text-lg font-light leading-relaxed opacity-0 animate-fade-up [animation-delay:650ms]">
               Réinvente les codes de la réussite. Découvrez une expérience
               d’apprentissage ultra-personnalisée et interactive, calibrée pour
               propulser vos compétences à votre propre rythme.
             </p>
+            <div className="flex flex-wrap gap-10 mt-12">
+
+    <div>
+        <h3 className="text-3xl font-serif">600+</h3>
+        <p className="text-yellow-300">
+            Étudiants actifs
+        </p>
+    </div>
+
+    <div>
+        <h3 className="text-3xl font-serif">98%</h3>
+        <p className="text-yellow-300">
+            Taux de réussite
+        </p>
+    </div>
+
+    <div>
+        <h3 className="text-3xl font-serif">24/7</h3>
+        <p className="text-yellow-300">
+            Assistance
+        </p>
+    </div>
+
+</div>
+
           </div>
 
           {/* Call To Action */}

@@ -26,7 +26,7 @@ export default function Footer() {
   };
 
   return (
-    <footer id="Contact" className="relative w-full bg-[#fcfbf9] text-[#1a1a1a] pt-24 pb-12 font-sans select-none border-t border-black/10 overflow-hidden">
+    <footer id="Contact" className="relative w-full  text-[#1a1a1a] pt-24 pb-12 font-sans select-none border-t border-black/10 overflow-hidden">
       
       {/* TRACE DE GRILLE INTERNE */}
       <div className="absolute inset-0 pointer-events-none grid grid-cols-4 md:grid-cols-12 gap-0 px-6 md:px-12 opacity-[0.02]">
