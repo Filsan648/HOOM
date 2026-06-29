@@ -62,7 +62,7 @@ export default function Testimonials() {
 
   return (
     // CORRECTION : Suppression de select-none globale qui pouvait interférer avec les événements de clics
-    <section id="testimonials" className="w-full bg-[#fcfbf9] py-24 md:py-36 border-b border-b-black/5 overflow-hidden">
+    <section id="testimonials" className="w-full  py-24 md:py-36 border-b border-b-black/5 overflow-hidden">
       <div className="w-full px-6 md:px-12">
         
         {/* EN-TÊTE ÉDITORIAL ASYMÉTRIQUE */}

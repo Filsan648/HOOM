@@ -55,7 +55,7 @@ export default function Menue() {
               <img src={KyronetIcone} alt="Kyronet Icon" className="w-full h-full object-cover" />
             </div>
             {!scrolled && (
-              <span className="font-sans text-xs uppercase tracking-[0.3em] text-black/40 group-hover:text-black transition-colors duration-300">
+              <span className="font-sans text-xs uppercase tracking-[0.3em] text-black group-hover:text-blue-600 transition-colors duration-300">
                 HOOM
               </span>
             )}
@@ -67,11 +67,11 @@ export default function Menue() {
               <button
                 key={i}
                 onClick={() => scrollToSection(link.id)}
-                className="text-sm font-medium text-black/60 hover:text-black tracking-tight transition-colors duration-300 relative py-2 group/link"
+                className="text-sm font-medium text-black hover:text-blue-600 tracking-tight transition-colors duration-300 relative py-2 group/link"
               >
                 {link.label}
                 {/* Barre de soulignement animée style Awwwards */}
-                <span className="absolute bottom-0 left-0 w-full h-[1px] bg-black scale-x-0 group-hover/link:scale-x-100 transition-transform duration-500 origin-left" />
+                <span className="absolute bottom-0 left-0 w-full h-[1px] bg-blue-600 scale-x-0 group-hover/link:scale-x-100 transition-transform duration-500 origin-left" />
               </button>
             ))}
           </div>

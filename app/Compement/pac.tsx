@@ -51,7 +51,7 @@ const cardsData: CardData[] = [
 
 export default function HoomCyclesGrid() {
   return (
-    <section className="relative w-full bg-[#fcfbf9] text-[#1a1a1a] px-6 md:px-12 py-24 font-sans select-none border-b border-black/5 overflow-hidden">
+    <section className="relative w-full  text-[#1a1a1a] px-6 md:px-12 py-24 font-sans select-none border-b border-black/5 overflow-hidden">
       
       {/* LIGNES DE GRILLE EN ARRIÈRE-PLAN */}
       <div className="absolute inset-0 pointer-events-none grid grid-cols-4 md:grid-cols-12 gap-0 px-6 md:px-12 opacity-[0.04]">
