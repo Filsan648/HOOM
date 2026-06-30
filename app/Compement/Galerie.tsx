@@ -64,16 +64,22 @@ function Gallerie() {
       <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-indigo-600/10 rounded-full blur-[100px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 mb-16 flex flex-col md:flex-row md:items-end justify-between gap-6 relative z-10">
-       <div className="lg:col-span-8">
-            <h2 className="text-3xl  md:text-5xl lg:text-6xl font-serif font-light text-white tracking-tight leading-[1.1]">
-Découvrez l'interface
-de Hoom  <span className="italic font-normal text-blue-600">étudiants</span> en images <br />
-              
-            </h2>
-             <p className="text-lg  font-light mt-4">
-              Une expérience utilisateur soignée, des designs intuitifs pour une apprentissage optimal
-             </p>
-          </div>
+       
+
+
+
+    {/* EN-TÊTE ÉDITORIAL DE LA SECTION */}
+      <div className="my-5" >
+        
+          <h2 className="text-4xl md:text-[4vw] font-serif font-light tracking-tight leading-tight text-[#1a1a1a]">
+           Découvrez l'interface l'interface de Hoom <br className="md:hidden" />
+            <span className="font-sans italic font-extralight text-blue-600">étudiants  </span>en images
+          </h2>
+            <p className="py-5 text-black/80 text-justify">Quelle que soit votre étape scolaire, notre plateforme vous accompagne avec des ressources adaptées à votre niveau. De la 9ᵉ année à l'université, accédez à des résumés de cours, des exercices ciblés, des fiches de révision, des annales, des travaux dirigés corrigés et des outils d'intelligence artificielle pour apprendre plus efficacement, progresser en toute confiance et réussir vos examens.</p>
+    
+      </div>
+
+
         
         {/* Boutons de navigation minimalistes et haut de gamme */}
         <div className="flex gap-4">

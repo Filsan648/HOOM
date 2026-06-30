@@ -1,4 +1,9 @@
 import BackgroundImage from "../assets/Fonctionallity/4.jpeg";
+import avart1 from "../assets/avatars/avatar1.png"
+import avart2 from "../assets/avatars/avatar2.png"
+import avart3 from "../assets/avatars/avatar3.png"
+import avart4 from "../assets/avatars/avatar4.png"
+
 import Button from "../utilis/Button";
 import PhoneMockup from "../utilis/Phonemockup";
 import { Apple, Download } from "lucide-react";
@@ -19,13 +24,13 @@ function Hero() {
 
     <div className=" my-4 flex -space-x-3">
 
-        <img src={BackgroundImage} className="w-10 h-10 rounded-full border-2 border-white"/>
+        <img src={avart1} className="w-12 h-12 rounded-full border-2 border-white"/>
 
-        <img src={BackgroundImage} className="w-10 h-10 rounded-full border-2 border-white"/>
+        <img src={avart2} className="w-12 h-12 rounded-full border-2 border-white"/>
 
-        <img src={BackgroundImage} className="w-10 h-10 rounded-full border-2 border-white"/>
+        <img src={avart3} className="w-12 h-12 rounded-full border-2 border-white"/>
 
-        <img src={BackgroundImage} className="w-10 h-10 rounded-full border-2 border-white"/>
+        <img src={avart4} className="w-12 h-12 rounded-full border-2 border-white"/>
 
     </div>
 
@@ -98,25 +103,10 @@ function Hero() {
 
             {/* Badge flottant Awwwards n°1 */}
             <div className="absolute -left-10 top-1/4 z-30 bg-white/80 backdrop-blur-md border border-black/5 px-4 py-2.5 rounded-2xl shadow-xl shadow-black/[0.03] flex items-center gap-3 animate-bounce [animation-duration:4s]">
-              <div className="group bg-transparent p-1 transition-colors duration-30 flex flex-col justify-between min-h-[80px]">
-            <h3 className="text-3xl md:text-4xl font-light font-serif tracking-tight text-[#1a1a1a] transition-transform duration-300 group-hover:-translate-y-0.5">
-              600  +
-            </h3>
-            <p className="">
-              Étudiants
-            </p>
-          </div>
+             <span className="text-amber-400 text-sm animate-pulse">✦</span>
+              <span className="text-[10px] uppercase tracking-wider font-semibold text-[#1a1a1a]">4.8  Satisfaction</span>
             </div>
 
-            {/* Badge flottant Awwwards n°2 */}
-            <div className="absolute -right-8 flex bottom-1/4 z-30 text-white px-4 py-3  backdrop-blur-md border border-black/5 rounded-2xl shadow-2xl  transition-transform duration-500 group-hover:translate-y-[-5px]">
-              
-               <span className="text-amber-400 text-sm animate-pulse">✦</span>
-              <span className="text-[10px] uppercase tracking-wider font-semibold text-[#1a1a1a]">4.8  Satisfaction</span>
-              
-              
-                
-            </div>
 
             {/* Châssis Premium de l'iPhone Mockup */}
              <PhoneMockup image={BackgroundImage} />

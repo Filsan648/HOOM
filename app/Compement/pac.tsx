@@ -61,15 +61,15 @@ export default function HoomCyclesGrid() {
       </div>
 
 
-      {/* EN-TÊTE ÉDITORIAL DE LA SECTION */}
-      <div className="relative z-20 w-full grid grid-cols-1 md:grid-cols-12 gap-6 mb-16 md:mb-24 items-end">
-        <div className="md:col-span-8 md:col-start-2">
+    {/* EN-TÊTE ÉDITORIAL DE LA SECTION */}
+      <div className="my-5" >
+        
           <h2 className="text-4xl md:text-[4vw] font-serif font-light tracking-tight leading-tight text-[#1a1a1a]">
-            Trois cycles. <br className="md:hidden" />
-            <span className="font-sans italic font-extralight text-blue-600">Une seule</span> et unique réussite.
+            Trois cycle  <br className="md:hidden" />
+            <span className="font-sans italic font-extralight text-blue-600">Une seule et unique </span>reussite
           </h2>
-        </div>
-        <div className="hidden md:block md:col-span-2 md:col-start-11 h-[1px] bg-black/10 w-full mb-3" />
+            <p className="py-5 text-black/80 text-justify">Quelle que soit votre étape scolaire, notre plateforme vous accompagne avec des ressources adaptées à votre niveau. De la 9ᵉ année à l'université, accédez à des résumés de cours, des exercices ciblés, des fiches de révision, des annales, des travaux dirigés corrigés et des outils d'intelligence artificielle pour apprendre plus efficacement, progresser en toute confiance et réussir vos examens.</p>
+    
       </div>
 
       {/* COLONNES OUVERTES STYLE AWWWARDS */}
