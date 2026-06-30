@@ -1,4 +1,4 @@
-import Image from "../assets/Image.png";
+import Image from "../assets/image.png";
 
 // Remplis les liens avec tes URL réelles
 const data = [
