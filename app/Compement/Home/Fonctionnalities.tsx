@@ -75,7 +75,7 @@ export default function Fonctionnalities() {
   return (
     <section className=" min-h-screen px-6 md:px-12 font-sans overflow-hidden">
       <div className="max-w-7xl mx-auto">
-        <Title title="Une plateforme complète pour votre réussite" /> 
+        <Title title="Une plateforme complète pour votre réussite" titlecolors="text-neutral-50" /> 
 
         {/* Bento Grid layout */}
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-10">

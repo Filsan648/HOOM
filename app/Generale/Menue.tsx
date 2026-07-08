@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ArrowUpRight, Menu, X } from "lucide-react";
 import KyronetIcone from "../assets/HomLogos.png";
 import Button from "~/utilis/Button";
+import { NavLink } from "react-router";
 
 export default function Menue() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -25,9 +26,9 @@ export default function Menue() {
   };
 
   const links = [
-    { label: "Acceil", id: "about" },
-    { label: "À propos", id: "Fonctionnalite" },
-    { label: "Fonctionalité", id: "testimonials" },
+    { label: "Acceil", id: "/" },
+    { label: "À propos", id: "Fonctionnality" },
+    { label: "Fonctionalité", id: "Fonctionnality" },
     { label: "Blog", id: "faq" },
     { label: "Contact", id: "Contact" },
   ];
@@ -64,15 +65,15 @@ export default function Menue() {
           {/* DESKTOP MENU */}
           <div className="hidden lg:flex items-center gap-8">
             {links.map((link, i) => (
-              <button
+              <NavLink
                 key={i}
-                onClick={() => scrollToSection(link.id)}
+                to={link.id}
                 className="text-sm font-medium text-black hover:text-blue-600 tracking-tight transition-colors duration-300 relative py-2 group/link"
               >
                 {link.label}
                 {/* Barre de soulignement animée style Awwwards */}
                 <span className="absolute bottom-0 left-0 w-full h-[1px] bg-blue-600 scale-x-0 group-hover/link:scale-x-100 transition-transform duration-500 origin-left" />
-              </button>
+              </NavLink>
             ))}
           </div>
 

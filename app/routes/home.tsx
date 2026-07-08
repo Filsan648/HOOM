@@ -13,7 +13,7 @@ import Faq from "~/Compement/Home/faq";
 import Statistique from "~/Compement/Home/statistique";
 import BackgroundImage from "../assets/BackgroundImage.png";
 import Pac from "~/Compement/Home/pac";
-import Mission from "~/Compement/Home/Mission";
+import Content from "~/Compement/Fonctionnality/Content";
 export function meta({}: Route.MetaArgs) {
   return [
     { title: "New React Router App" },
@@ -24,19 +24,20 @@ export function meta({}: Route.MetaArgs) {
 
 export default function Home() {
   return (
-    <div className=" font-sora bg-white overflow-hidden ">
+    <div className=" font-sora  flex flex-col gap-10 bg-white overflow-hidden ">
       <Menue />
       <Hero />
        <Statistique /> 
-          <div className="pt-10 flex flex-col gap-24 text-neutral-50/65 bg-black">
+          <div className="pt-10 flex flex-col gap-24  bg-black">
   
       <About /> 
         <Fontionalities />
                        <Gallerie />
-        <Pac />
+   
  
             </div>
- 
+ <Content/>
+      <Pac />
         <Testimonials />
         <PreFooter />
         <Footer />

@@ -1,6 +1,6 @@
 import Title from "~/utilis/TitleSubtitle";
 function Statistique() {return( 
-    <section className="mx-10 my-10 text-neutral-900">
+    <section className="mx-10  text-neutral-900">
          <Title title="Des résultats qui parlent d'eux-mêmes" />
      <div className="grid grid-cols-4  items-start  gap-3.5 mt-24">
     

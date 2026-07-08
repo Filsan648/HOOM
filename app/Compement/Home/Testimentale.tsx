@@ -4,7 +4,7 @@ import avart1 from "../../assets/avatars/avatar1.png";
 import avart2 from "../../assets/avatars/avatar2.png";
 import avart3 from "../../assets/avatars/avatar3.png";
 import avart4 from "../../assets/avatars/avatar4.png";
-
+import Title from "~/utilis/TitleSubtitle";
 interface Testimonial {
   quote: string;
   author: string;
@@ -119,18 +119,11 @@ export default function Testimonials() {
   }, []);
 
   return (
-    <section id="testimonials" className="w-full py-24 md:py-36 border-b border-b-black/5 overflow-hidden select-none">
+    <section id="testimonials" className="w-full   border-b border-b-black/5 overflow-hidden select-none">
       <div className="w-full px-6 md:px-12">
         
-        {/* EN-TÊTE ÉDITORIAL ASYMÉTRIQUE */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-16">
-          <div className="lg:col-span-8">
-            <h2 className="text-3xl md:text-5xl lg:text-6xl font-serif font-light text-[#1a1a1a] tracking-tight leading-[1.1]">
-              Ce que nos <span className="italic font-normal text-blue-600">étudiants</span> disent <br />
-              de leur expérience chez nous.
-            </h2>
-          </div>
-        </div>
+              <Title title="Ce que disent nos étudiants" titlecolors="text-neutreal-800" />
+
 
         {/* CONTENEUR DE CARTES CÔTE À CÔTE (Scrollable & Draggable) */}
         <div

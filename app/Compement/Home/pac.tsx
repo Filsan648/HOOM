@@ -56,16 +56,16 @@ const cardsData: CardData[] = [
 
 export default function Pac() {
   return (
-    <section className="relative w-full    px-6 md:px-12 py-24  select-none  overflow-hidden">
+    <section className="relative w-full    px-6 md:px-12   select-none  overflow-hidden">
 
 
 
     {/* EN-TÊTE ÉDITORIAL DE LA SECTION */}
       <div className="my-5" >
-       <Title title=" Trois cycle Une seule et unique reussite" />
+       <Title title="Trois cycle Une seule et unique reussite" titlecolors="text-neutreal-800" />
 
          
-            <p className="py-5  text-justify">Quelle que soit votre étape scolaire, notre plateforme vous accompagne avec des ressources adaptées à votre niveau. De la 9ᵉ année à l'université, accédez à des résumés de cours, des exercices ciblés, des fiches de révision, des annales, des travaux dirigés corrigés et des outils d'intelligence artificielle pour apprendre plus efficacement, progresser en toute confiance et réussir vos examens.</p>
+            <p className="py-5 text-lg text-neutral-700  text-justify">Quelle que soit votre étape scolaire, notre plateforme vous accompagne avec des ressources adaptées à votre niveau. De la 9ᵉ année à l'université, accédez à des résumés de cours, des exercices ciblés, des fiches de révision, des annales, des travaux dirigés corrigés et des outils d'intelligence artificielle pour apprendre plus efficacement, progresser en toute confiance et réussir vos examens.</p>
     
       </div>
 

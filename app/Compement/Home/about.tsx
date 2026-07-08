@@ -9,8 +9,8 @@ function About() {
       // MODIFIÉ : Réduction de mb pour mieux gérer le défilement. h-auto est mieux ici.
       className='min-h-screen my-2.5 px-10'
     >
-   
-      <Title title="Probleme Et Solutions" />
+   <div className=''>
+      <Title title="Probleme Et Solutions" titlecolors='text-neutral-50' /></div>
 
       {/* --- Section Haut (Image 1 + Texte descriptif) --- */}
       <div className='grid grid-cols-3 gap-10 mb-20'> {/* Ajout de mb pour l'espace */}
@@ -18,7 +18,7 @@ function About() {
           <img src={image1} alt="Image 1" className="w-full h-full object-cover rounded-4xl" />
         </div>
         <div className='col-span-2  flex items-center'> {/* Centrer le texte verticalement */}
-          <p>
+          <p className='text-neutral-200/90 text-lg text-justify '>
             Découvrez la galerie de Hoom à travers ses interfaces modernes et soigneusement conçues. 
             Chaque écran a été pensé pour offrir une expérience utilisateur fluide, intuitive et agréable. 
             Avec plus de 8 interfaces entièrement responsive et un design résolument moderne, Hoom 
@@ -27,11 +27,8 @@ function About() {
         </div>
       </div>
 
-      {/* --- Cart1 (Haut Centre, Optionnel selon ton image exemple, je l'ai commenté) --- */}
-      {/* <div className='flex justify-center items-center mb-10'>
-        <Cards title="Problème" text="Ce que nos étudiants disent de leur expérience chez nous." color="red" />
-      </div>
-      */}
+      
+ 
 
       {/* --- Section Bas (Cartes + Image centrale + Popover) --- */}
       {/* NOUVEAU : Conteneur principal en 'relative' pour le positionnement du popover */}
@@ -67,8 +64,6 @@ function About() {
             founderTitle="Founder of Hoom app"
           />
         </div>
-
-
       </div>
     </section>
   );

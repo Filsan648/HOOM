@@ -1,50 +1,63 @@
-function Title({ title }: {title:string}) {
-  // Séparation du titre en deux parties égales
-  const words = title.split(" ");
-  const midpoint = Math.ceil(words.length / 2);
-  const firstPart = words.slice(0, midpoint).join(" ");
-  const secondPart = words.slice(midpoint).join(" ");
+import { motion } from 'framer-motion';
+
+function Title({ title ,titlecolors }: { title: string ,titlecolors:string }) {
+  // On sépare le titre en lettres individuelles pour l'effet cinétique
+  const letters = Array.from(title);
+
+  // Configuration de l'animation pour les lettres
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: { staggerChildren: 0.03, delayChildren: 0.2 }
+    }
+  };
+
+  const letterVariants = {
+    hidden: { 
+      opacity: 0, 
+      y: 40,
+      filter: "blur(10px)" // Effet de flou cinétique au démarrage
+    },
+    visible: { 
+      opacity: 1, 
+      y: 0,
+      filter: "blur(0px)",
+      transition: { 
+        duration: 0.6,
+        ease: [0.33, 1, 0.68, 1] // Custom ease-out très fluide
+      }
+    }
+  };
 
   return (
-    <div className="relative mb-20 md:mb-24 flex items-center justify-center group overflow-hidden">
-      {/* 
-          GRAND CERCLE DE FOND :
-          Un grand cercle en gris très léger (neutral-100) pour créer de la texture,
-          placé en arrière-plan (z-0).
-          Il ajoute une touche de design géométrique doux.
-      */}
-   
+    <div className="relative flex justify-center items-center  mb-24 md:mb-32 group select-none">
+    
 
-      {/* 
-          BLOC DE TITRE PRINCIPAL :
-          - flex-col et md:flex-row pour le responsive.
-          - items-center et relative z-10 pour le positionnement.
-      */}
-      <h2 className="relative z-10 text-center md:text-left flex flex-col md:flex-row items-center gap-6 md:gap-8 text-5xl md:text-7xl leading-none">
-        
-        {/* PREMIÈRE PARTIE : GRAS & COULEUR FONCÉE (ex: Excellence) */}
-        <span className="font-bold  tracking-tighter">
-          {firstPart}
-        </span>
-        
-        {/* 
-            POINT DE FOCUS GÉOMÉTRIQUE :
-            Un petit cercle plein bleu roi (#0055D7) pour séparer les deux mots.
-            C'est une référence directe au bouton Google Play et à l'identité visuelle de l'app.
-            On le rend invisible en mobile pour alléger le layout.
-        */}
-        <div className="hidden md:block h-6 w-6 rounded-full bg-[#0055D7]" />
+      {/* 2. Titre Principal Massif */}
+      <motion.h2 
+        className="font-sans text-5xl md:text-7xl text-center lg:text-8xl font-normal tracking-tight text-neutral-800 leading-none flex flex-wrap"
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: "-20%" }}
+      >
+        {letters.map((letter, index) => (
+          <motion.span
+            key={index}
+            variants={letterVariants}
+            className={`inline-block hover:text-orange-500 ${titlecolors} transition-colors duration-300 transform hover:scale-105`}
+            style={{ whiteSpace: letter === " " ? "pre" : "normal" }}
+          >
+            {letter}
+          </motion.span>
+        ))}
+      </motion.h2>
 
-        {/* 
-            DEUXIÈME PARTIE : FIN & COULEUR MOYENNE (ex: Académique)
-            - En mobile, on force un retour à la ligne (`md:ml-auto`).
-        */}
-        <span className="font-extralight text-neutral-600 dark:text-neutral-400 tracking-tight md:ml-2">
-          {secondPart}
-        </span>
-      </h2>
+     
+
     </div>
-  )
+  );
 }
 
-export default Title
+export default Title;
