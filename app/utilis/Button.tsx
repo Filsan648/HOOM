@@ -19,13 +19,13 @@ function Button({
       {/* SECONDARY BUTTON */}
       {text1 && (
         <a href="#services" className="hidden sm:inline-block">
-          <button className="group relative overflow-hidden rounded-full border border-black/20 bg-transparent px-6 py-3.5 text-black transition-colors duration-500 hover:border-black">
+          <button className="group relative overflow-hidden rounded-full border border-back/20 bg-transparent px-6 py-3.5 text-back transition-colors duration-500 hover:border-blue-600">
             <span className="relative z-10 flex items-center gap-2 text-[10px] uppercase tracking-[0.2em] font-medium transition-colors duration-500 group-hover:text-white">
               {Icon1 && <Icon1 size={14} />}
               {text1}
             </span>
 
-            <span className="absolute inset-0 z-0 bg-black translate-y-full transition-transform duration-500 group-hover:translate-y-0" />
+            <span className="absolute inset-0 z-0 bg-back translate-y-full transition-transform duration-500 group-hover:translate-y-0" />
           </button>
         </a>
       )}
@@ -33,8 +33,8 @@ function Button({
       {/* PRIMARY BUTTON */}
       {text2 && (
         <a href="#about" className="inline-block">
-          <button className="group relative overflow-hidden rounded-full bg-black px-6 py-3.5 text-white border border-black">
-            <span className="relative z-10 flex items-center gap-2 text-[10px] uppercase tracking-[0.2em] font-semibold transition-colors duration-500 group-hover:text-black">
+          <button className="group relative overflow-hidden rounded-full bg-blue-600 px-6 py-3.5 text-white border border-blue-600">
+            <span className="relative z-10 flex items-center gap-2 text-[10px] uppercase tracking-[0.2em] font-semibold transition-colors duration-500 group-hover:text-blue-600">
               {text2}
 
               {Icon2 && (

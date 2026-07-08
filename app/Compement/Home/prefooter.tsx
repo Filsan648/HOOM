@@ -23,8 +23,7 @@ export default function PreFooter() {
 
           {/* TON TITRE DE L'IMAGE - REFAÇONNÉ EN TYPO ÉDITORIALE */}
           <h2 className="text-4xl sm:text-6xl md:text-7xl lg:text-[5.5vw] font-serif font-light text-white tracking-tight leading-[1.1] max-w-4xl mx-auto">
-            Prêt à transformer votre <br />
-            parcours <span className="italic font-normal text-blue-600">scolaire</span> ?
+            Prêt à transformer votre parcours <span className="italic font-normal text-blue-600">scolaire</span> ?
           </h2>
 
           {/* TON SOUSTITRE DE L'IMAGE - ÉPURÉ */}

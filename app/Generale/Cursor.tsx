@@ -40,7 +40,7 @@ export default function Cursor() {
       
       // Détection des types d'éléments
       const interactiveEl = target.closest("button, a, .cursor-magnetic") as HTMLElement | null;
-      const textEl = target.closest("h1, h2, h3, p, .cursor-text") as HTMLElement | null;
+      const textEl = target.closest("h1 ,h2, h3, p, .cursor-text") as HTMLElement | null;
 
       if (interactiveEl) {
         const rect = interactiveEl.getBoundingClientRect();
@@ -76,7 +76,7 @@ export default function Cursor() {
 
   return (
     <motion.div
-      className="fixed top-0 left-0 pointer-events-none z-[9999] hidden md:block mix-blend-difference border border-white"
+      className="fixed top-0 left-0   pointer-events-none z-[9999] hidden md:block mix-blend-difference border border-white"
       style={{
         x: cursorX,
         y: cursorY,

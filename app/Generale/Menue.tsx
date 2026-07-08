@@ -25,10 +25,10 @@ export default function Menue() {
   };
 
   const links = [
-    { label: "À propos", id: "about" },
-    { label: "Fonctionnalités", id: "Fonctionnalite" },
-    { label: "Témoignages", id: "testimonials" },
-    { label: "FAQ", id: "faq" },
+    { label: "Acceil", id: "about" },
+    { label: "À propos", id: "Fonctionnalite" },
+    { label: "Fonctionalité", id: "testimonials" },
+    { label: "Blog", id: "faq" },
     { label: "Contact", id: "Contact" },
   ];
 
