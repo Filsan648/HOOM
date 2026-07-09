@@ -20,7 +20,7 @@ function Button({
       {text1 && (
         <a href="#services" className="hidden sm:inline-block">
           <button className="group relative overflow-hidden rounded-full border border-back/20 bg-transparent px-6 py-3.5 text-back transition-colors duration-500 hover:border-blue-600">
-            <span className="relative z-10 flex items-center gap-2 text-[10px] uppercase tracking-[0.2em] font-medium transition-colors duration-500 group-hover:text-white">
+            <span className="relative z-10 flex items-center gap-2 text-[10px] uppercase tracking-[0.2em] font-medium transition-colors duration-500 group-hover:text-blue-600">
               {Icon1 && <Icon1 size={14} />}
               {text1}
             </span>

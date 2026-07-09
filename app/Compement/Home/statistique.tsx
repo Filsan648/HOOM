@@ -1,7 +1,7 @@
 import Title from "~/utilis/TitleSubtitle";
 function Statistique() {return( 
     <section className="mx-10  text-neutral-900">
-         <Title title="Des résultats qui parlent d'eux-mêmes" />
+         <Title title="Des résultats qui parlent d'eux-mêmes" titlecolors="text-neutral-900" />
      <div className="grid grid-cols-4  items-start  gap-3.5 mt-24">
     
   <div

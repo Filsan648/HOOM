@@ -14,6 +14,7 @@ import Statistique from "~/Compement/Home/statistique";
 import BackgroundImage from "../assets/BackgroundImage.png";
 import Pac from "~/Compement/Home/pac";
 import Content from "~/Compement/Fonctionnality/Content";
+import Concour from "~/Compement/Concour/Concour";
 import Blog from "~/Compement/Blog/Blog";
 export function meta({}: Route.MetaArgs) {
   return [
@@ -23,25 +24,11 @@ export function meta({}: Route.MetaArgs) {
 }
 
 
-export default function Home() {
+export default function Blogs() {
   return (
     <div className=" font-sora  flex flex-col gap-10 bg-white overflow-hidden ">
       <Menue />
-      <Hero />
-       <Statistique /> 
-          <div className="pt-10 flex flex-col gap-24  bg-black">
-  
-      <About /> 
-        <Fontionalities />
-                       <Gallerie />
-   
- 
-            </div>
- <Content/>
-      <Pac />
-        <Testimonials />
-  
-        <PreFooter />
+         <Blog />
         <Footer />
     </div>
   );

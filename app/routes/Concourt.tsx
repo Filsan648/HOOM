@@ -14,7 +14,7 @@ import Statistique from "~/Compement/Home/statistique";
 import BackgroundImage from "../assets/BackgroundImage.png";
 import Pac from "~/Compement/Home/pac";
 import Content from "~/Compement/Fonctionnality/Content";
-import Blog from "~/Compement/Blog/Blog";
+import Concour from "~/Compement/Concour/Concour";
 export function meta({}: Route.MetaArgs) {
   return [
     { title: "New React Router App" },
@@ -23,25 +23,11 @@ export function meta({}: Route.MetaArgs) {
 }
 
 
-export default function Home() {
+export default function Concours() {
   return (
     <div className=" font-sora  flex flex-col gap-10 bg-white overflow-hidden ">
       <Menue />
-      <Hero />
-       <Statistique /> 
-          <div className="pt-10 flex flex-col gap-24  bg-black">
-  
-      <About /> 
-        <Fontionalities />
-                       <Gallerie />
-   
- 
-            </div>
- <Content/>
-      <Pac />
-        <Testimonials />
-  
-        <PreFooter />
+         <Concour />
         <Footer />
     </div>
   );

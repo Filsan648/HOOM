@@ -10,13 +10,10 @@ import { Apple, Download } from "lucide-react";
 
 function Hero() {
   const [mouse, setMouse] = useState({ x: 0, y: 0 });
-
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     const rect = e.currentTarget.getBoundingClientRect();
-
     const x = (e.clientX - rect.left) / rect.width - 0.5;
     const y = (e.clientY - rect.top) / rect.height - 0.5;
-
     setMouse({ x, y });
   };
 
@@ -61,7 +58,7 @@ Excellence </span>
         <span className="px-5 italic text-neutral-600
 ">    Académique</span>
 </h1>
-<div   className=" mt-1.5  flex justify-center items-center     "> <p className='text-center text-lg'>  HOOM  est là pour vous accompagner vers la  réussite  grâce à des parcours sur mesure, des  modules    interactifs et des annales ciblées.
+<div   className=" mt-1.5  flex justify-center items-center     "> <p className='text-center text-lg leading-relaxed font-light text-neutral-700'>  HOOM est la première plateforme éducative à Djibouti, conçue pour aider chaque étudiant à réussir. Grâce à des ressources pédagogiques, des outils intelligents et un accompagnement personnalisé. HOOM rend l’apprentissage plus simple, plus efficace et plus accessible.
  </p>
   </div>
 <div className='flex justify-center items-center my-10'> <Button text1="App Store" text2="Google Play" icone1={Apple} icone2={Download} /> </div>

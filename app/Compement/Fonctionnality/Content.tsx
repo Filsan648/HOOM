@@ -1,6 +1,6 @@
 import React from 'react'
 import image from '../../assets/Fonctionality/Content/506shots_so (1).png'
-import Title from '~/utilis/TitleSubtitle'
+
 const data=[{
 
     title:"Cours Interactifs",
@@ -16,14 +16,9 @@ const data=[{
     titleColor:"text-gray-600",
 
     textColor:"text-gray-500"
-
-   
-
-   
-
 },
 
-{title:"Communauté Active",
+{  title:"Communauté Active",
 
     description:"Découvrez la galerie de Hoom à travers ses interfaces modernes et soigneusement conçues. Chaque écran a été pensé pour offrir une expérience utilisateur fluide, intuitive et agréable. Avec plus de 8 interfaces entièrement responsive et un design résolument moderne, Hoom s’adapte parfaitement à tous les appareils."
 
@@ -36,13 +31,6 @@ const data=[{
     titleColor:"text-gray-600",
 
     textColor:"text-gray-500"
-
-   
-
-
-
-     
-
 },
 
 {
@@ -60,12 +48,6 @@ const data=[{
     titleColor:"text-gray-600",
 
     textColor:"text-gray-500"
-
-     
-
-   
-
-
 
 },
 
@@ -93,9 +75,9 @@ const data=[{
 
     image:image,
 
- order :true,
+    order :true,
 
-  bg:"bg-tranparent",
+    bg:"bg-tranparent",
 
     titleColor:"text-gray-600",
 
@@ -118,40 +100,35 @@ const data=[{
     titleColor:"text-gray-600",
 
     textColor:"text-gray-500"
-
-
-
 }
 
 ,{
 
     title:'Vidéos de Cours',
 
-       image:image,
+    image:image,
 
     description: "Découvrez la galerie de Hoom à travers ses interfaces modernes et soigneusement conçues. Chaque écran a été pensé pour offrir une expérience utilisateur fluide, intuitive et agréable. Avec plus de 8 interfaces entièrement responsive et un design résolument moderne, Hoom s’adapte parfaitement à tous les appareils."
 
-     ,order :true,
+    ,order :true,
 
-     bg:"bg-tranparent",
+    bg:"bg-tranparent",
 
     titleColor:"text-gray-600",
 
     textColor:"text-gray-500"
 
-     
-
 },{
 
     title : "Support Réactif",
 
-        image:image,
+    image:image,
 
     description:"Découvrez la galerie de Hoom à travers ses interfaces modernes et soigneusement conçues. Chaque écran a été pensé pour offrir une expérience utilisateur fluide, intuitive et agréable. Avec plus de 8 interfaces entièrement responsive et un design résolument moderne, Hoom s’adapte parfaitement à tous les appareils."
 
- ,order :false,
+    ,order :false,
 
-  bg:"bg-blue-600",
+    bg:"bg-blue-600",
 
     titleColor:"text-gray-600",
 
@@ -162,14 +139,9 @@ const data=[{
 ]
 
 
-
-
-
-
-
 export default function Content() {
   return (
-    <section className=" mx-auto px-6 space-y-16 md:space-y-24">
+    <section id="Fonctionnality" className=" mx-auto px-6 space-y-16 md:space-y-24">
       {data.map((item, index) => (
         <Section 
           key={index}
@@ -186,7 +158,17 @@ export default function Content() {
   )
 }
 
-function Section({ title, text, image, order, bg, titleColor, textColor }) {
+type SectionProps = {
+  title: string
+  text: string
+  image: string
+  order: boolean
+  bg: string
+  titleColor: string
+  textColor: string
+}
+
+function Section({ title, text, image, order, bg, titleColor, textColor }: SectionProps) {
   return (
     <div 
       // L'effet de perspective est injecté directement via style ou classe arbitraire inline

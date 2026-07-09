@@ -19,10 +19,7 @@ function About() {
         </div>
         <div className='col-span-2  flex items-center'> {/* Centrer le texte verticalement */}
           <p className='text-neutral-200/90 text-lg text-justify '>
-            Découvrez la galerie de Hoom à travers ses interfaces modernes et soigneusement conçues. 
-            Chaque écran a été pensé pour offrir une expérience utilisateur fluide, intuitive et agréable. 
-            Avec plus de 8 interfaces entièrement responsive et un design résolument moderne, Hoom 
-            s’adapte parfaitement à tous les appareils.
+          L'accès à une éducation de qualité ne devrait pas être un obstacle. Nous proposons une solution moderne qui rassemble des cours interactifs, des ressources fiables et des outils intelligents pour permettre à chacun d'apprendre efficacement, progresser à son rythme et atteindre ses objectifs plus facilement.
           </p>
         </div>
       </div>
@@ -38,10 +35,10 @@ function About() {
         <div className="z-10"> {/* NOUVEAU : z-10 pour être sûr d'être devant s'il y a superposition */}
           <Cards 
             title="Problème " 
-            text="Fragmented expérience and missed opportunities." 
+            text="L'accès à une éducation de qualité reste souvent compliqué. Entre le manque de ressources fiables et l'absence d'accompagnement adapté, apprendre efficacement peut vite devenir un défi." 
             color="red" 
             founderName="Kyronet"
-            founderTitle="Founder of Hoom app"
+            founderTitle="Founder"
           />
         </div>
 
@@ -57,11 +54,11 @@ function About() {
         {/* --- Carte droite --- */}
         <div className="z-10"> {/* z-10 pour être devant */}
           <Cards 
-            title="Solution " 
-            text="Novora combines banking, budgeting, and analytics into one seamless app." 
-            color="green" 
+            title="Solution "
+            text="Hoom réinvente l'apprentissage à Djibouti en réunissant toutes les ressources essentielles pour accompagner les étudiants dans leur parcours académique. Progresser à son rythme et maximiser ses chances de réussite."
+            color="green"
             founderName="Kyronet"
-            founderTitle="Founder of Hoom app"
+            founderTitle="Founder"
           />
         </div>
       </div>

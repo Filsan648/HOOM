@@ -42,6 +42,7 @@ function Title({ title ,titlecolors }: { title: string ,titlecolors:string }) {
         whileInView="visible"
         viewport={{ once: true, margin: "-20%" }}
       >
+        
         {letters.map((letter, index) => (
           <motion.span
             key={index}

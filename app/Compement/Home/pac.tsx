@@ -58,16 +58,21 @@ export default function Pac() {
   return (
     <section className="relative w-full    px-6 md:px-12   select-none  overflow-hidden">
 
+ {/* En-tête de la section */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 border-b border-gray-200 pb-16 mb-16">
+          <div className="lg:col-span-7">
+          
+<Title title="Trois cycle,Une seule reussite" titlecolors='text-neutral-900'/>
 
+           
+          </div>
+          <div className="lg:col-span-5 flex flex-col justify-end">
+            <p className="text-base text-gray-600 font-light leading-relaxed max-w-sm">
+Quelle que soit votre étape scolaire, notre plateforme vous accompagne avec des ressources adaptées à votre niveau.   </p>
+          </div>
+        </div>
 
-    {/* EN-TÊTE ÉDITORIAL DE LA SECTION */}
-      <div className="my-5" >
-       <Title title="Trois cycle Une seule et unique reussite" titlecolors="text-neutreal-800" />
-
-         
-            <p className="py-5 text-lg text-neutral-700  text-justify">Quelle que soit votre étape scolaire, notre plateforme vous accompagne avec des ressources adaptées à votre niveau. De la 9ᵉ année à l'université, accédez à des résumés de cours, des exercices ciblés, des fiches de révision, des annales, des travaux dirigés corrigés et des outils d'intelligence artificielle pour apprendre plus efficacement, progresser en toute confiance et réussir vos examens.</p>
-    
-      </div>
+   
 
       
       <div className="relative z-20 w-full gap-10 grid grid-cols-1 md:grid-cols-12 ">
