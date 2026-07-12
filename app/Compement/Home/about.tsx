@@ -1,7 +1,7 @@
 import Title from '~/utilis/TitleSubtitle';
 import image1 from "../../assets/about/image1.png"
 import image from "../../assets/about/image.png"
-
+import video from "../../assets/about/7013391-uhd_4096_2160_25fps.mp4"
 function About() {
   return (
     <section 
@@ -62,6 +62,9 @@ function About() {
           />
         </div>
       </div>
+        <div className=" w-full h-full ">
+    <video className="w-full mt-10 rounded-md" src={video} autoPlay loop muted controls />
+  </div>
     </section>
   );
 }
