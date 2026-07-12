@@ -52,7 +52,7 @@ export default function Menue() {
             onClick={() => scrollToSection("home")}
             className="flex items-center gap-3 group cursor-magnetic"
           >
-            <div id="#" className="w-12 h-12 rounded-full overflow-hidden border border-black/5 bg-white shadow-sm transition-transform duration-500 group-hover:scale-105">
+            <div id="/" className="w-12 h-12 rounded-full overflow-hidden border border-black/5 bg-white shadow-sm transition-transform duration-500 group-hover:scale-105">
               <img src={KyronetIcone} alt="Kyronet Icon" className="w-full h-full object-cover" />
             </div>
             {!scrolled && (
