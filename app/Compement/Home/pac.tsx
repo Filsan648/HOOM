@@ -56,7 +56,7 @@ const cardsData: CardData[] = [
 
 export default function Pac() {
   return (
-    <section className="relative w-full    px-6 md:px-12   select-none  overflow-hidden">
+    <section className="relative w-full     bg-white  px-32    select-none  overflow-hidden">
 
  {/* En-tête de la section */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 border-b border-gray-200 pb-16 mb-16">

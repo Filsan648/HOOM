@@ -2,69 +2,69 @@ import Title from '~/utilis/TitleSubtitle';
 import image1 from "../../assets/about/image1.png"
 import image from "../../assets/about/image.png"
 import video from "../../assets/about/7013391-uhd_4096_2160_25fps.mp4"
+import { Apple, Download } from "lucide-react";
+
+
+const data=[
+  { 
+    icone : Apple,
+    title :"Formats trop longs",
+    description :"Les contenus s'étirent sur des heures sans découpage adapté. La charge cognitive devient insurmontable.",
+    clasname:'bg-blue-600 '
+ 
+  },
+    { 
+    icone : Apple,
+    title :"Formats trop longs",
+    description :"Les contenus s'étirent sur des heures sans découpage adapté. La charge cognitive devient insurmontable."
+   ,clasname:'bg-blue-600'
+  },
+    { 
+    icone : Apple,
+    title :"Formats trop longs",
+    description :"Les contenus s'étirent sur des heures sans découpage adapté. La charge cognitive devient insurmontable."
+  ,clasname:''
+  },
+    { 
+    icone : Apple,
+    title :"Formats trop longs",
+    description :"Les contenus s'étirent sur des heures sans découpage adapté. La charge cognitive devient insurmontable."
+   ,clasname:'col-span-3'
+  },
+
+]
+
+
+
 function About() {
+  
   return (
     <section 
       id="about"
       // MODIFIÉ : Réduction de mb pour mieux gérer le défilement. h-auto est mieux ici.
-      className='min-h-screen my-2.5 px-10'
+      className='min-h-screen my-2.5  text-white px-16 '
     >
-   <div className=''>
-      <Title title="Probleme Et Solutions" titlecolors='text-neutral-50' /></div>
-
-      {/* --- Section Haut (Image 1 + Texte descriptif) --- */}
-      <div className='grid grid-cols-3 gap-10 mb-20'> {/* Ajout de mb pour l'espace */}
-        <div className="col-span-1 h-[300px] flex justify-center items-center">
-          <img src={image1} alt="Image 1" className="w-full h-full object-cover rounded-4xl" />
-        </div>
-        <div className='col-span-2  flex items-center'> {/* Centrer le texte verticalement */}
-          <p className='text-neutral-200/90 text-lg text-justify '>
-          L'accès à une éducation de qualité ne devrait pas être un obstacle. Nous proposons une solution moderne qui rassemble des cours interactifs, des ressources fiables et des outils intelligents pour permettre à chacun d'apprendre efficacement, progresser à son rythme et atteindre ses objectifs plus facilement.
-          </p>
-        </div>
-      </div>
-
-      
  
+      <Title title="Probleme Et Solutions" titlecolors='text-neutral-50' />
+ 
+  <div className='grid grid-cols-3 gap-10 '>
+   {data.map((item, index) => {
+    const Icon = item.icone;
 
-      {/* --- Section Bas (Cartes + Image centrale + Popover) --- */}
-      {/* NOUVEAU : Conteneur principal en 'relative' pour le positionnement du popover */}
-      <div className="relative pt-10 grid grid-cols-3 gap-8 items-start">
+    return (
+      <div key={index} className={`flex bg-white/10 h-[300px] ${item.clasname}  group transition-transform duration-500  flex-col p-5 border gap-5 border-white/20 rounded-2xl`}>
+        <div className='p-5 transition-transform duration-500 group-hover:scale-125 group-hover:-translate-y-1  bg-gray-600/15 group-hover:bg-white/30   w-max rounded-2xl'>
+        <Icon
+          size={24}
+          className=" "
+        /></div>
 
-        {/* --- Carte gauche --- */}
-        <div className="z-10"> {/* NOUVEAU : z-10 pour être sûr d'être devant s'il y a superposition */}
-          <Cards 
-            title="Problème " 
-            text="L'accès à une éducation de qualité reste souvent compliqué. Entre le manque de ressources fiables et l'absence d'accompagnement adapté, apprendre efficacement peut vite devenir un défi." 
-            color="red" 
-            founderName="Kyronet"
-            founderTitle="Founder"
-          />
-        </div>
-
-        {/* --- Image au centre --- */}
-        <div className="w-full h-[500px] -mt-10 z-0"> {/* Réglé -mt et z-0 */}
-          <img
-            src={image}
-            alt="Image 2"
-            className="w-full h-full object-cover rounded-3xl"
-          />
-        </div>
-
-        {/* --- Carte droite --- */}
-        <div className="z-10"> {/* z-10 pour être devant */}
-          <Cards 
-            title="Solution "
-            text="Hoom réinvente l'apprentissage à Djibouti en réunissant toutes les ressources essentielles pour accompagner les étudiants dans leur parcours académique. Progresser à son rythme et maximiser ses chances de réussite."
-            color="green"
-            founderName="Kyronet"
-            founderTitle="Founder"
-          />
-        </div>
+        <h3 className='text-2xl font-meduim'>{item.title}</h3>
+        <p className='text-lg text-white/60'>{item.description}</p>
       </div>
-        <div className=" w-full h-full ">
-    <video className="w-full mt-10 rounded-md" src={video} autoPlay loop muted controls />
-  </div>
+    );
+  })}</div>
+
     </section>
   );
 }

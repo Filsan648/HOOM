@@ -119,7 +119,7 @@ export default function Testimonials() {
   }, []);
 
   return (
-    <section id="testimonials" className="w-full px-6 md:px-12   border-b border-b-black/5 overflow-hidden select-none">
+    <section id="testimonials" className="w-fu bg-white  px-32    border-b border-b-black/5 overflow-hidden select-none">
       <div className="w-full">
         
               <Title title="Ce que disent nos étudiants" titlecolors="text-neutreal-800" />

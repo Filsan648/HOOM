@@ -22,7 +22,7 @@ function Hero() {
   };
 
   return (
-<section className="relative  rounded-4xl overflow-hidden py-28 px-10  ">      
+<section className="relative bg-white  px-32 overflow-hidden py-28  ">      
 <div className="relative grid grid-cols-2 items-center gap-2">
  
 
