@@ -23,11 +23,13 @@ function Solution() {
 
   return (
     // h-[200vh] crée l'espace nécessaire pour scroller et animer l'élément fixe
-    <section ref={containerRef} className="relative h-[200vh] ">
+    <section ref={containerRef} className="relative h-[200vh] text-white mt-24 ">
+        <div className="mx-24">
       <Title 
             title="L'accès au contenu ne garantit pas l'assimilation des cours." 
             titlecolors="text-neutral-50"
           />
+  </div>
       {/* Conteneur collant (Sticky) qui reste à l'écran pendant le scroll */}
       <div className="sticky top-0 h-screen w-full overflow-hidden flex flex-col justify-center items-center px-4">
         

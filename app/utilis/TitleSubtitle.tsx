@@ -40,12 +40,10 @@ function Title({ title, titlecolors }: TitleProps) {
   return (
     <div className="relative flex flex-col justify-center items-center mb-24 md:mb-32 group select-none">
       <div className=" bg-gray-200/25 border-orange-200/40 border py-1 px-4 rounded-2xl" >  dcvcx   </div>
+      
       <motion.h2
         className="font-sans text-5xl md:text-7xl lg:text-8xl font-normal tracking-tight text-neutral-800 leading-none text-center flex flex-wrap justify-center gap-x-3 gap-y-2"
-        variants={containerVariants}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, margin: "-20%" }}
+   
       >
             
         {words.map((word, wordIndex) => (
@@ -65,6 +63,13 @@ function Title({ title, titlecolors }: TitleProps) {
           </span>
         ))}
       </motion.h2>
+      <p className="py-5 text-center flex  flex-wrap text-xl w-3xl">
+
+Non pas par manque de capacité, mais parce que les formats sont souvent trop longs, peu interactifs et difficiles à assimiler.
+
+      </p>
+
+
     </div>
   );
 }

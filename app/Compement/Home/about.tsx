@@ -1,7 +1,6 @@
 import Title from '~/utilis/TitleSubtitle';
 import image1 from "../../assets/about/image1.png"
 import image from "../../assets/about/image.png"
-import video from "../../assets/about/7013391-uhd_4096_2160_25fps.mp4"
 import { Apple, Download } from "lucide-react";
 
 
@@ -52,7 +51,7 @@ function About() {
     const Icon = item.icone;
 
     return (
-      <div key={index} className={`flex bg-white/10 h-[300px] ${item.clasname}  group transition-transform duration-500  flex-col p-5 border gap-5 border-white/20 rounded-2xl`}>
+      <div key={index} className={`flex bg-[#090b0e] h-[300px] ${item.clasname}  group transition-transform duration-500  flex-col p-5 border gap-5 border-white/20 rounded-2xl`}>
         <div className='p-5 transition-transform duration-500 group-hover:scale-125 group-hover:-translate-y-1  bg-gray-600/15 group-hover:bg-white/30   w-max rounded-2xl'>
         <Icon
           size={24}
