@@ -56,20 +56,17 @@ const cardsData: CardData[] = [
 
 export default function Pac() {
   return (
-    <section className="relative w-full     bg-white  px-32    select-none  overflow-hidden">
+    <section className="relative w-full  my-20    bg-white  px-32    select-none  overflow-hidden">
 
  {/* En-tête de la section */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 border-b border-gray-200 pb-16 mb-16">
-          <div className="lg:col-span-7">
+        <div className="">
+          <div className="">
           
 <Title title="Trois cycle,Une seule reussite" titlecolors='text-neutral-900'/>
 
            
           </div>
-          <div className="lg:col-span-5 flex flex-col justify-end">
-            <p className="text-base text-gray-600 font-light leading-relaxed max-w-sm">
-Quelle que soit votre étape scolaire, notre plateforme vous accompagne avec des ressources adaptées à votre niveau.   </p>
-          </div>
+         
         </div>
 
    
@@ -81,9 +78,12 @@ Quelle que soit votre étape scolaire, notre plateforme vous accompagne avec des
           return (
             <div
               key={card.id}
-              className={`col-span-1 md:col-span-4 p-6 rounded-2xl md:p-8 flex flex-col justify-between transition-colors duration-500  ${card.bg}
-                ${index === 0 ? "md:col-start-1" : ""} 
-                ${index !== 2 ? "md:border-r md:border-black/10" : ""}`}
+              className={`col-span-1 md:col-span-4 p-6  transition-all
+    duration-300
+    ease-out
+    hover:-translate-y-3 rounded-2xl md:p-8 flex flex-col justify-between   border
+    border-black/20  
+               `}
             >
               {/* Entête de Colonne */}
               <div className="space-y-6">

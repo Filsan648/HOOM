@@ -26,7 +26,7 @@ function Solution() {
     <section ref={containerRef} className="relative h-[200vh] text-white mt-24 ">
         <div className="mx-24">
       <Title 
-            title="L'accès au contenu ne garantit pas l'assimilation des cours." 
+            title="La réussite académique, enfin accessible et simplifiée." 
             titlecolors="text-neutral-50"
           />
   </div>

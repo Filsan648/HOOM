@@ -502,15 +502,12 @@ export default function Fonctionnalities() {
               return (
                 <div
                   key={item.id}
-                  className={`relative rounded-2xl border transition-all duration-500 overflow-hidden group
-                    ${isActive 
-                      ? `bg-white/[0.02] ${item.color.activeBorder} ${item.color.shadow}` 
-                      : "bg-transparent border-neutral-900/40 hover:border-neutral-800"
-                    }`}
+                  className="relative rounded-2xl border transition-all duration-500 overflow-hidden group
+                    bg-transparent border-neutral-900/40 hover:border-neutral-800"
                 >
                   {/* Ligne d'accentuation sur le côté gauche pour l'onglet actif */}
                   <div className={`absolute left-0 top-0 bottom-0 w-[3px] transition-all duration-500
-                    ${isActive ? `bg-gradient-to-b ${item.color.gradient}` : "bg-transparent"}`} 
+                   `} 
                   />
 
                   {/* Bouton d'en-tête (Déclencheur de l'accordéon) */}
@@ -519,11 +516,7 @@ export default function Fonctionnalities() {
                     className="w-full text-left p-5 flex items-center justify-between gap-4 transition-colors"
                   >
                     <div className="flex items-center gap-4">
-                      <div className={`p-2.5 rounded-xl border transition-all duration-300 ${
-                        isActive 
-                          ? `${item.color.bg} ${item.color.primary} ${item.color.border}` 
-                          : "bg-neutral-900/50 border-neutral-850 text-neutral-400 group-hover:text-neutral-200"
-                      }`}>
+                      <div className="p-2.5 rounded-xl border transition-all duration-300 bg-neutral-900/50 border-neutral-850 text-neutral-400 group-hover:text-neutral-200">
                         <Icon className="w-5 h-5" />
                       </div>
                       
@@ -539,9 +532,6 @@ export default function Fonctionnalities() {
                       </div>
                     </div>
 
-                    <ChevronDown className={`w-4 h-4 text-neutral-500 transition-transform duration-500 shrink-0
-                      ${isActive ? "rotate-180 text-white" : "group-hover:text-neutral-400"}`} 
-                    />
                   </button>
 
                   {/* Contenu de l'accordéon avec transition de hauteur et d'opacité */}
@@ -554,13 +544,7 @@ export default function Fonctionnalities() {
                           {item.descriptionDetaillee}
                         </p>
                         
-                        <a 
-                          href={item.link}
-                          className={`self-start flex items-center gap-1.5 px-4 py-2 text-xs font-semibold rounded-xl border transition-all duration-300 hover:scale-[1.03] active:scale-95 ${item.color.buttonActive}`}
-                        >
-                          <span>Découvrir</span>
-                          <ArrowUpRight className="w-3.5 h-3.5" />
-                        </a>
+                    
                       </div>
                     </div>
                   </div>

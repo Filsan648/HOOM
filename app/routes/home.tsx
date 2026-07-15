@@ -34,24 +34,16 @@ export default function Home() {
        <Statistique /> 
 
 
-
-
-
-
-
-
-
-
           <div className="pt-10 flex flex-col gap-24  relative h-full w-full bg-black">
 <div className="">
       <About /> 
       <Solution /> 
         <Fontionalities />
-                       <Gallerie />
+           
    </div>
  
             </div>
- <Content/>
+
       <Pac />
         <Testimonials />
   

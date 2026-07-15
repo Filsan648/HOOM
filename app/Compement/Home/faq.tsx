@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Plus } from "lucide-react";
 
 // Données de la FAQ adaptées à ton univers pédagogique / académique
+
 const faqData = [
   {
     id: 1,

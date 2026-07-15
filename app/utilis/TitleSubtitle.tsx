@@ -63,10 +63,8 @@ function Title({ title, titlecolors }: TitleProps) {
           </span>
         ))}
       </motion.h2>
-      <p className="py-5 text-center flex  flex-wrap text-xl w-3xl">
-
+      <p className="my-10 text-center flex  flex-wrap text-xl w-3xl">
 Non pas par manque de capacité, mais parce que les formats sont souvent trop longs, peu interactifs et difficiles à assimiler.
-
       </p>
 
 
