@@ -3,7 +3,9 @@ import image1 from "../../assets/about/image1.png"
 import image from "../../assets/about/image.png"
 // Import des nouvelles icônes plus parlantes
 import { UserCheck, Layers, ZapOff, TrendingDown } from "lucide-react";
-
+import {  Target } from "lucide-react"; 
+import { Info } from 'lucide-react';
+import Motions from '~/utilis/Motion';
 const constat = [
   { 
     icone: UserCheck, // Évoque l'accompagnement / le suivi de l'élève
@@ -36,15 +38,16 @@ function About() {
       className='min-h-screen my-2.5  text-white px-16 '
     >
  
-      <Title title="Probleme Et Solutions" titlecolors='text-neutral-50' />
- 
+      <Title subtitle='LE CONSTAT' SubtitleStyle='text-yellow-600 bg-yellow-600/5 text-xs border border-yellow-400/40' title="Les défis de l'éducation à Djibouti" titlecolors='text-neutral-50' description="Non pas par désintérêt des étudiants, mais parce que la dispersion des supports et l'absence de suivi sur-mesure finissent par lasser les élèves, briser leur confiance et freiner leur élan."  descriptionstyle='text-white/60 ' icone={Target}     />
+ <Motions>
   <div className='grid grid-cols-3 gap-10 '>
+    
    {constat.map((item, index) => {
     const Icon = item.icone;
 
     return (
-      <div key={index} className={`flex bg-[#090b0e] h-[350px] ${item.clasname}  group transition-transform duration-500  flex-col p-5 border gap-5 border-white/20 rounded-2xl`}>
-        <div className='p-5 transition-transform duration-500 group-hover:scale-125 group-hover:-translate-y-1  bg-gray-600/15 group-hover:bg-white/30   w-max rounded-2xl'>
+      <div key={index} className={`flex  h-[350px] ${item.clasname}  group transition-transform duration-500  flex-col p-5 border gap-5 border-white/20 rounded-2xl`}>
+        <div className='p-5 transition-transform duration-500 group-hover:scale-125 group-hover:-translate-y-1     w-max rounded-2xl'>
         <Icon
           size={24}
           className=" "
@@ -60,13 +63,18 @@ function About() {
   
   
   </div>
-<div className="flex flex-col md:flex-row bg-[#090b0e] min-h-[450px] w-full mt-5 group transition-all duration-500 p-6 border gap-6 border-white/20 rounded-2xl overflow-hidden shadow-2xl shadow-red-950/10">
+  </Motions>
+   <Motions>
+<div className="flex flex-col md:flex-row  min-h-[450px] w-full mt-5 group transition-all duration-500 p-6 border gap-6 border-white/20 rounded-2xl overflow-hidden shadow-2xl shadow-red-950/10">
       
       {/* Colonne Gauche : Votre texte (Prend un peu moins d'espace pour laisser l'animation briller) */}
       <div className="flex-1 flex flex-col justify-between gap-5 py-4">
-        <div className="bg-red-400/5 border-red-400/20 w-max text-red-400 border py-1 px-4 rounded-2xl text-sm font-medium">
-          Les conséquences
-        </div>
+     
+
+      <div className= {`py-1 px-4 w-max flex text-red-500 bg-red-600/20 text-xs border border-red-400/40 gap-2 rounded-2xl   `}>  <Info size={15} /> <span> Les conséquences </span> </div>
+
+
+
 
         <div className="space-y-4">
           <h3 className="text-3xl  text-white ">
@@ -183,6 +191,7 @@ function About() {
       `}</style>
 
     </div>
+    </Motions>
     </section>
   );
 }

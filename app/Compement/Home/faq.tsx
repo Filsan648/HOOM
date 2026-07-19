@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Plus } from "lucide-react";
-
+import Title from "~/utilis/TitleSubtitle";
+import Motions from "~/utilis/Motion";
 // Données de la FAQ adaptées à ton univers pédagogique / académique
 
 const faqData = [
@@ -66,34 +67,16 @@ export default function Faq() {
   return (
     <section id="faq" className="w-full min-h-screen  text-white py-24 px-6 md:px-12 lg:px-24 relative overflow-hidden selection:bg-blue-500 selection:text-white">
       {/* Background Glow Discret */}
-      <div className="absolute top-1/2 right-0 w-[400px] h-[400px] bg-indigo-600/5 rounded-full blur-[150px] pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24">
+      <div className="max-w-7xl mx-auto ">
         
         {/* COLONNE GAUCHE : Titre Éditorial Fixe */}
-        <div className="lg:col-span-5 space-y-6 lg:sticky lg:top-32 h-fit">
-         
-          <h2 className="text-4xl md:text-6xl font-light tracking-tight leading-[1.1]">
-            Des réponses à vos <br />
-            <span className="font-serif italic font-normal text-blue-400 bg-gradient-to-r from-blue-400 to-indigo-300 bg-clip-text text-transparent">
-              ambitions.
-            </span>
-          </h2>
-          <p className="text-neutral-400 font-light text-lg max-w-sm leading-relaxed">
-            Vous avez des doutes sur le fonctionnement de la plateforme ? Voici tout ce que vous devez savoir pour démarrer sereinement.
-          </p>
-          
-          {/* CTA de support au look minimaliste */}
-          <div className="pt-4">
-            <a href="#Contact" className="inline-flex items-center gap-2 text-sm text-neutral-400 hover:text-white transition-colors group cursor-magnetic">
-              <span>Vous ne trouvez pas votre réponse ?</span>
-              <span className="text-blue-400 underline underline-offset-4 group-hover:text-blue-300 transition-colors">Contactez-nous</span>
-            </a>
-          </div>
+        <div className="  ">
+           <Title title="Des réponses à vos  ambitions. "  titlecolors="text-neutreal-50" description=" Vous avez des doutes sur le fonctionnement de la plateforme ? Voici tout ce que vous devez savoir pour démarrer sereinement." />
         </div>
-
+<Motions>
         {/* COLONNE DROITE : Les Accordéons */}
-        <div className="lg:col-span-7 divide-y divide-white/10">
+        <div className="">
           {faqData.map((item) => {
             const isOpen = openId === item.id;
             return (
@@ -138,7 +121,7 @@ export default function Faq() {
             );
           })}
         </div>
-
+</Motions>
       </div>
     </section>
   );

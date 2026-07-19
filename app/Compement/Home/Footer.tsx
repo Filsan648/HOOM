@@ -26,7 +26,7 @@ export default function Footer() {
   };
 
   return (
-    <footer id="Contact" className="relative w-full  text-[#1a1a1a] pt-24 pb-12 font-sans select-none border-t border-black/10 overflow-hidden">
+    <footer id="Contact" className="relative w-full  text-[#1a1a1a] pt-10  font-sans select-none overflow-hidden">
       
       {/* TRACE DE GRILLE INTERNE */}
       <div className="absolute inset-0 pointer-events-none grid grid-cols-4 md:grid-cols-12 gap-0 px-6 md:px-12 opacity-[0.02]">
@@ -115,38 +115,11 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* RETOUR EN HAUT DESIGN */}
-          <div className="md:col-span-1 flex justify-start md:justify-end items-start">
-            <button 
-              onClick={scrollToTop}
-              className="w-10 h-10 rounded-full border border-black/10 hover:border-black flex items-center justify-center text-black transition-colors duration-300 focus:outline-none cursor-pointer group cursor-magnetic"
-              aria-label="Retour en haut"
-            >
-              <span className="text-[10px] uppercase font-mono transform tracking-tighter group-hover:-translate-y-0.5 transition-transform">↑</span>
-            </button>
-          </div>
-
+         
         </div>
 
-        {/* SECTION MARQUE GÉANTE DE BASE */}
-        <div className="pt-16 pb-4 relative">
-          <h1 className="text-[14vw] font-sans font-bold tracking-tighter text-black/[0.03] leading-none text-center select-none pointer-events-none uppercase transition-colors duration-700 hover:text-black/[0.05]">
-            HOOM
-          </h1>
-        </div>
+      
 
-        {/* MENTIONS COMPLÉMENTAIRES BAS DE PAGE (Avec le juridique réintégré discrètement) */}
-        <div className="flex flex-col md:flex-row justify-between items-center gap-6 pt-4 border-t border-black/[0.03] text-[10px] font-mono text-neutral-400 uppercase tracking-widest">
-          <div className="flex flex-col md:flex-row items-center gap-4 md:gap-6">
-            <span>© {currentYear} HOOM. Tous droits réservés.</span>
-            <div className="flex gap-4 normal-case font-sans text-xs tracking-normal text-neutral-500">
-              {footerLinks.legal.map((link, i) => (
-                <a key={i} href={link.href} className="hover:text-black transition-colors text-[10px] font-mono uppercase tracking-widest">{link.label}</a>
-              ))}
-            </div>
-          </div>
-     
-        </div>
 
       </div>
     </footer>

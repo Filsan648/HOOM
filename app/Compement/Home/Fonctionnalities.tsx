@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { ArrowUpRight, BookOpen, Users, BarChart3, Bot, Compass, ChevronDown } from "lucide-react";
 import Title from "~/utilis/TitleSubtitle";
-
+import { CheckCircle2, Sparkles, Award, Zap, GraduationCap } from "lucide-react";
+import Motions from "~/utilis/Motion";
 const data = [
   {
     id: 1,
@@ -100,7 +101,6 @@ const data = [
   }
 ];
 
-import { CheckCircle2, Sparkles, Award, Zap, GraduationCap } from "lucide-react";
 
 // =====================================================================
 // 1. ANIMATION PÉDAGOGIE
@@ -486,14 +486,16 @@ export default function Fonctionnalities() {
   const currentTab = data[activeTab];
 
   return (
-    <section className="min-h-screen py-24 px-6 text-white md:px-12 font-sans overflow-hidden ">
-      <div className="max-w-6xl mx-auto">
-        <Title title="Découvrez nos fonctionnalités" titlecolors="text-neutral-50" /> 
+    <section className="min-h-screen py-24 relative px-6 relative  text-white md:px-12 font-sans overflow-hidden ">
 
+      <div className="max-w-6xl mx-auto">
+        <Title subtitle="FONCTIONNALITeES" SubtitleStyle='text-yellow-600 bg-yellow-600/5 text-xs border border-yellow-400/40' title="La technologie au service de votre progression" titlecolors="text-neutral-50" description="Non pas en vous laissant chercher votre voie, mais en analysant vos lacunes pour vous guider 24h/7 avec une assistante virtuelle et un tableau de bord intelligent." descriptionstyle='text-white/60  ' icone={Sparkles} /> 
+  <Motions>
         {/* Layout en grille asymétrique (5 cols gauche / 7 cols droite) */}
         <div className="mt-20 grid grid-cols-1 lg:grid-cols-12  border-1  border-white/20 items-start">
           
           {/* COLONNE GAUCHE : Accordéon vertical interactif */}
+        
           <div className="lg:col-span-5  border-r border-r-white/20 p-10 flex flex-col gap-4">
             {data.map((item, index) => {
               const Icon = item.icon;
@@ -503,7 +505,7 @@ export default function Fonctionnalities() {
                 <div
                   key={item.id}
                   className="relative rounded-2xl border transition-all duration-500 overflow-hidden group
-                    bg-transparent border-neutral-900/40 hover:border-neutral-800"
+                    bg-transparent  border-neutral-900/40 hover:border-neutral-800"
                 >
                   {/* Ligne d'accentuation sur le côté gauche pour l'onglet actif */}
                   <div className={`absolute left-0 top-0 bottom-0 w-[3px] transition-all duration-500
@@ -587,6 +589,7 @@ export default function Fonctionnalities() {
           </div>
 
         </div>
+        </Motions>
       </div>
     </section>
   );

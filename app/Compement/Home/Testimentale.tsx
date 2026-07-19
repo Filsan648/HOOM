@@ -5,6 +5,8 @@ import avart2 from "../../assets/avatars/avatar2.png";
 import avart3 from "../../assets/avatars/avatar3.png";
 import avart4 from "../../assets/avatars/avatar4.png";
 import Title from "~/utilis/TitleSubtitle";
+import { MessageSquare } from "lucide-react";
+import Motions from "~/utilis/Motion";
 interface Testimonial {
   quote: string;
   author: string;
@@ -119,13 +121,20 @@ export default function Testimonials() {
   }, []);
 
   return (
+
     <section id="testimonials" className="w-fu bg-white    border-b border-b-black/5 overflow-hidden select-none">
       <div className="w-full">
         
-              <Title title="Ce que disent nos étudiants" titlecolors="text-neutreal-800" />
+              <Title title="Ce que disent nos étudiants" titlecolors="text-neutreal-950"   
+                          subtitle="RETROURS D'EXPÉRIENCE"
+                          SubtitleStyle="text-yellow-600 bg-gray-400/5 text-xs font-mono border border-gray-400/20 px-3 py-1 rounded-full backdrop-blur-sm tracking-wider mb-4 inline-flex"
+                          description="Découvrez l'évolution et l'engagement en temps réel de notre communauté sur la plateforme HOOM." 
+                          descriptionstyle="text-black/60 text-base md:text-lg mt-4 max-w-xl"
+                          icone={MessageSquare} />
 
 
         {/* CONTENEUR DE CARTES CÔTE À CÔTE (Scrollable & Draggable) */}
+        <Motions>
         <div
           ref={scrollContainerRef}
           onScroll={handleScroll}
@@ -147,8 +156,8 @@ export default function Testimonials() {
                 key={testimonial.index}
                 className={`shrink-0 w-[80%] md:w-[45%] lg:w-[40%] snap-center rounded-3xl p-8 md:p-12 transition-all duration-500 ease-out border shadow-sm
                   ${isCenter 
-                    ? "bg-blue-600 border-blue-600 text-white scale-100 z-10 shadow-blue-500/10" 
-                    : "bg-neutral-100 border-neutral-200/60 text-neutral-800 scale-95 opacity-70"
+                    ? "border-black/20  scale-100 z-10 shadow-blue-500/10" 
+                    : " border-neutral-200/60 text-neutral-800 scale-95 opacity-70"
                   }`}
               >
                 <div className="flex flex-col h-full justify-between space-y-8">
@@ -173,13 +182,13 @@ export default function Testimonials() {
                         <h4 className="text-sm font-medium tracking-wide">
                           {testimonial.author}
                         </h4>
-                        <p className={`text-xs font-mono mt-0.5 ${isCenter ? "text-blue-200" : "text-neutral-500"}`}>
+                        <p className={`text-xs font-mono mt-0.5 ${isCenter ? "text-blue-600" : "text-neutral-500"}`}>
                           {testimonial.role}
                         </p>
                       </div>
                     </div>
                     
-                    <p className={`text-xs uppercase tracking-wider font-medium hidden sm:block ${isCenter ? "text-blue-200/80" : "text-neutral-400"}`}>
+                    <p className={`text-xs uppercase tracking-wider font-medium hidden sm:block ${isCenter ? "text-blue-600" : "text-neutral-400"}`}>
                       {testimonial.program}
                     </p>
                   </div>
@@ -191,7 +200,7 @@ export default function Testimonials() {
 
           <div className="shrink-0 w-[10%] md:w-[25%]" />
         </div>
-
+</Motions>
         {/* INDICATEUR VISUEL DE NAVIGATION CENTRALISÉ */}
         <div className="flex justify-center items-center gap-2 mt-4 font-mono text-xs text-neutral-400">
           <span className="text-black font-medium">{activeIndex }</span>

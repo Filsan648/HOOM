@@ -1,9 +1,8 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Title from "~/utilis/TitleSubtitle";
-import video from "../../assets/about/7013391-uhd_4096_2160_25fps.mp4";
-
-function Solution() {
+import video from "../../assets/about/Video Project.mp4";
+import { Activity } from "lucide-react";function Solution() {
   const containerRef = useRef<HTMLDivElement>(null);
 
   // On suit la progression du scroll sur l'ensemble de la section
@@ -24,14 +23,18 @@ function Solution() {
   return (
     // h-[200vh] crée l'espace nécessaire pour scroller et animer l'élément fixe
     <section ref={containerRef} className="relative h-[200vh] text-white mt-24 ">
-        <div className="mx-24">
+        <div className="mx-32">
       <Title 
-            title="La réussite académique, enfin accessible et simplifiée." 
-            titlecolors="text-neutral-50"
+      subtitle="LA SOLUTION"
+      SubtitleStyle='text-green-600 bg-green-400/10 text-xs border border-green-500/40'
+            title="La  réussite académique, enfin accessible et simplifiée." 
+            titlecolors="text-neutral-50" description="HOOM réinvente l'apprentissage en apportant la personnalisation et la simplicité dont chaque étudiant djiboutien a besoin pour réussir."
+            descriptionstyle='text-white/60'
+            icone={Activity}
           />
   </div>
       {/* Conteneur collant (Sticky) qui reste à l'écran pendant le scroll */}
-      <div className="sticky top-0 h-screen w-full overflow-hidden flex flex-col justify-center items-center px-4">
+      <div className="sticky top-0 h-screenw-full overflow-hidden flex flex-col justify-center items-center px-4">
         
       
 
@@ -41,7 +44,7 @@ function Solution() {
           className="w-full max-w-7xl aspect-video overflow-hidden will-change-transform shadow-2xl"
         >
           <video
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover  rounded-3xl  "
             src={video}
             autoPlay
             loop

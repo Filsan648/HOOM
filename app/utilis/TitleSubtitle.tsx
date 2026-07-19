@@ -1,12 +1,18 @@
 import { motion } from "framer-motion";
-
+import type { LucideIcon } from "lucide-react";
+import Motions from "./Motion";
 interface TitleProps {
   title: string;
-  titlecolors: string;
+  titlecolors: string;description:string;
+  descriptionstyle:string;
+  subtitle:string,
+  SubtitleStyle:string
+   icone: LucideIcon;
 }
 
-function Title({ title, titlecolors }: TitleProps) {
+function Title({ title, titlecolors,description , descriptionstyle,subtitle,SubtitleStyle  , icone: Icon, }: TitleProps) {
   // Découpe le titre en mots
+ 
   const words = title.split(" ");
 
   const containerVariants = {
@@ -38,14 +44,14 @@ function Title({ title, titlecolors }: TitleProps) {
   };
 
   return (
-    <div className="relative flex flex-col justify-center items-center mb-24 md:mb-32 group select-none">
-      <div className=" bg-gray-200/25 border-orange-200/40 border py-1 px-4 rounded-2xl" >  dcvcx   </div>
+    <Motions> 
+    <div className="relative flex flex-col justify-center items-center mb-10 group select-none">
+     <div className= {`py-1 px-4 flex gap-2 rounded-2xl ${SubtitleStyle}`}>  {Icon && <Icon size={15} />}  <span> {subtitle}  </span> </div>
       
       <motion.h2
-        className="font-sans text-5xl md:text-7xl lg:text-8xl font-normal tracking-tight text-neutral-800 leading-none text-center flex flex-wrap justify-center gap-x-3 gap-y-2"
+        className="font-sans text-5xl sm:text-6xl md:text-7xl lg:text-[5.2vw] font-normal tracking-tight text-neutral-800 leading-none text-center flex flex-wrap justify-center gap-x-3 gap-y-2"
    
-      >
-            
+      >   
         {words.map((word, wordIndex) => (
           <span
             key={wordIndex}
@@ -63,12 +69,12 @@ function Title({ title, titlecolors }: TitleProps) {
           </span>
         ))}
       </motion.h2>
-      <p className="my-10 text-center flex  flex-wrap text-xl w-3xl">
-Non pas par manque de capacité, mais parce que les formats sont souvent trop longs, peu interactifs et difficiles à assimiler.
-      </p>
+      <p className={`my-10 text-center  flex ${descriptionstyle}  flex-wrap text-lg w-3xl`}>
+{description}      </p>
 
 
     </div>
+    </Motions>
   );
 }
 

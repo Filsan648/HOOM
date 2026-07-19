@@ -1,15 +1,15 @@
 import { ArrowUpRight } from "lucide-react";
 import Faq from "./faq";
+import Motions from "~/utilis/Motion";
 export default function PreFooter() {
   return (
-    <section className="relative w-full bg-blue-600 rounded-b-[200px] text-[#1a1a1a] py-32 md:py-48   px-32   overflow-hidden font-sans select-none">
-      
+
+    <section className="relative w-full bg-black rounded-b-[200px] text-[#1a1a1a] py-20 md:py-48   px-32   overflow-hidden font-sans select-none">
+          <Motions>
        {/* Background Glows (Style Awwwards immersif) */}
       <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-blue-600/10 rounded-full blur-[120px] pointer-events-none" />
-      <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-indigo-600/10 rounded-full blur-[100px] pointer-events-none" />
-    <Faq/>
-        
-
+      <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-blue-600/10 rounded-full blur-[100px] pointer-events-none" />
+    <Faq/>   
       <div className="relative z-10 w-full px-6 md:px-12">
         <div className="max-w-5xl mx-auto text-center space-y-12">
           
@@ -68,6 +68,8 @@ export default function PreFooter() {
 
         </div>
       </div>
+      </Motions>
     </section>
+  
   );
 }
