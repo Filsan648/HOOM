@@ -15,9 +15,7 @@ function Hero() {
   return (
  <Motions>
     <section 
-      className="relative w-full bg-white px-6 md:px-16 lg:px-32 py-24 md:py-32 select-none overflow-hidden "
-   
-    >
+      className="relative w-full  px-6 md:px-16 lg:px-32 py-24 md:py-32  select-none overflow-hidden ">
 
       {/* Lignes de structure minimalistes en arrière-plan */}
       <div className="absolute top-0 left-1/4 w-[1px] h-full bg-neutral-100/60 pointer-events-none" />

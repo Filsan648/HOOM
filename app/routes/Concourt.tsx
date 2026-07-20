@@ -25,9 +25,10 @@ export function meta({}: Route.MetaArgs) {
 
 export default function Concours() {
   return (
-    <div className=" font-sora  flex flex-col gap-10 bg-white overflow-hidden ">
+    <div className=" font-sora  bg-yellow-600  flex flex-col gap-10  overflow-hidden ">
+       <div className="bg-white" >
       <Menue />
-         <Concour />
+         <Concour />  </div>
         <Footer />
     </div>
   );

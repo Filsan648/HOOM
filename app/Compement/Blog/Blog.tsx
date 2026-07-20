@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import Title from '~/utilis/TitleSubtitle';
+import { Newspaper } from "lucide-react";
+
 const ARTICLES_DATA = [
   {
     id: 1,
@@ -40,11 +42,11 @@ const ARTICLES_DATA = [
 ];
 
 function Blog() {
-  const [activeFilter, setActiveFilter] = useState('Tous');
-  
+  const [activeFilter, setActiveFilter] = useState('Tous'); 
   const categories = ['Tous', 'Méthodologie', 'Orientation', 'Sciences', 'Conseils'];
 
   // Filtrage des articles
+
   const filteredArticles = activeFilter === 'Tous' 
     ? ARTICLES_DATA 
     : ARTICLES_DATA.filter(art => art.category === activeFilter);
@@ -54,24 +56,20 @@ function Blog() {
   const regularArticles = filteredArticles.filter(art => !art.isFeatured || activeFilter !== 'Tous');
 
   return (
-    <section className="bg-white text-gray-950 py-24 px-6 md:px-12 lg:px-24 min-h-screen font-sans">
-      <div className="max-w-7xl mx-auto">
+    <section className="text-gray-950 bg-yellow-600/5  py-24 px-6 md:px-12 lg:px-24 ">
+  
         
-        {/* En-tête de la section */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 border-b border-gray-200 pb-16 mb-16">
-          <div className="lg:col-span-7">
-          
-<Title title="Le Journal
-de la Réussite" titlecolors='text-neutral-900'/>
-
-           
-          </div>
-          <div className="lg:col-span-5 flex flex-col justify-end">
-            <p className="text-base text-gray-600 font-light leading-relaxed max-w-sm">
-              Réflexions, guides pratiques et analyses de fond rédigés par nos enseignants et experts pour vous accompagner au-delà des cours.
-            </p>
-          </div>
-        </div>
+          <Title 
+          title="Le Journal de la Réussite" 
+          titlecolors="text-neutral-900" 
+          subtitle="Blog"
+          SubtitleStyle="text-yellow-600 bg-gray-400/5 text-xs font-mono border border-gray-400/20 px-3 py-1 rounded-full backdrop-blur-sm tracking-wider mb-4 inline-flex"
+          description="Réflexions, guides pratiques et analyses de fond rédigés par nos enseignants et experts pour vous accompagner au-delà des cours." 
+          descriptionstyle="text-black/60 text-base md:text-lg mt-4 max-w-xl"
+          icone={Newspaper} 
+        />
+   
+        
 
         {/* Barre de navigation / Filtres par catégories */}
         <div className="flex flex-wrap gap-3 md:gap-4 mb-20">
@@ -122,6 +120,7 @@ de la Réussite" titlecolors='text-neutral-900'/>
           )}
 
           {/* ZONE DROITE : Liste minimaliste des autres articles */}
+
           <div className={`${activeFilter === 'Tous' ? 'lg:col-span-6' : 'lg:col-span-12'} flex flex-col gap-12`}>
             {regularArticles.map((article) => (
               <div 
@@ -161,7 +160,7 @@ de la Réussite" titlecolors='text-neutral-900'/>
 
         </div>
 
-      </div>
+
     </section>
   );
 }

@@ -35,7 +35,7 @@ function About() {
     <section 
       id="about"
       // MODIFIÉ : Réduction de mb pour mieux gérer le défilement. h-auto est mieux ici.
-      className='min-h-screen my-2.5  text-white px-16 '
+      className='min-h-screen   text-white px-16 '
     >
  
       <Title subtitle='LE CONSTAT' SubtitleStyle='text-yellow-600 bg-yellow-600/5 text-xs border border-yellow-400/40' title="Les défis de l'éducation à Djibouti" titlecolors='text-neutral-50' description="Non pas par désintérêt des étudiants, mais parce que la dispersion des supports et l'absence de suivi sur-mesure finissent par lasser les élèves, briser leur confiance et freiner leur élan."  descriptionstyle='text-white/60 ' icone={Target}     />

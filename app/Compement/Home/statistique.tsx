@@ -14,7 +14,7 @@ const data = [
 
 function Statistique() {
   return (
-    <section className="bg-white px-6 py-24 md:px-16 lg:px-32 text-neutral-900 font-sans">
+    <section className="px-6 py-24 md:px-16 lg:px-32 text-neutral-900 font-sans">
       {/* Conteneur principal en grille : Titre à gauche, stats à droite sur grand écran */}
          {/* Colonne Titre */}
         <div className="">

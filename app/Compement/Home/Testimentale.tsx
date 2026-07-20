@@ -122,7 +122,7 @@ export default function Testimonials() {
 
   return (
 
-    <section id="testimonials" className="w-fu bg-white    border-b border-b-black/5 overflow-hidden select-none">
+    <section id="testimonials" className="w-full     overflow-hidden select-none">
       <div className="w-full">
         
               <Title title="Ce que disent nos étudiants" titlecolors="text-neutreal-950"   

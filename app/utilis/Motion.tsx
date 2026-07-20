@@ -15,8 +15,7 @@ function Motions({
   delay = 0,
 }: MotionProps) {
   
-  // Courbe de bézier custom signature des sites Awwwards (Escale / Inertie dramatique)
-  const awwwardsEase = [0.16, 1, 0.3, 1]; 
+  const Ease = [0.16, 1, 0.3, 1]; 
 
   const revealVariants: Variants = {
     hidden: {
@@ -29,7 +28,7 @@ function Motions({
       transition: {
         duration,
         delay,
-        ease: awwwardsEase,
+        ease: Ease,
         // Optimisation matérielle pendant l'animation
         type: "tween",
       },

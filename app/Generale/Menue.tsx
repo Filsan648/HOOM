@@ -29,7 +29,7 @@ export default function Menue() {
   };
 
   const links = [
-    { label: "Acceil", id: "/" },
+    { label: "Acceuil", id: "/" },
     { label: "À propos", id: "/#about" },
     { label: "Fonctionalité", id: "/#Fonctionnality" },
     { label: "Concour", id: "/Concour" },
