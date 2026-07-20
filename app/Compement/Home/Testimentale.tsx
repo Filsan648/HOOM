@@ -156,7 +156,7 @@ export default function Testimonials() {
                 key={testimonial.index}
                 className={`shrink-0 w-[80%] md:w-[45%] lg:w-[40%] snap-center rounded-3xl p-8 md:p-12 transition-all duration-500 ease-out border shadow-sm
                   ${isCenter 
-                    ? "border-black/20  scale-100 z-10 shadow-blue-500/10" 
+                    ? "border-blue-600  scale-100 z-10 shadow-blue-500/10" 
                     : " border-neutral-200/60 text-neutral-800 scale-95 opacity-70"
                   }`}
               >

@@ -65,6 +65,7 @@ export default function Faq() {
   };
 
   return (
+    <Motions>
     <section id="faq" className="w-full min-h-screen  text-white py-24 px-6 md:px-12 lg:px-24 relative overflow-hidden selection:bg-blue-500 selection:text-white">
       {/* Background Glow Discret */}
 
@@ -74,7 +75,7 @@ export default function Faq() {
         <div className="  ">
            <Title title="Des réponses à vos  ambitions. "  titlecolors="text-neutreal-50" description=" Vous avez des doutes sur le fonctionnement de la plateforme ? Voici tout ce que vous devez savoir pour démarrer sereinement." />
         </div>
-<Motions>
+
         {/* COLONNE DROITE : Les Accordéons */}
         <div className="">
           {faqData.map((item) => {
@@ -121,8 +122,9 @@ export default function Faq() {
             );
           })}
         </div>
-</Motions>
+
       </div>
     </section>
+    </Motions>
   );
 }

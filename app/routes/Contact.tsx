@@ -15,6 +15,7 @@ import BackgroundImage from "../assets/BackgroundImage.png";
 import Pac from "~/Compement/Home/pac";
 import Content from "~/Compement/Fonctionnality/Content";
 import Concour from "~/Compement/Concour/Concour";
+import Contacts from "~/Compement/Contact/Contact";
 export function meta({}: Route.MetaArgs) {
   return [
     { title: "New React Router App" },
@@ -23,12 +24,11 @@ export function meta({}: Route.MetaArgs) {
 }
 
 
-export default function Concours() {
+export default function Contact() {
   return (
-    <div className=" font-sora bg-blue-600/5   flex flex-col gap-10  overflow-hidden ">
-       <div className="" >
+    <div className=" font-sora  flex flex-col gap-10 bg-yellow-600/5 overflow-hidden ">
       <Menue />
-         <Concour />  </div>
+         <Contacts />
         <Footer />
     </div>
   );

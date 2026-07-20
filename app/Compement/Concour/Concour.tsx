@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Title from '~/utilis/TitleSubtitle';
 import { TrendingUp } from "lucide-react";
-
+import Motions from '~/utilis/Motion';
 const CONCOURS_DATA = [
   {
     id: 1,
@@ -35,7 +35,8 @@ function Concour() {
   const filteredConcours = CONCOURS_DATA.filter(item => item.status === activeTab);
 
   return (
-    <section className="text-black py-32 rounded-b-[150px] bg-blue-600/5 px-6 md:px-24 lg:px-32 min-h-screen font-sans">
+    <Motions>
+    <section className="text-black py-32 rounded-b-[150px] px-6 md:px-24 lg:px-32 min-h-screen font-sans">
       <div className="max-w-7xl mx-auto">
         
         {/* En-tête : Titre principal et paragraphe explicatif */}
@@ -43,7 +44,7 @@ function Concour() {
           <Title 
           title="Défiez vos limites.Mesurez votre talent" 
           titlecolors="text-neutral-900" 
-          subtitle="Blog"
+          subtitle="Concour"
           SubtitleStyle="text-yellow-600 bg-gray-400/5 text-xs font-mono border border-gray-400/20 px-3 py-1 rounded-full backdrop-blur-sm tracking-wider mb-4 inline-flex"
           description="Réflexions, guides pratiques et analyses de fond rédigés par nos enseignants et experts pour vous accompagner au-delà des cours." 
           descriptionstyle="text-black/60 text-base md:text-lg mt-4 max-w-xl"
@@ -127,6 +128,7 @@ function Concour() {
 
       </div>
     </section>
+    </Motions>
   );
 }
 

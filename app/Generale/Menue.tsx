@@ -34,6 +34,7 @@ export default function Menue() {
     { label: "Fonctionalité", id: "/#Fonctionnality" },
     { label: "Concour", id: "/Concour" },
     { label: "Blog", id: "/Blog" },
+    { label: "Contact", id: "/Contact" },
   ];
 
   return (

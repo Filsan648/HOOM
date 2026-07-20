@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Title from '~/utilis/TitleSubtitle';
 import { Newspaper } from "lucide-react";
-
+import Motions from '~/utilis/Motion';
 const ARTICLES_DATA = [
   {
     id: 1,
@@ -56,6 +56,7 @@ function Blog() {
   const regularArticles = filteredArticles.filter(art => !art.isFeatured || activeFilter !== 'Tous');
 
   return (
+    <Motions>
     <section className="text-gray-950 bg-yellow-600/5  py-24 px-6 md:px-12 lg:px-24 ">
   
         
@@ -95,8 +96,8 @@ function Blog() {
           {activeFilter === 'Tous' && featuredArticle && (
             <div className="lg:col-span-6 lg:border-r lg:border-gray-100 lg:pr-12 flex flex-col justify-between group">
               <div>
-                <div className="flex items-center gap-4 text-xs font-mono text-gray-400 mb-6">
-                  <span className="text-gray-950 font-medium tracking-widest uppercase">[ À LA UNE ]</span>
+                <div className="flex items-center gap-4 text-xs font-mono text-yellow-600 mb-6">
+                  <span className="text-yellow-950 font-medium tracking-widest uppercase">[ À LA UNE ]</span>
                   <span>•</span>
                   <span>{featuredArticle.date}</span>
                 </div>
@@ -128,7 +129,7 @@ function Blog() {
                 className="group border-b border-gray-100 pb-10 flex flex-col justify-between last:border-none last:pb-0"
               >
                 <div>
-                  <div className="flex items-center justify-between text-xs font-mono text-gray-400 mb-4">
+                  <div className="flex items-center justify-between text-xs font-mono text-yellow-600 mb-4">
                     <span className="text-gray-950 uppercase tracking-wider">{article.category}</span>
                     <span>{article.date}</span>
                   </div>
@@ -143,7 +144,7 @@ function Blog() {
                 </div>
 
                 <div className="flex justify-between items-center">
-                  <span className="text-xs font-mono text-gray-400">{article.readingTime}</span>
+                  <span className="text-xs font-mono text-yellow-600">{article.readingTime}</span>
                   <button className="text-xs font-mono uppercase text-gray-950 opacity-0 group-hover:opacity-100 transition-opacity duration-300 underline underline-offset-4">
                     Lire la suite
                   </button>
@@ -162,6 +163,7 @@ function Blog() {
 
 
     </section>
+    </Motions>
   );
 }
 
