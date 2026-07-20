@@ -44,7 +44,7 @@ function Motions({
         whileInView="visible"
         viewport={{
           once: true,
-          amount: 0.15, // Plus réactif dès que l'élément pointe le bout de son nez
+          amount: 0.3, // Plus réactif dès que l'élément pointe le bout de son nez
         }}
         style={{ willChange: "transform, opacity" }} // Force l'accélération GPU
       >
