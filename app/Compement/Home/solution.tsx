@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Title from "~/utilis/TitleSubtitle";
-import video from "../../assets/about/Video Project.mp4";
+import video from "../../assets/about/9034534-uhd_3840_2160_24fps.mp4";
 import { Activity } from "lucide-react";function Solution() {
   const containerRef = useRef<HTMLDivElement>(null);
 
