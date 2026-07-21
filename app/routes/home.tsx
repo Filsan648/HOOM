@@ -11,11 +11,11 @@ import PreFooter from "~/Compement/Home/prefooter";
 import Footer from "~/Compement/Home/Footer";
 import Faq from "~/Compement/Home/faq";
 import Statistique from "~/Compement/Home/statistique";
-import BackgroundImage from "../assets/BackgroundImage.png";
 import Pac from "~/Compement/Home/pac";
 import Content from "~/Compement/Fonctionnality/Content";
 import Blog from "~/Compement/Blog/Blog";
 import Solution from "~/Compement/Home/solution";
+import BackgroundImage from "../assets/BackgroundImage.png"
 export function meta({}: Route.MetaArgs) {
   return [
     { title: "New React Router App" },
@@ -33,19 +33,28 @@ export default function Home() {
       <Hero />
        <Statistique /> 
 
+<div className="relative min-h-screen w-full overflow-hidden bg-black/98">
+  {/* Texture de fond (équivalent à body::after) */}
+ <div
+  className="absolute inset-0 z-0 pointer-events-none opacity-[0.18]"
+  style={{
+    backgroundImage: `url(${BackgroundImage})`,
+    backgroundRepeat: "repeat",
+    backgroundSize: "128px 128px",
+  }}
+/>
 
-          <div className="pt-10 flex flex-col gap-24 relative   h-full w-full bg-black">
-       {/* Background Glows (Style Awwwards immersif) */}
-      <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-blue-600/10 rounded-full blur-[120px] pointer-events-none" />
-      <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-blue-600/10 rounded-full blur-[100px] pointer-events-none" />
-<div className="">
-      <About /> 
-      <Solution /> 
-        <Fontionalities />
-           
-   </div>
- 
-            </div>
+  {/* Background Glows */}
+  <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-blue-600/10 rounded-full blur-[120px] pointer-events-none z-0" />
+  <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-blue-600/10 rounded-full blur-[100px] pointer-events-none z-0" />
+
+  {/* Contenu */}
+  <div className="relative z-10 pt-10 flex flex-col gap-24">
+    <About />
+    <Solution />
+    <Fontionalities />
+  </div>
+</div>
 
       <Pac />
         <Testimonials />

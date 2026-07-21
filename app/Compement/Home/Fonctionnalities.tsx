@@ -557,7 +557,7 @@ export default function Fonctionnalities() {
           </div>
 
           {/* COLONNE DROITE : Vitrine d'animations autonome */}
-          <div className="lg:col-span-7  h-[380px] sm:h-[440px] lg:h-full lg:sticky  relative bg-[#090b0e] flex items-center justify-center overflow-hidden">
+          <div className="lg:col-span-7  h-[380px] sm:h-[440px] lg:h-full lg:sticky  relative  flex items-center justify-center overflow-hidden">
             
             {/* Halo lumineux d'ambiance d'arrière-plan */}
             <div className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[320px] h-[320px] ${currentTab.color.halo} rounded-full blur-[100px] pointer-events-none transition-all duration-1000 z-0`} />
