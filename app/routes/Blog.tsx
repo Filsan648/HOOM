@@ -26,10 +26,11 @@ export function meta({}: Route.MetaArgs) {
 
 export default function Blogs() {
   return (
-    <div className=" font-sora  flex flex-col gap-10 bg-white overflow-hidden ">
-      <Menue />
-         <Blog />
-        <Footer />
-    </div>
+    <div className="font-sora bg-yellow-600/5 dark:bg-white text-black dark:text-white flex flex-col gap-10 overflow-hidden">
+  <div className="bg-yellow-600/5">
+  <Menue />
+  <Blog />
+  <Footer /></div>
+</div>
   );
 }

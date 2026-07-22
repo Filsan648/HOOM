@@ -57,7 +57,7 @@ function Blog() {
 
   return (
     <Motions>
-    <section className="text-gray-950 bg-yellow-600/5  py-24 px-6 md:px-12 lg:px-24 ">
+    <section className="text-gray-950 py-24 px-6 md:px-12 lg:px-24 ">
   
         
           <Title 

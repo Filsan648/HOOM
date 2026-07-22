@@ -5,6 +5,9 @@ interface ButtonProps {
   text2?: string;
   icone1?: LucideIcon;
   icone2?: LucideIcon;
+  link1?: string;
+  link2?: string;
+
 }
 
 function Button({
@@ -12,13 +15,15 @@ function Button({
   text2,
   icone1: Icon1,
   icone2: Icon2,
+  link1,
+  link2
 }: ButtonProps) {
   return (
-    <div className="flex items-center gap-4 select-none">
+    <div className="flex  flex-col md:flex-row items-center gap-4 select-none">
       
       {/* SECONDARY BUTTON */}
       {text1 && (
-        <a href="#services" className="hidden sm:inline-block">
+        <a href={link1} className="">
           <button className="group relative overflow-hidden rounded-full border border-back/20 bg-transparent px-6 py-3.5 text-back transition-colors duration-500 hover:border-blue-600">
             <span className="relative z-10 flex items-center gap-2 text-[10px] uppercase tracking-[0.2em] font-medium transition-colors duration-500 group-hover:text-blue-600">
               {Icon1 && <Icon1 size={14} />}
@@ -32,7 +37,7 @@ function Button({
 
       {/* PRIMARY BUTTON */}
       {text2 && (
-        <a href="#about" className="inline-block">
+        <a href={link2} className="inline-block">
           <button className="group relative overflow-hidden rounded-full bg-blue-600 px-6 py-3.5 text-white border border-blue-600">
             <span className="relative z-10 flex items-center gap-2 text-[10px] uppercase tracking-[0.2em] font-semibold transition-colors duration-500 group-hover:text-blue-600">
               {text2}

@@ -69,7 +69,7 @@ function Title({ title, titlecolors,description , descriptionstyle,subtitle,Subt
           </span>
         ))}
       </motion.h2>
-      <p className={`my-10 text-center  flex ${descriptionstyle}  flex-wrap text-lg w-3xl`}>
+      <p className={`my-10 text-center max-w-sm md:max-w-md  flex ${descriptionstyle}  flex-wrap text-lg `}>
 {description}      </p>
 
 

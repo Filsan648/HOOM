@@ -26,10 +26,11 @@ export function meta({}: Route.MetaArgs) {
 
 export default function Contact() {
   return (
-    <div className=" font-sora  flex flex-col gap-10 bg-yellow-600/5 overflow-hidden ">
+    <div className=" font-sora  flex flex-col gap-10  dark:bg-white overflow-hidden ">
+      <div className="bg-yellow-600/5" >
       <Menue />
          <Contacts />
-        <Footer />
+        <Footer /> </div>
     </div>
   );
 }

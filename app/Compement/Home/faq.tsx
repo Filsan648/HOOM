@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Plus } from "lucide-react";
 import Title from "~/utilis/TitleSubtitle";
 import Motions from "~/utilis/Motion";
+import { MessageCircleQuestion } from "lucide-react";
 // Données de la FAQ adaptées à ton univers pédagogique / académique
 
 const faqData = [
@@ -66,14 +67,15 @@ export default function Faq() {
 
   return (
     <Motions>
-    <section id="faq" className="w-full min-h-screen  text-white py-24 px-6 md:px-12 lg:px-24 relative overflow-hidden selection:bg-blue-500 selection:text-white">
+    <section id="faq" className="w-full min-h-screen  text-white px-6 md:px-12  relative overflow-hidden selection:bg-blue-500 selection:text-white">
       {/* Background Glow Discret */}
 
       <div className="max-w-7xl mx-auto ">
         
         {/* COLONNE GAUCHE : Titre Éditorial Fixe */}
         <div className="  ">
-           <Title title="Des réponses à vos  ambitions. "  titlecolors="text-neutreal-50" description=" Vous avez des doutes sur le fonctionnement de la plateforme ? Voici tout ce que vous devez savoir pour démarrer sereinement." />
+
+           <Title title="Des réponses à vos  ambitions. " subtitle='FAQ' SubtitleStyle='text-yellow-600 bg-yellow-600/5 text-xs border border-yellow-400/40' titlecolors="text-white" description=" Vous avez des doutes sur le fonctionnement de la plateforme ? Voici tout ce que vous devez savoir pour démarrer sereinement." descriptionstyle='text-white/60 ' icone={MessageCircleQuestion}  />
         </div>
 
         {/* COLONNE DROITE : Les Accordéons */}

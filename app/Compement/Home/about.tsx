@@ -35,32 +35,30 @@ function About() {
     <section 
       id="about"
       // MODIFIÉ : Réduction de mb pour mieux gérer le défilement. h-auto est mieux ici.
-      className='min-h-screen   text-white px-16 '
+      className='min-h-screen   text-white md:px-16 px-5 '
     >
  
       <Title subtitle='LE CONSTAT' SubtitleStyle='text-yellow-600 bg-yellow-600/5 text-xs border border-yellow-400/40' title="Les défis de l'éducation à Djibouti" titlecolors='text-neutral-50' description="Non pas par désintérêt des étudiants, mais parce que la dispersion des supports et l'absence de suivi sur-mesure finissent par lasser les élèves, briser leur confiance et freiner leur élan."  descriptionstyle='text-white/60 ' icone={Target}     />
  <Motions>
-  <div className='grid grid-cols-3 gap-10 '>
+  <div className='grid lg:grid-cols-3 grid-cols-1 gap-10 '>
     
    {constat.map((item, index) => {
     const Icon = item.icone;
 
     return (
       <div key={index} className={`flex  h-[350px] ${item.clasname}  group transition-transform duration-500  flex-col p-5 border gap-5 border-white/20 rounded-2xl`}>
-        <div className='p-5 transition-transform duration-500 group-hover:scale-125 group-hover:-translate-y-1     w-max rounded-2xl'>
+        <div className='md:p-5 p-2 transition-transform duration-500 group-hover:scale-125 group-hover:-translate-y-1     w-max rounded-2xl'>
         <Icon
           size={24}
           className=" "
-        /></div>
+        />
+        </div>
 
-        <h3 className='text-2xl font-meduim'>{item.title}</h3>
+        <h3 className='lg:text-2xl font-meduim'>{item.title}</h3>
         <p className='text-lg text-white/60'>{item.description}</p>
       </div>
     );
   })}
-  
-     
-  
   
   </div>
   </Motions>

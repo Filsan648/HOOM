@@ -14,7 +14,7 @@ const data = [
 
 function Statistique() {
   return (
-    <section className="px-6 py-24 md:px-16 lg:px-32 text-neutral-900 font-sans">
+    <section className="px-6 mb-10  md:px-16 lg:px-32 text-neutral-900 font-sans">
       {/* Conteneur principal en grille : Titre à gauche, stats à droite sur grand écran */}
          {/* Colonne Titre */}
         <div className="">
@@ -28,13 +28,13 @@ function Statistique() {
             icone={Brain}
           />
         </div>
-      <div className=" lg:grid-cols-2 gap-16 mx-32 items-center justify-center">
+      <div className=" lg:grid-cols-2 gap-16 md:mx-32  items-center justify-center">
         
      
 
       {/* Grille de Statistiques centrée */}
-      <div className="mt-20 max-w-5xl mx-auto flex justify-center items-center">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-16 gap-y-16 w-full justify-center">
+      <div className="md:mt-16  md:max-w-5xl  flex justify-center items-center">
+        <div className="grid   grid-cols-2 md:grid-cols-3 gap-x-16 gap-y-16 w-full justify-center">
           {data.map((item, index) => (
             <div 
               key={index} 

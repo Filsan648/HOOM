@@ -122,7 +122,7 @@ export default function Testimonials() {
 
   return (
 
-    <section id="testimonials" className="w-full     overflow-hidden select-none">
+    <section id="testimonials" className="w-full my-10 overflow-hidden select-none">
       <div className="w-full">
         
               <Title title="Ce que disent nos étudiants" titlecolors="text-neutreal-950"   
@@ -142,7 +142,7 @@ export default function Testimonials() {
           onMouseLeave={handleMouseLeave}
           onMouseUp={handleMouseUp}
           onMouseMove={handleMouseMove}
-          className="flex gap-6 overflow-x-auto snap-x snap-mandatory pb-8 pt-4 cursor-grab active:cursor-grabbing scrollbar-none scroll-smooth"
+          className="flex gap-6 overflow-x-auto snap-x snap-mandatory  cursor-grab active:cursor-grabbing scrollbar-none scroll-smooth"
           style={{ scrollbarWidth: "none", msOverflowStyle: "none" }} // Masque la barre de défilement standard
         >
           {/* Espacements virtuels au début et à la fin pour permettre le centrage parfait des cartes de bord */}
@@ -156,7 +156,7 @@ export default function Testimonials() {
                 key={testimonial.index}
                 className={`shrink-0 w-[80%] md:w-[45%] lg:w-[40%] snap-center rounded-3xl p-8 md:p-12 transition-all duration-500 ease-out border shadow-sm
                   ${isCenter 
-                    ? "border-blue-600  scale-100 z-10 shadow-blue-500/10" 
+                    ? "border-blue-600 text-black  scale-100 z-10 shadow-blue-500/10" 
                     : " border-neutral-200/60 text-neutral-800 scale-95 opacity-70"
                   }`}
               >

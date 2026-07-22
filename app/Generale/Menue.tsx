@@ -11,6 +11,24 @@ import { NavLink } from "react-router";
 export default function Menue() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const handleNavigation = (link: string) => {
+  setMobileMenuOpen(false);
+
+  // Si c'est une ancre dans la même page
+  if (link.includes("#")) {
+    const id = link.split("#")[1];
+
+    setTimeout(() => {
+      const section = document.getElementById(id);
+      if (section) {
+        section.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      }
+    }, 100);
+  }
+};
 
   useEffect(() => {
     const handleScroll = () => {
@@ -31,12 +49,12 @@ export default function Menue() {
   const links = [
     { label: "Acceuil", id: "/" },
     { label: "À propos", id: "/#about" },
-    { label: "Fonctionalité", id: "/#Fonctionnality" },
+    { label: "Fonctionalité", id: "#Fonctionnality" },
     { label: "Concour", id: "/Concour" },
     { label: "Blog", id: "/Blog" },
     { label: "Contact", id: "/Contact" },
   ];
-
+const MotionNavLink = motion(NavLink);
   return (
     <>
       <motion.nav
@@ -83,13 +101,13 @@ export default function Menue() {
 
           {/* DESKTOP CTA */}
           <div className="hidden lg:block cursor-magnetic">
-            <Button text1="S'inscrire " text2="Se connecter" icone1={undefined} icone2={ArrowUpRight} />
+            <Button text1="" text2="Contactez-nous" icone1={undefined} icone2={ArrowUpRight} link1="" link2="/contact" />
           </div>
 
           {/* MOBILE MENU TRIGGER */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="lg:hidden w-11 h-11 rounded-full flex items-center justify-center transition-all duration-300 bg-black text-white hover:scale-105 active:scale-95 shadow-md"
+            className="lg:hidden w-11 h-11 rounded-full flex items-center justify-center transition-all duration-300 bg-blue-600 text-white hover:scale-105 active:scale-95 shadow-md"
           >
             {mobileMenuOpen ? <X className="w-4 h-4" /> : <Menu className="w-4 h-4" />}
           </button>
@@ -116,16 +134,17 @@ export default function Menue() {
               <div className="space-y-6">
                 <p className="text-xs font-mono uppercase tracking-widest text-black/30 mb-8">Navigation</p>
                 {links.map((link, i) => (
-                  <motion.button
-                    initial={{ opacity: 0, x: 20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: i * 0.05 + 0.1 }}
-                    key={i}
-                    onClick={() => scrollToSection(link.id)}
-                    className="block w-full text-left text-3xl font-light tracking-tight text-black hover:translate-x-2 transition-transform duration-300"
-                  >
-                    {link.label}
-                  </motion.button>
+                <MotionNavLink
+  key={i}
+  to={link.id}
+  onClick={() => handleNavigation(link.id)}
+  initial={{ opacity: 0, x: 20 }}
+  animate={{ opacity: 1, x: 0 }}
+  transition={{ delay: i * 0.05 + 0.1 }}
+  className="block w-full text-left text-3xl font-light tracking-tight text-black hover:translate-x-2 transition-transform duration-300"
+>
+  {link.label}
+</MotionNavLink>
                 ))}
               </div>
 
@@ -136,12 +155,17 @@ export default function Menue() {
                 transition={{ delay: 0.5 }}
                 className="space-y-4 border-t border-black/5 pt-6"
               >
+                <NavLink
+                id="contact"
+                to="/contact"
+                >
                 <button
-                  onClick={() => scrollToSection("contact")}
-                  className="w-full py-4 rounded-full bg-black text-white text-sm font-medium tracking-wide hover:opacity-90 transition-opacity"
+                  
+                  className="w-full py-4 rounded-full bg-blue-600 text-white text-sm font-medium tracking-wide hover:opacity-90 transition-opacity"
                 >
                   Nous contacter
                 </button>
+                </NavLink>
               </motion.div>
             </motion.div>
           </motion.div>

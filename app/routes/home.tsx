@@ -28,7 +28,7 @@ export default function Home() {
   return (
     <div className=" font-sora  flex flex-col  bg-yellow-600 overflow-hidden ">
       
-            <div className="bg-white">
+      <div className="bg-white">
       <Menue />
       <Hero />
        <Statistique /> 

@@ -53,7 +53,7 @@ const cardsData: CardData[] = [
 
 export default function Pac() {
   return (
-    <section className="relative w-full py-24 bg-white border-b border-b-black/5 select-none overflow-hidden">
+    <section className="relative px-10 w-full mt-10 bg-white  select-none overflow-hidden">
       <div className="w-full">
         
         {/* En-tête de la section parfaitement calqué sur Témoignages */}
@@ -69,7 +69,7 @@ export default function Pac() {
 
         {/* Grille Uniforme des Cartes de Cycles */}
          
-        <div className="mt-16 px-6 md:px-16 lg:px-32 grid grid-cols-1 md:grid-cols-3 gap-6 relative z-20">
+        <div className="mt-4  md:px-16 lg:px-32 grid grid-cols-1 md:grid-cols-3 gap-6 relative z-20">
           {cardsData.map((card) => {
             return (
               <Motions>

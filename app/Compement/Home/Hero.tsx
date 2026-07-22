@@ -15,11 +15,9 @@ function Hero() {
   return (
  <Motions>
     <section 
-      className="relative w-full  px-6 md:px-16 lg:px-32 py-24 md:py-32  select-none overflow-hidden ">
+      className="relative w-ful md:px-16 lg:px-32 py-24 px-10 lg:py-0   select-none overflow-hidden ">
 
-      {/* Lignes de structure minimalistes en arrière-plan */}
-      <div className="absolute top-0 left-1/4 w-[1px] h-full bg-neutral-100/60 pointer-events-none" />
-      <div className="absolute top-0 left-3/4 w-[1px] h-full bg-neutral-100/60 pointer-events-none" />
+
 
       {/* Grille Principale (Texte gauche / Image droite) */}
       <div className="relative z-20 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
@@ -28,7 +26,7 @@ function Hero() {
         <div className="col-span-1 lg:col-span-7 flex flex-col items-start space-y-8">
           
           {/* Badge Social Proof (Témoignages-style) */}
-          <div className="inline-flex items-center gap-3  border border-neutral-200/70 rounded-full py-1.5 pl-2 pr-4  group">
+          <div className="inline-flex items-center gap-3 w-max border border-neutral-200/70 rounded-full py-1.5 group">
             <div className="flex items-center -space-x-2.5">
               <img src={avart1} className="w-7 h-7 rounded-full border border-white object-cover" alt="" />
               <img src={avart2} className="w-7 h-7 rounded-full border border-white object-cover" alt="" />
@@ -57,6 +55,8 @@ function Hero() {
             <Button 
               text1="App Store" 
               text2="Google Play" 
+              link1=""
+              link2="https://play.google.com/store/apps/details?id=com.saad2000.ebaro"
               icone1={Apple} 
               icone2={Download} 
             />
@@ -76,7 +76,6 @@ function Hero() {
           
           >
             {/* Ombre portée 3D au sol pour accentuer le relief */}
-            <div className="absolute -bottom-6 left-10 right-10 h-10 bg-neutral-950/10 rounded-full blur-xl mix-blend-multiply transform translate-z-[-50px] pointer-events-none" />
             
             {/* Le Mockup de ton téléphone */}
             <div className="drop-shadow-[15px_35px_55px_rgba(0,0,0,0.12)]">

@@ -2,10 +2,13 @@ import { ArrowUpRight } from "lucide-react";
 import Faq from "./faq";
 import Motions from "~/utilis/Motion";
 import BackgroundImage from "../../assets/BackgroundImage.png"
+import Button from "~/utilis/Button";
+import { Apple, Download } from "lucide-react";
+
 export default function PreFooter() {
   return (
-
-    <section className="relative w-full bg-black/98 rounded-b-[200px] text-[#1a1a1a] py-20 md:py-48   px-32   overflow-hidden font-sans select-none">
+    <section className="relative py-10 z-10 w-full bg-black/98 text-white md:rounded-b-[200px]  rounded-b-[100px]  md:px-32  px-10  overflow-hidden ">
+         
           <div
             className="absolute inset-0 z-0 pointer-events-none opacity-[0.18]"
             style={{
@@ -14,7 +17,6 @@ export default function PreFooter() {
               backgroundSize: "128px 128px",
             }}
           />
-       {/* Background Glows (Style Awwwards immersif) */}
       <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-blue-600/10 rounded-full blur-[120px] pointer-events-none" />
       <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-blue-600/10 rounded-full blur-[100px] pointer-events-none" />
     <Faq/>
@@ -41,37 +43,18 @@ export default function PreFooter() {
           </p>
 
           {/* TES DEUX ACTIONS DE L'IMAGE - EN DUO BOUTONS HAUTE COUTURE */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-6 pt-6">
-            
-            {/* ACTION 1 : Essai gratuit 7 jours */}
-            <a href="#register" className="w-full sm:w-auto">
-              <button className="group relative w-full sm:w-auto overflow-hidden rounded-full bg-black px-8 py-4 text-white border border-black transition-transform duration-300 active:scale-95 focus:outline-none">
-                <span className="relative z-10 flex items-center justify-center gap-3 text-[10px] uppercase tracking-[0.2em] font-semibold transition-colors duration-500 group-hover:text-black">
-                  Essai gratuit 7 jours
-                  <div className="relative w-4 h-4 overflow-hidden">
-                    <ArrowUpRight
-                      size={14}
-                      className="absolute inset-0 transition-transform duration-500 ease-[cubic-bezier(0.19,1,0.22,1)] group-hover:translate-x-4 group-hover:-translate-y-4"
-                    />
-                    <ArrowUpRight
-                      size={14}
-                      className="absolute inset-0 -translate-x-4 translate-y-4 transition-transform duration-500 ease-[cubic-bezier(0.19,1,0.22,1)] group-hover:translate-x-0 group-hover:translate-y-0"
-                    />
-                  </div>
-                </span>
-                <span className="absolute inset-0 z-0 bg-[#fcfbf9] translate-y-full transition-transform duration-500 ease-[cubic-bezier(0.19,1,0.22,1)] group-hover:translate-y-0" />
-              </button>
-            </a>
-
-            {/* ACTION 2 : Demander une démo */}
-            <a href="#demo" className="w-full sm:w-auto">
-              <button className="group relative w-full sm:w-auto overflow-hidden rounded-full border border-black/20 bg-transparent px-8 py-4 text-black transition-colors duration-500 hover:border-black focus:outline-none">
-                <span className="relative z-10 block text-[10px] uppercase tracking-[0.2em] font-medium transition-colors duration-500 group-hover:text-white">
-                  Demander une démo
-                </span>
-                <span className="absolute inset-0 z-0 bg-black translate-y-full transition-transform duration-500 ease-[cubic-bezier(0.19,1,0.22,1)] group-hover:translate-y-0" />
-              </button>
-            </a>
+          <div className="flex  text-white flex-row items-center justify-center gap-6 md:pt-2">
+              <div className="pt-2 flex items-center justify-center md:justify-start w-full md:w-auto">
+            <Button 
+              text1="App Store" 
+              text2="Google Play" 
+              link1=""
+              link2="https://play.google.com/store/apps/details?id=com.saad2000.ebaro"
+              icone1={Apple} 
+              icone2={Download} 
+            />
+          </div>
+           
 
           </div>
 
